@@ -137,15 +137,6 @@
   
   
     
-    <li><a class="" href="/posts/introduction/" title="Introduction">Introduction</a></li>
-  
-
-  
-  
-  
-  
-  
-    
     <li>
       <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">Linux Tutorials</a>
       
@@ -208,6 +199,122 @@
     </li>
   
 
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/">Write-Up</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
             </div>
           </ul>
@@ -224,6 +331,120 @@
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
+      
+        
+          <div class="post-card">
+  <a href="/posts/malware/investigations/kardon/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/malware/investigations/kardon/banner.gif' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Kardon Loader</h5>
+        <p class="card-text post-summary">Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">January 28, 2022</span>
+        <a
+        href="/posts/malware/investigations/kardon/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/write-up/vulnhub/bellatrix/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/write-up/vulnhub/bellatrix/banner.gif' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Bellatrix - easy</h5>
+        <p class="card-text post-summary">NMAP Okay let&rsquo;s start with the beginning !
+sudo nmap -A -sS bellatrix.vuln
+As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">August 19, 2020</span>
+        <a
+        href="/posts/write-up/vulnhub/bellatrix/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/write-up/vulnhub/y0usef/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/write-up/vulnhub/y0usef/banner.gif' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Y0usef - easy</h5>
+        <p class="card-text post-summary">LEVEL : Easy
+TIME SPEND : 1h30
+LINK : y0usef 1
+ NMAP Welcome to a new writeup vulnhub.
+Let&rsquo;s start with an nmap to list the services open on the machine.
+sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">August 19, 2020</span>
+        <a
+        href="/posts/write-up/vulnhub/y0usef/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/malware/malware-tutorials/cuckoo-sandbox/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/malware/malware-tutorials/cuckoo-sandbox/banner.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Cuckoo sandbox install</h5>
+        <p class="card-text post-summary">EDIT - 03/03/202021 : I upgrade the Windows 7 install for a Windows 10.
+Hello! it&rsquo;s been a while since I&rsquo;ve done a little tutorial on my blog!
+Today we&rsquo;re going to see how to install and configure cuckoo sandbox for dynamic analysis on a Windows 10 machine!
+INFO : I made this tutorial on a Ubuntu 20.04 updated machine and virtualbox 6.1. You may have version problems depending on the packages you are going to install.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">July 19, 2020</span>
+        <a
+        href="/posts/malware/malware-tutorials/cuckoo-sandbox/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
       
         
           <div class="post-card">
@@ -331,32 +552,6 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
         <span class="float-left">June 19, 2020</span>
         <a
         href="/posts/linux-tutorials/nixos/nixos-ssh/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
-  <a href="/posts/introduction/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/posts/introduction/hero.svg' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Introduction</h5>
-        <p class="card-text post-summary">Greeting! This is an introduction post. This post tests the followings:
- Hero image is in the same directory as the post. This post should be at top of the sidebar. Post author should be the same as specified in author.yaml file.  </p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">June 8, 2020</span>
-        <a
-        href="/posts/introduction/"
         class="float-right btn btn-outline-info btn-sm"
         >Read</a
         >

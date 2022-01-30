@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Anti-VM on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/anti-vm/</link>
+    <description>Recent content in Anti-VM on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/anti-vm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kardon Loader</title>
+      <link>https://AlrikRr.github.io/posts/malware/investigations/kardon/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/malware/investigations/kardon/</guid>
+      <description>Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
+    </item>
+    
+  </channel>
+</rss>

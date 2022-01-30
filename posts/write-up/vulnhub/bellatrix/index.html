@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bellatrix - easy</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+<link rel="stylesheet" href="/css/katex.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="Bellatrix - easy" />
+<meta property="og:description" content="VulnHub Write-Up for Bellatrix machine" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-08-19T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="VulnHub Write-Up for Bellatrix machine" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">Linux Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/write-up/">Write-Up</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/banner.gif);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien Lasalle</h5>
+          <p>Wednesday, August 19, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>Bellatrix - easy</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h2 id="nmap">NMAP</h2>
+<p>Okay let&rsquo;s start with the beginning !</p>
+<p><code>sudo nmap -A -sS bellatrix.vuln</code></p>
+<p><img src="nmap.png" alt="nmap"></p>
+<p>As we can see, there are two main services :</p>
+<table>
+<thead>
+<tr>
+<th>PORT</th>
+<th>Status</th>
+<th>Banner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22</td>
+<td>OPEN</td>
+<td>OpenSSH 8.3p1</td>
+</tr>
+<tr>
+<td>80</td>
+<td>OPEN</td>
+<td>Apache http 2.4.46</td>
+</tr>
+</tbody>
+</table>
+<h2 id="web-application">Web Application</h2>
+<p>The web application is using the http port 80.  This page is a static html with a gif and a strange text with a <code>.php</code> at the end.<br>
+<img src="web_index.png" alt="web_index"></p>
+<p>Unfortunatle, the page <code>http://192.168.1.166/ikilledsiriusblack[...]ikilledsiriusblack.php</code> is FORBIDEN.</p>
+<p>After a few url manipulation, I figgured out that the <code>index.php</code> is actually <code>ikilledsiriusblack.php</code>.</p>
+<p>Nothing more here, let&rsquo;s take a look at the source code.</p>
+<p>Well, there is something interesting, as we can see there is a PHP code, this code is showing us that we can display a file using the <code>?file=</code> GET parameter.</p>
+<p><img src="web_src.png" alt="web_src"></p>
+<p>We quickly realize that there is an <strong>LFI vulnerability</strong>, we can for example display the content of <code>/etc/passwd</code>.<br>
+<img src="lfi_passwd.png" alt="lfi_passwd"></p>
+<p>Now that I have a good LFI exploit, I will try to find something to display because the goal of this exploit would be to have a shell on the machine.</p>
+<p>I start a small fuzzing session with <code>gobuster</code>.</p>
+<h3 id="fuzzing">Fuzzing</h3>
+<p><code>gobuster -u http://bellatrix.vuln/ -w directory-list-2.3-medium.txt -x php,txt,html,db -fw</code></p>
+<p><img src="web_fuzz.png" alt="web_fuzz"></p>
+<p>Okay well nothing interesting, considering the name of some pages I would need a special harry potter wordlist.</p>
+<p>That&rsquo;s ok, I&rsquo;ll be able to test PHP wrappers and see if we can get the pages in base64.</p>
+<h3 id="php-filter">PHP filter</h3>
+<p><code>php://filter/read=convert.base64-encode</code> is working very well, I&rsquo;m able to get the content of <code>index.php</code> and <code>ikillsiriusblack.php</code> but there is nothing more in those files.</p>
+<p><img src="web_filter.png" alt="web_filter"></p>
+<p>I need to found how to put a php reverse shell or at least execute unix command.</p>
+<h3 id="fuzzing-lfi">Fuzzing LFI</h3>
+<p>I need a way to inject PHP code but at the moment I have no idea how to do it.</p>
+<p>To continue, I&rsquo;m fuzzing again but this time I&rsquo;m looking to see if there are any system files that can be accessed by the www-data account. Maybe I&rsquo;ll find my inspiration in that.</p>
+<p>Indeed, I was right, we can see that the www-data user has access to the log file of the ssh service  <code>/var/log/auth.log</code>.</p>
+<p><code>http://bellatrix.vuln/ikilledsiriusblack.php?file=../../../..//var/log/auth.log</code></p>
+<p>Then an idea comes to me. If I have the possibility to display the logs of the ssh service, I also have technically the possibility to inject anything I want. Let&rsquo;s do a test. I will try to connect in SSH but my user will be a bit different:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> ssh <span style="color:#e6db74">&#39;&lt;?php system($_GET[&#34;c&#34;]); ?&gt;&#39;</span>@bellatrix.vuln 
+</code></pre></div><p>As you can see, my user is actually a PHP code that calls the system function with a GET variable. If everything goes as expected, then I will be able to inject the linux commands I want with this parameter because they will be executed by system().</p>
+<p>As you can see, if I use the base64 filter to get the RAW data of the <code>auth.log</code> I can see my PHP code.</p>
+<p><img src="php_auth_log.png" alt="php_auth_log"></p>
+<h3 id="ssh-log-poisoning">SSH log poisoning</h3>
+<p>Okay great, now let&rsquo;s get started !</p>
+<p>Let&rsquo;s see if we missed folders or files with the command <code>ls- al</code>.</p>
+<p>Indeed, as you can see, there is a folder named &ldquo;secrets&rdquo; in base64 and a gif.<br>
+<strong>Spoilers</strong> :  the gif is just sirius black who dies.</p>
+<p><img src="ssh_log_cmd.png" alt="ssh_log_cmd"></p>
+<p>On the other hand the secret folder contains two other files :</p>
+<ul>
+<li><em>.secrets.dic</em> : Well, well, well it&rsquo;s a wordlist with a few words from the Harry Potter universe</li>
+<li><em>Swordofgryffindor</em> : It contains a username with the hash of his password.</li>
+</ul>
+<p><img src="secrets_content.png" alt="ssh_log_cmd"></p>
+<h3 id="ssh-brute-force">SSH brute force</h3>
+<p>Well that&rsquo;s not really a brute force because I have already guess the password of <code>lestrange</code>.<br>
+<em>Obvious btw</em></p>
+<p><img src="http://i.imgur.com/plJGnCb.gif" alt="hackerman"></p>
+<h2 id="system">System</h2>
+<p>Okay now I&rsquo;ve got the user account, now we need to privesc and pwn that machine !</p>
+<p>I hope that&rsquo;s not gonna be so hard because the user have an <strong>Azkaban</strong> shell.</p>
+<p><img src="rbash_user.png" alt="rbash_user"></p>
+<p>Since I have the lestrange&rsquo;s password, I cant check the sudo rights and &hellip; Well &hellip;Se ha cometido un error !</p>
+<p>The user can run vim with the root account without any password.</p>
+<p><img src="sudo.png" alt="sudo"></p>
+<p><img src="https://media.giphy.com/media/pPhyAv5t9V8djyRFJH/giphy.gif" alt="wtf"></p>
+<h3 id="privesc">Privesc</h3>
+<p>I take a look at <a href="https://gtfobins.github.io/">GTFOBins</a> and search for a privsec on VIM.</p>
+<p>This is what I got <a href="https://gtfobins.github.io/gtfobins/vim/#sudo">vim#sudo</a></p>
+<p>Rooted !</p>
+<p><img src="vim_privesc.png" alt="vim_privesc"></p>
+<h2 id="thanks">Thanks</h2>
+<p>Thank you <a href="https://twitter.com/bertandlorent9">#BLY</a> for this funny box !</p>
+<p>I have learned a few things like SSH log poisoning, very interesting !</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/write-up/vulnhub/bellatrix/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Cuckoo sandbox install</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Y0usef - easy</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#nmap">NMAP</a></li>
+    <li><a href="#web-application">Web Application</a>
+      <ul>
+        <li><a href="#fuzzing">Fuzzing</a></li>
+        <li><a href="#php-filter">PHP filter</a></li>
+        <li><a href="#fuzzing-lfi">Fuzzing LFI</a></li>
+        <li><a href="#ssh-log-poisoning">SSH log poisoning</a></li>
+        <li><a href="#ssh-brute-force">SSH brute force</a></li>
+      </ul>
+    </li>
+    <li><a href="#system">System</a>
+      <ul>
+        <li><a href="#privesc">Privesc</a></li>
+      </ul>
+    </li>
+    <li><a href="#thanks">Thanks</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;0123456789</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" defer src="/js/katex.min.js"></script>
+<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

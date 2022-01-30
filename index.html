@@ -1436,23 +1436,22 @@
     <div class="row" id="recent-post-cards">
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup your SSH on NixOS" class="post-card-link">
+  <a href="/posts/malware/investigations/kardon/" title="Kardon Loader" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-ssh/banner.png'
+        <img class="card-img-top" src='/posts/malware/investigations/kardon/banner.gif'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">How to setup your SSH on NixOS</h5>
-        <p class="card-text post-summary"> SSH configuration TO change the confguration of you SSH, you have to edit your configuration.nix.
-You cannot edit the default ssh file located in /etc/ssh/sshd_config.
-Enable openssh First, you need to enable the OpenSSH Daemon.
-[...] # List services that you want to enable: services.openssh.enable = true; [...] Enable root login For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.</p>
+        <h5 class="card-title">Kardon Loader</h5>
+        <p class="card-text post-summary"> Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 19, 2020</span>
-        <a href="/posts/linux-tutorials/nixos/nixos-ssh/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">January 28, 2022</span>
+        <a href="/posts/malware/investigations/kardon/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -1460,25 +1459,26 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS" class="post-card-link">
+  <a href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-wireguard/banner.png'
+        <img class="card-img-top" src='/posts/write-up/vulnhub/y0usef/banner.gif'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">How to setup Wireguard NixOS</h5>
-        <p class="card-text post-summary"> Special thnks to Rayan Lahfa
-and Klaes ;)
- Wiki ! You can use the default configuration file : Nixos-Wireguard
-Install &amp; setup First, you need to install wireguard using :
-$ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
-$ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</p>
+        <h5 class="card-title">Y0usef - easy</h5>
+        <p class="card-text post-summary"> LEVEL : Easy
+TIME SPEND : 1h30
+LINK : y0usef 1
+ NMAP Welcome to a new writeup vulnhub.
+Let&rsquo;s start with an nmap to list the services open on the machine.
+sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 19, 2020</span>
-        <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">August 19, 2020</span>
+        <a href="/posts/write-up/vulnhub/y0usef/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -1486,26 +1486,23 @@ $ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS" class="post-card-link">
+  <a href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-install/banner.png'
+        <img class="card-img-top" src='/posts/write-up/vulnhub/bellatrix/banner.gif'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">How to install NixOS</h5>
-        <p class="card-text post-summary"> Special thanks to Rayan Lahfa
-ISO &amp; VBOX configuration This tutorial was realized with a virtual environment using VirtualBox, don&rsquo;t forget to activate the EFI option into your VM configuration.
-You can download the official NIXOS ISO here : nixos.org/download
-Don&rsquo;t hesitate to read the wiki here : nixos.org
-Installation If you have any issue, Google is your friend
-For this install, I used a Virtual Disk of 25GiB.
-# Display NixOS Wiki  $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP  $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition  $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
+        <h5 class="card-title">Bellatrix - easy</h5>
+        <p class="card-text post-summary"> NMAP Okay let&rsquo;s start with the beginning !
+sudo nmap -A -sS bellatrix.vuln
+As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 19, 2020</span>
-        <a href="/posts/linux-tutorials/nixos/nixos-install/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">August 19, 2020</span>
+        <a href="/posts/write-up/vulnhub/bellatrix/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
