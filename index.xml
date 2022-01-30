@@ -344,6 +344,17 @@ Initial setup Search depends on additional output content type of JSON in config
     </item>
     
     <item>
+      <title>#1 Introduction to linux buffer-overflow 32-bit</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</guid>
+      <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
+Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
+Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
+    </item>
+    
+    <item>
       <title>Bellatrix - easy</title>
       <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>

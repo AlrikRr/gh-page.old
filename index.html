@@ -299,12 +299,7 @@
 
 
 
-  
-  
 
-
-
-  
 
 
 <div class="container-fluid home" id="home">
@@ -312,22 +307,22 @@
      
     #homePageBackgroundImageDivStyled {
         
-      background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_500x0_resize_box_3.png');
+      background-image: url('https://AlrikRr.github.io/images/background_hua7741678839331b7161b35138da3cc47_395969_500x0_resize_box_3.png');
     }
      
     @media (min-width: 500px) and (max-width: 800px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_800x0_resize_box_3.png');
+          background-image: url('https://AlrikRr.github.io/images/background_hua7741678839331b7161b35138da3cc47_395969_800x0_resize_box_3.png');
         }
     }
     @media (min-width: 801px) and (max-width: 1200px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_1200x0_resize_box_3.png');
+          background-image: url('https://AlrikRr.github.io/images/background_hua7741678839331b7161b35138da3cc47_395969_1200x0_resize_box_3.png');
         }
     }
     @media (min-width: 1201px) and (max-width: 1500px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_1500x0_resize_box_3.png');
+          background-image: url('https://AlrikRr.github.io/images/background_hua7741678839331b7161b35138da3cc47_395969_1500x0_resize_box_3.png');
         }
     }
     @media (min-width: 1501px) {  
@@ -459,7 +454,7 @@
   <div class="circular-progress blue">
     <span class="circular-progress-left">
       <span
-        class="circular-progress-bar circular-progress-percentage-75"
+        class="circular-progress-bar circular-progress-percentage-65"
         
       ></span>
     </span>
@@ -469,7 +464,7 @@
       
       ></span>
     </span>
-    <div class="circular-progress-value">Pentest</div>
+    <div class="circular-progress-value">Pentesting</div>
   </div>
 </div>
 
@@ -547,7 +542,7 @@
   <div class="circular-progress pink">
     <span class="circular-progress-left">
       <span
-        class="circular-progress-bar circular-progress-percentage-75"
+        class="circular-progress-bar circular-progress-percentage-95"
         
       ></span>
     </span>
@@ -557,7 +552,7 @@
       
       ></span>
     </span>
-    <div class="circular-progress-value">Formator</div>
+    <div class="circular-progress-value">Team Work</div>
   </div>
 </div>
 
@@ -696,7 +691,7 @@
         
       </div>
       <div class="card-body">
-        <p class="card-text">I start learning reverse on malware from PE windoes to VBS scripts ! I&rsquo;m still learning but I know the basics ! You can check my malware analysis !</p>
+        <p class="card-text">I start learning reverse on malware from PE windows to VBS scripts ! I&rsquo;m still learning but I know the basics ! You can check my malware analysis !</p>
       </div>
     </div>
   </a>
@@ -737,8 +732,8 @@
             
           
         
-          <img class="card-img-xs" src="/images/sections/skills/docker_hu26c4c8a404e6bd1b11279f3c877606b9_16968_24x24_fit_box_3.png" alt="SecDevOps (In Progress !)" />
-          <h5 class="card-title">SecDevOps (In Progress !)</h5>
+          <img class="card-img-xs" src="/images/sections/skills/docker_hu26c4c8a404e6bd1b11279f3c877606b9_16968_24x24_fit_box_3.png" alt="DevSecOps (In Progress !)" />
+          <h5 class="card-title">DevSecOps (In Progress !)</h5>
         
       </div>
       <div class="card-body">
@@ -1459,6 +1454,29 @@
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
+  <a href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/buffer-overflow/banner.png'
+          alt="Card image cap"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">#1 Introduction to linux buffer-overflow 32-bit</h5>
+        <p class="card-text post-summary"> What&rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
+Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
+Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 12, 2020</span>
+        <a href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+      </div>
+    </div>
+  </a>
+</div>
+
+      
+        <div class="col-lg-4 col-md-6 pt-2 post-card">
   <a href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy" class="post-card-link">
     <div class="card">
       <div class="card-head">
@@ -1479,30 +1497,6 @@ sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services
       <div class="card-footer">
         <span class="float-left">August 19, 2020</span>
         <a href="/posts/write-up/vulnhub/y0usef/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
-      </div>
-    </div>
-  </a>
-</div>
-
-      
-        <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/posts/write-up/vulnhub/bellatrix/banner.gif'
-          alt="Card image cap"
-        />
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Bellatrix - easy</h5>
-        <p class="card-text post-summary"> NMAP Okay let&rsquo;s start with the beginning !
-sudo nmap -A -sS bellatrix.vuln
-As we can see, there are two main services :
-   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 19, 2020</span>
-        <a href="/posts/write-up/vulnhub/bellatrix/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
