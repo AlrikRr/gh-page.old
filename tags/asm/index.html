@@ -141,7 +141,7 @@
           
             
           
-          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/23-bit/" data-taxonomy-term="23-bit"><span class="taxonomy-label">23-bit</span></a></li>
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/32-bit/" data-taxonomy-term="32-bit"><span class="taxonomy-label">32-bit</span></a></li>
         
           
             
@@ -206,6 +206,16 @@
           
             
           
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ret2libc/" data-taxonomy-term="ret2libc"><span class="taxonomy-label">ret2libc</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ret2win/" data-taxonomy-term="ret2win"><span class="taxonomy-label">ret2win</span></a></li>
+        
+          
+            
+          
           <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/sandboxing/" data-taxonomy-term="sandboxing"><span class="taxonomy-label">Sandboxing</span></a></li>
         
           
@@ -251,6 +261,62 @@
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
+      
+        
+          <div class="post-card">
+  <a href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/ret-2-libc/banner.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">#3 ret2libc exploit 32-bit linux</h5>
+        <p class="card-text post-summary">ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
+There are several ways to bypass this protection (ROP, ret2plt, etc&hellip;) but here we will focus on ret2libc.
+In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
+The idea is to go look for the functions that interest us in order to build an exploit.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 18, 2020</span>
+        <a
+        href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/binary-exploitation/binary-tutorials/ret-2-win/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/ret-2-win/banner.png' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">#2 ret2win exploit 32-bit linux</h5>
+        <p class="card-text post-summary">ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
+The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
+In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
+Code Here is the code of the program we are going to use:</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 15, 2020</span>
+        <a
+        href="/posts/binary-exploitation/binary-tutorials/ret-2-win/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
       
         
           <div class="post-card">

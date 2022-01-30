@@ -6,7 +6,31 @@
     <description>Recent content in ASM on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/asm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/asm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#3 ret2libc exploit 32-bit linux</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</guid>
+      <description>ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
+There are several ways to bypass this protection (ROP, ret2plt, etc&amp;hellip;) but here we will focus on ret2libc.
+In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
+The idea is to go look for the functions that interest us in order to build an exploit.</description>
+    </item>
+    
+    <item>
+      <title>#2 ret2win exploit 32-bit linux</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</guid>
+      <description>ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
+The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
+In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
+Code Here is the code of the program we are going to use:</description>
+    </item>
+    
     <item>
       <title>#1 Introduction to linux buffer-overflow 32-bit</title>
       <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</link>

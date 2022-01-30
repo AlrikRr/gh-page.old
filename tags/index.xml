@@ -44,18 +44,18 @@
     </item>
     
     <item>
-      <title>23-bit</title>
-      <link>https://AlrikRr.github.io/tags/23-bit/</link>
-      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      <title>32-bit</title>
+      <link>https://AlrikRr.github.io/tags/32-bit/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/tags/23-bit/</guid>
+      <guid>https://AlrikRr.github.io/tags/32-bit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ASM</title>
       <link>https://AlrikRr.github.io/tags/asm/</link>
-      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/tags/asm/</guid>
       <description></description>
@@ -64,9 +64,27 @@
     <item>
       <title>Binary</title>
       <link>https://AlrikRr.github.io/tags/binary/</link>
-      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/tags/binary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ret2libc</title>
+      <link>https://AlrikRr.github.io/tags/ret2libc/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/tags/ret2libc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ret2win</title>
+      <link>https://AlrikRr.github.io/tags/ret2win/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/tags/ret2win/</guid>
       <description></description>
     </item>
     

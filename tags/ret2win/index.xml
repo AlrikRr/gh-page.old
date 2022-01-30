@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ret2win on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/ret2win/</link>
+    <description>Recent content in ret2win on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/ret2win/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#2 ret2win exploit 32-bit linux</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</guid>
+      <description>ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
+The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
+In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
+Code Here is the code of the program we are going to use:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1454,22 +1454,23 @@
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit" class="post-card-link">
+  <a href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/buffer-overflow/banner.png'
+        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/ret-2-libc/banner.png'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">#1 Introduction to linux buffer-overflow 32-bit</h5>
-        <p class="card-text post-summary"> What&rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
-Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
-Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</p>
+        <h5 class="card-title">#3 ret2libc exploit 32-bit linux</h5>
+        <p class="card-text post-summary"> ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
+There are several ways to bypass this protection (ROP, ret2plt, etc&hellip;) but here we will focus on ret2libc.
+In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
+The idea is to go look for the functions that interest us in order to build an exploit.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">September 12, 2020</span>
-        <a href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">September 18, 2020</span>
+        <a href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -1477,26 +1478,23 @@ Why ?  To crash an application (a DOS) Have a shell with privileged rights To st
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy" class="post-card-link">
+  <a href="/posts/binary-exploitation/binary-tutorials/ret-2-win/" title="#2 ret2win exploit 32-bit linux" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/write-up/vulnhub/y0usef/banner.gif'
+        <img class="card-img-top" src='/posts/binary-exploitation/binary-tutorials/ret-2-win/banner.png'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Y0usef - easy</h5>
-        <p class="card-text post-summary"> LEVEL : Easy
-TIME SPEND : 1h30
-LINK : y0usef 1
- NMAP Welcome to a new writeup vulnhub.
-Let&rsquo;s start with an nmap to list the services open on the machine.
-sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
-   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</p>
+        <h5 class="card-title">#2 ret2win exploit 32-bit linux</h5>
+        <p class="card-text post-summary"> ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
+The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
+In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
+Code Here is the code of the program we are going to use:</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">August 19, 2020</span>
-        <a href="/posts/write-up/vulnhub/y0usef/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">September 15, 2020</span>
+        <a href="/posts/binary-exploitation/binary-tutorials/ret-2-win/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>

@@ -138,25 +138,37 @@
     <loc>https://AlrikRr.github.io/tags/unpacked/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/tags/23-bit/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <loc>https://AlrikRr.github.io/tags/32-bit/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/asm/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/binary/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/binary/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/binary-exploitation/</loc>
-    <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/ret2libc/</loc>
+    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</loc>
+    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/ret2win/</loc>
+    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/bufferoverflow/</loc>
