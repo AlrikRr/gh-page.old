@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to install NixOS</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+<link rel="stylesheet" href="/css/katex.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="How to install NixOS" />
+<meta property="og:description" content="Install for beginners - LUKS, EFI &amp; BTRFS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="Install for beginners - LUKS, EFI &amp; BTRFS" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/" title="Introduction">Introduction</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/linux-tutorials/">Linux Tutorials</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/banner.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien Lasalle</h5>
+          <p>Friday, June 19, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>How to install NixOS</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>Special thanks to <a href="https://github.com/RaitoBezarius">Rayan Lahfa</a></p>
+<h2 id="iso--vbox-configuration">ISO &amp; VBOX configuration</h2>
+<p>This tutorial was realized with a virtual environment using VirtualBox, don&rsquo;t forget to activate the EFI option into your VM configuration.</p>
+<p><img src="/images/posts/linux-tutorials/nixos/nixos-install/efi.png" alt="efi-screen"></p>
+<p>You can download the official <strong>NIXOS ISO</strong> here : <a href="https://nixos.org/download.html">nixos.org/download</a><br>
+Don&rsquo;t hesitate to read the <strong>wiki</strong> here : <a href="https://nixos.org/nixos/options.html">nixos.org</a></p>
+<h2 id="installation">Installation</h2>
+<p><em>If you have any issue, Google is your friend</em></p>
+<p>For this install, I used a Virtual Disk of 25GiB.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Display NixOS Wiki </span>
+$ nixos-help  
+
+<span style="color:#75715e"># If you need to change the keyboard layout, use this command with you contry code</span>
+<span style="color:#75715e"># here I used French layout</span>
+$ loadkeys fr
+
+<span style="color:#75715e"># Switch with root</span>
+$ sudo -i
+
+<span style="color:#75715e"># Display disks name and partitions</span>
+$ lsblk  
+
+<span style="color:#75715e"># Open  parted tool and free 2GB for the SWAP  </span>
+$ parted /dev/sda -- mklabel gpt  
+$ parted /dev/sda -- mkpart primary 512MiB -2GiB  
+$ parted /dev/sda -- mkpart primary -2GiB 100%  
+
+<span style="color:#75715e"># Create boot ESP</span>
+$ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB  
+$ parted /dev/sda -- set <span style="color:#ae81ff">3</span> boot on  
+
+<span style="color:#75715e"># Encryption of the root partition  </span>
+$ cryptsetup luksFormat /dev/sda1
+$ cryptsetup luksOpen /dev/sda1 nixos-root
+
+<span style="color:#75715e"># Check if you nixos-root is open</span>
+$ ls -l /dev/mapper
+
+<span style="color:#75715e"># Format the nixos-root into BTRFS</span>
+mkfs.btrfs -L nixroot /dev/mapper/nixos-root
+
+<span style="color:#75715e"># Create the SWAP partition</span>
+$ mkswap /dev/sda2
+$ swapon /dev/sda2
+
+<span style="color:#75715e"># Check if the SWAP is working</span>
+$ free -hm
+
+<span style="color:#75715e"># Format the BOOT partition with vfat</span>
+$ mkfs.vfat -n BOOT /dev/sda3
+
+<span style="color:#75715e"># Mount nixos-root into /mnt</span>
+$ mount -t btrfs /dev/mapper/nixos-root /mnt
+
+<span style="color:#75715e"># Create btrfs subvolume, the top level will be nios</span>
+$ btrfs subvolume create /mnt/nixos
+$ btrfs subvolume list /mnt
+
+<span style="color:#75715e"># umount /mnt and mount again nixos-root but this time using btrfs options</span>
+$ umount /mnt
+$ mount -t btrfs -o subvol<span style="color:#f92672">=</span>nixos /dev/mapper/nixos-root /mnt
+$ cd /mnt
+$ ls
+
+<span style="color:#75715e"># Create btrfs subvolume, this part replaces LVM</span>
+$ btrfs subvolume create /mnt/home
+$ btrfs subvolume create /mnt/var
+$ btrfs subvolume create /mnt/nix
+$ btrfs subvolume list /mnt
+$ mkdir /mnt/boot
+
+<span style="color:#75715e"># Mount BOOT into /mnt/boot</span>
+$ mount /dev/sda3 /mnt/boot
+$ ls -l /mnt
+
+<span style="color:#75715e"># Generate all the default configuration files for nixos</span>
+$ nixos-generate-config --root /mnt
+
+<span style="color:#75715e"># Start the install and enter root password</span>
+$ nixos-install
+</code></pre></div><h2 id="basic-commands">Basic commands</h2>
+<p>Hare are some basic commands for surviving on NixOS :</p>
+<pre tabindex="0"><code class="language-bash/shell" data-lang="bash/shell"># Rebuild the OS, this command will take a &quot;snapshot&quot; of all your nixos files.
+# This way in cas of issues on a nixos configuration, you will be able to 
+# go back to a previous build.
+$ nixos-rebuild switch
+
+# Rebuilt and display errors
+$ nixos-rebuild switch --show-case
+
+# Search a nixos packet
+$ nix search &lt;name&gt;
+
+# Install a nixos packet
+$ nix-env -iA nixos.&lt;name&gt;
+
+</code></pre><p>All the magic of NixOS lies in its configuration.nix and the *.nix files you&rsquo;ll be adding to it !<br>
+Indeed, configuration you NixOS via <code>/etc/nixos/configuration.nix</code>.<br>
+Once done, you can copy/paste your configuration.nix file to another freshly installed NixOS to automatically configure it with your settings !</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/linux-tutorials/nixos/nixos-install/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">How to configure NixOS</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup your SSH on NixOS" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">How to setup your SSH on NixOS</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#iso--vbox-configuration">ISO &amp; VBOX configuration</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#basic-commands">Basic commands</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;0123456789</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" defer src="/js/katex.min.js"></script>
+<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

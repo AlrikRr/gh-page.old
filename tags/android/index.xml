@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/android/</link>
+    <description>Recent content in Android on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to setup Wireguard NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</guid>
+      <description>Special thnks to Rayan Lahfa
+and Klaes ;)
+ Wiki ! You can use the default configuration file : Nixos-Wireguard
+Install &amp;amp; setup First, you need to install wireguard using :
+$ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
+$ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</description>
+    </item>
+    
+  </channel>
+</rss>

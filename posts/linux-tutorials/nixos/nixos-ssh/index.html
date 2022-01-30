@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>How to setup your SSH on NixOS</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+<link rel="stylesheet" href="/css/katex.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="How to setup your SSH on NixOS" />
+<meta property="og:description" content="How to setup your SSH on NixOS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="How to setup your SSH on NixOS" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/introduction/" title="Introduction">Introduction</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/linux-tutorials/">Linux Tutorials</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/banner.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien Lasalle</h5>
+          <p>Friday, June 19, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>How to setup your SSH on NixOS</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <h2 id="ssh-configuration">SSH configuration</h2>
+<p>TO change the confguration of you SSH, you have to edit your configuration.nix.<br>
+You cannot edit the default ssh file located in <code>/etc/ssh/sshd_config</code>.</p>
+<h2 id="enable-openssh">Enable openssh</h2>
+<p>First, you need to enable the OpenSSH Daemon.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix">[<span style="color:#f92672">...</span>]
+<span style="color:#75715e"># List services that you want to enable:</span>
+services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>enable <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">true</span>;
+[<span style="color:#f92672">...</span>]
+</code></pre></div><h2 id="enable-root-login">Enable root login</h2>
+<p>For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.<br>
+To authorize ots connection, in a temporary way of course, you need to add this line into your configuration file :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Activer Root login</span>
+services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>permitRootLogin <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#e6db74">&#34;yes&#34;</span>;
+</code></pre></div><p>For more informations : <a href="https://nixos.org/nixos/options.html#permitroot">Nixos-permitroot</a></p>
+<h2 id="enable-ssh-in-the-firewall">Enable SSH in the firewall</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Open port in the firewall</span>
+networking<span style="color:#f92672">.</span>firewall<span style="color:#f92672">.</span>allowedTCPPorts <span style="color:#960050;background-color:#1e0010">=</span> [ <span style="color:#ae81ff">22</span> ];
+</code></pre></div><h2 id="use-public-key-">Use public key !</h2>
+<p>Create your user.<br>
+You must add your public key in order to log in to your NixOS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Don&#39;t forget to assign a password with the command `passwd` !</span>
+users<span style="color:#f92672">.</span>users<span style="color:#f92672">.</span>eidorian <span style="color:#960050;background-color:#1e0010">=</span> {
+  isNormalUser <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  extraGroups <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;wheel&#34;</span> ]; <span style="color:#75715e"># Enable ‘sudo’.</span>
+  openssh<span style="color:#f92672">.</span>authorizedKeys<span style="color:#f92672">.</span>keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Add your public key here&#34;</span>];
+};
+</code></pre></div><h2 id="use-another-file-">Use another file !</h2>
+<p>To make your configuration cleaner, you can create an ssh.nix file in the same place as your configuration.nix file and add everything we&rsquo;ve just seen here.</p>
+<p>This way, it will be easier for you to search for your settings than searching a single large file.</p>
+<p>For the ssh.nix file to be recognized by the system and by the configuration.nix file, you have to tell it in the imports section.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix">imports <span style="color:#960050;background-color:#1e0010">=</span>
+[ <span style="color:#75715e"># Include the results of the hardware scan.</span>
+        <span style="color:#e6db74">./hardware-configuration.nix</span>
+        <span style="color:#e6db74">./ssh.nix</span>
+];
+</code></pre></div>
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/linux-tutorials/nixos/nixos-ssh/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">How to install NixOS</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">How to setup Wireguard NixOS</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ssh-configuration">SSH configuration</a></li>
+    <li><a href="#enable-openssh">Enable openssh</a></li>
+    <li><a href="#enable-root-login">Enable root login</a></li>
+    <li><a href="#enable-ssh-in-the-firewall">Enable SSH in the firewall</a></li>
+    <li><a href="#use-public-key-">Use public key !</a></li>
+    <li><a href="#use-another-file-">Use another file !</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;0123456789</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" defer src="/js/katex.min.js"></script>
+<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

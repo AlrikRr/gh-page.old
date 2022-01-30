@@ -103,7 +103,61 @@
     <priority>0.1</priority>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/android/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/btrfs/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-conf/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/install/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/luks/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/nixos/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/nixos/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/nixos/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/ssh/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/vpn/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/wireguard/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/basic/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
@@ -111,19 +165,10 @@
     <loc>https://AlrikRr.github.io/categories/basic/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/categories/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/posts/introduction/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/multi-lingual/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2020-06-08T08:06:25+06:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2020-06-08T08:06:25+06:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/notes/</loc>

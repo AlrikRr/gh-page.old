@@ -31,6 +31,17 @@
 
 
 
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" />
+
 
 
 
@@ -78,11 +89,27 @@
 
 
 
+  
+
+
+  
 
 
 
 
+  
+  
+    
+  
+  
 
+
+
+  
+  
+    
+  
+  
 
 
 
@@ -96,6 +123,8 @@
 <nav class="navbar navbar-expand-xl top-navbar initial-navbar" id="top-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" id="logo" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button
       class="navbar-toggler navbar-dark"
@@ -208,6 +237,10 @@
   </div>
   
   
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -227,10 +260,6 @@
 
 
 
-
-
-
-
   
 
 
@@ -243,6 +272,7 @@
 
 
 
+  
 
 
 
@@ -265,6 +295,16 @@
 
 
 
+
+
+
+
+  
+  
+
+
+
+  
 
 
 <div class="container-fluid home" id="home">
@@ -272,27 +312,27 @@
      
     #homePageBackgroundImageDivStyled {
         
-      background-image: url('https://AlrikRr.github.io/images/default-background_hu3d03a01dcc18bc5be0e67db3d8d209a6_1182514_500x0_resize_q75_box.jpg');
+      background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_500x0_resize_box_3.png');
     }
      
     @media (min-width: 500px) and (max-width: 800px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/default-background_hu3d03a01dcc18bc5be0e67db3d8d209a6_1182514_800x0_resize_q75_box.jpg');
+          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_800x0_resize_box_3.png');
         }
     }
     @media (min-width: 801px) and (max-width: 1200px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/default-background_hu3d03a01dcc18bc5be0e67db3d8d209a6_1182514_1200x0_resize_q75_box.jpg');
+          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_1200x0_resize_box_3.png');
         }
     }
     @media (min-width: 1201px) and (max-width: 1500px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/default-background_hu3d03a01dcc18bc5be0e67db3d8d209a6_1182514_1500x0_resize_q75_box.jpg');
+          background-image: url('https://AlrikRr.github.io/images/background_hu2b1f9c95ec3957a2e4d9530bf6054fff_124394_1500x0_resize_box_3.png');
         }
     }
     @media (min-width: 1501px) {  
       #homePageBackgroundImageDivStyled {   
-          background-image: url('https://AlrikRr.github.io/images/default-background.jpg');
+          background-image: url('https://AlrikRr.github.io/images/background.png');
         }
     }
     </style>
@@ -1396,21 +1436,23 @@
     <div class="row" id="recent-post-cards">
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/introduction/" title="Introduction" class="post-card-link">
+  <a href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup your SSH on NixOS" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/introduction/hero.svg'
+        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-ssh/banner.png'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Introduction</h5>
-        <p class="card-text post-summary"> Greeting! This is an introduction post. This post tests the followings:
- Hero image is in the same directory as the post. This post should be at top of the sidebar. Post author should be the same as specified in author.yaml file.  </p>
+        <h5 class="card-title">How to setup your SSH on NixOS</h5>
+        <p class="card-text post-summary"> SSH configuration TO change the confguration of you SSH, you have to edit your configuration.nix.
+You cannot edit the default ssh file located in /etc/ssh/sshd_config.
+Enable openssh First, you need to enable the OpenSSH Daemon.
+[...] # List services that you want to enable: services.openssh.enable = true; [...] Enable root login For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 8, 2020</span>
-        <a href="/posts/introduction/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">June 19, 2020</span>
+        <a href="/posts/linux-tutorials/nixos/nixos-ssh/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -1418,24 +1460,25 @@
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/search/" title="অনুসন্ধানের ফলাফল" class="post-card-link">
+  <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'
+        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-wireguard/banner.png'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">অনুসন্ধানের ফলাফল</h5>
-        <p class="card-text post-summary"> This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```</p>
+        <h5 class="card-title">How to setup Wireguard NixOS</h5>
+        <p class="card-text post-summary"> Special thnks to Rayan Lahfa
+and Klaes ;)
+ Wiki ! You can use the default configuration file : Nixos-Wireguard
+Install &amp; setup First, you need to install wireguard using :
+$ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
+$ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 8, 2010</span>
-        <a href="/search/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">June 19, 2020</span>
+        <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -1443,24 +1486,26 @@ Initial setup Search depends on additional output content type of JSON in config
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/search/" title="Search Results" class="post-card-link">
+  <a href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'
+        <img class="card-img-top" src='/posts/linux-tutorials/nixos/nixos-install/banner.png'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Search Results</h5>
-        <p class="card-text post-summary"> This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```</p>
+        <h5 class="card-title">How to install NixOS</h5>
+        <p class="card-text post-summary"> Special thanks to Rayan Lahfa
+ISO &amp; VBOX configuration This tutorial was realized with a virtual environment using VirtualBox, don&rsquo;t forget to activate the EFI option into your VM configuration.
+You can download the official NIXOS ISO here : nixos.org/download
+Don&rsquo;t hesitate to read the wiki here : nixos.org
+Installation If you have any issue, Google is your friend
+For this install, I used a Virtual Disk of 25GiB.
+# Display NixOS Wiki  $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP  $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition  $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">June 8, 2010</span>
-        <a href="/search/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">June 19, 2020</span>
+        <a href="/posts/linux-tutorials/nixos/nixos-install/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
