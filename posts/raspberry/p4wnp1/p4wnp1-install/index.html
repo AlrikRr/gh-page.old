@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P4wnP1 Install</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+<link rel="stylesheet" href="/css/katex.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="P4wnP1 Install" />
+<meta property="og:description" content="How to install p4wnp1 on raspberry pi zero w" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/raspberry/p4wnp1/p4wnp1-install/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-11T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="How to install p4wnp1 on raspberry pi zero w" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">Linux Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/">Write-Up</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/binary-exploitation/">Binary exploitation</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/binary-exploitation/binary-tutorials/">Binary Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit">#1 Introduction to linux buffer-overflow 32-bit</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/ret-2-win/" title="#2 ret2win exploit 32-bit linux">#2 ret2win exploit 32-bit linux</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux">#3 ret2libc exploit 32-bit linux</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/raspberry/">Raspberry Projects</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/raspberry/p4wnp1/">P4wnP1</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/raspberry/p4wnp1/p4wnp1-install/" title="P4wnP1 Install">P4wnP1 Install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/raspberry/p4wnp1/p4wnp1-install/banner.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu10e76675fb78c228f3f9d5fadc12cabd_48232_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien Lasalle</h5>
+          <p>Wednesday, November 11, 2020</p>
+        </div>
+
+        <div class="title">
+          <h1>P4wnP1 Install</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>Hello! Today we are going to set up the Swiss army knife of the pentester.</p>
+<p>I&rsquo;m talking about the <a href="https://github.com/RoganDawes/P4wnP1_aloa">P4wnP1 ALOA</a> project from <a href="https://github.com/RoganDawes">RoganDawes</a>!</p>
+<p>Initially, the P4wnP1 project comes from <a href="https://github.com/mame82/">MaMe82</a>.Here I will show you how to install the A.L.O.A (A Little Offensive Appliance) version on your RaspberryPi Zero!</p>
+<p>The ALOA version is a bit easier to configure and has a graphical interface via a web server for payload configuration.</p>
+<h2 id="p4wnp1-">P4wnp1 ?</h2>
+<p>P4wnP1 works as a backdoor that can be accessed remotely via a WI-Fi access point.<br>
+Just plug it into your victim&rsquo;s computer and you&rsquo;re done.<br>
+Like a <strong>RubberDucky</strong> or a <strong>BashBunny</strong>, P4wnP1 is recognized as a keyboard by the computer which allows it to execute almost anything you can :)</p>
+<ul>
+<li>Command execution like a keyboard</li>
+<li>Execute motion like a mouse</li>
+<li>Pretend to be a USB key to exfiltrate data</li>
+<li>etc &hellip;</li>
+</ul>
+<p>The list is long, you will find many more examples of attacks on the github !</p>
+<p><strong>Warning</strong> : You have to know that it is not a RubberDucky, the P4wnP1 is slower, if you plug it on a computer with a code execution script like a keyboard, you have to wait for the OS, which is kali linux, to finish loading before you can execute its commands.
+Or maybe you have planned it and plugged your P4wnP1 on an external battery with the power port ;)
+Now let&rsquo;s go to the installation !</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<ul>
+<li>An SD card (16GB)</li>
+<li>A Raspberry Pi Zero W card</li>
+<li>A USB SD card reader</li>
+<li>SSH client (Terminal linux or Putty for windows)</li>
+<li>BalenaEtcher or others to flash the SD card</li>
+</ul>
+<h2 id="flash-of-the-image">Flash of the image</h2>
+<p>You can find the Image file in the <a href="https://github.com/RoganDawes/P4wnP1_aloa/releases">releases</a> section on the github.</p>
+<p>For this installation, I use the v.0.1.1-beta version.</p>
+<p>Install <a href="https://www.balena.io/etcher/">BalenaEtcher</a>, the advantage is that the tool is multi platform (Windows, Linux and MaxOS).<br>
+Otherwise, you are free to use the tool you want.</p>
+<p>Once the <strong>img</strong> file is copied on the SD card, we can go to the next step !</p>
+<h2 id="plug-the-pi-">Plug the pi !</h2>
+<p>For the plugging, be careful, you have to use the USB port of the RaspberryPi Zero card in order to transfer data to the connected machine.</p>
+<p><img src="branchement_usb.png" alt="USB connection"></p>
+<p>Be careful with the cable you use, some do not allow data transfer. Unfortunately there is no way to distinguish them.</p>
+<h2 id="wi-fi">Wi-Fi</h2>
+<p>Once your raspberry is plugged in, you should see a fairly explicit wifi access point.</p>
+<p><img src="wifi.png" alt="Wi-Fi connection"></p>
+<p>The password is on the github: <code>MaMe82-P4wnP1</code>.</p>
+<h2 id="interface-web">Interface Web</h2>
+<p>Once connected, beware you will not have access to the Internet if you use the same Wi-Fi card that you use.</p>
+<p>Go to <code>http://172.24.0.1:8000</code></p>
+<p><img src="web.png" alt="Web"></p>
+<p>You have access to a lot of menus, here the one that will interest us is the <strong>Wi-Fi Settings</strong> menu.<br>
+I will show you how the configuration works on P4wnP1 by taking the example of Wi-Fi.</p>
+<p><img src="wifi-options.png" alt="Web"></p>
+<p>Here you can set some options like :</p>
+<ul>
+<li>The broadcast channel of our Wi-Fi access point</li>
+<li>The authentication mode</li>
+<li>The SSID displayed</li>
+<li>If the SSID should be hidden</li>
+<li>Finally, the access point password.</li>
+</ul>
+<p>If you change some parameters, you must then deploy your changes with the <strong>DEPLOY</strong> button</p>
+<p><img src="wifi-options-config.png" alt="Web"></p>
+<ul>
+<li>DEPLOY : Allows you to deploy changes on your P4wnP1</li>
+<li>DEPLOY STORED : Allows to deploy a configuration already saved</li>
+<li>RESET : Apply the default configuration</li>
+<li>STORE : Allows to store a configuration to use it later</li>
+<li>LOAD STORED : Allows you to apply a saved configuration in the fields.</li>
+</ul>
+<h2 id="ssh">SSH</h2>
+<p>You can connect to your Raspberry via SSH by logging in with the account :</p>
+<ul>
+<li><code>root</code></li>
+<li><code>toor</code></li>
+</ul>
+<p><img src="ssh.png" alt="Connexion SSH"></p>
+<h2 id="hack-">Hack !</h2>
+<p>For the next step, I will make some tutorials soon on possible attacks with the P4wnP1 ALOA.<br>
+Stay tuned ;)</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/raspberry/p4wnp1/p4wnp1-install/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">#3 ret2libc exploit 32-bit linux</div>
+      </a>
+    </div>
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#p4wnp1-">P4wnp1 ?</a></li>
+    <li><a href="#prerequisite">Prerequisite</a></li>
+    <li><a href="#flash-of-the-image">Flash of the image</a></li>
+    <li><a href="#plug-the-pi-">Plug the pi !</a></li>
+    <li><a href="#wi-fi">Wi-Fi</a></li>
+    <li><a href="#interface-web">Interface Web</a></li>
+    <li><a href="#ssh">SSH</a></li>
+    <li><a href="#hack-">Hack !</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
+                </li>
+              
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;0123456789</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+<script type="text/javascript" defer src="/js/katex.min.js"></script>
+<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
