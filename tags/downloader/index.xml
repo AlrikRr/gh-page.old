@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Downloader on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/downloader/</link>
+    <description>Recent content in Downloader on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/downloader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>#1 VBS MP3 Downloader</title>
+      <link>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</guid>
+      <description>Identification    Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs     Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990   Size 71K   From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/    VBS - Code Hello There !
+Today we are going to check a VBS code and see what’s inside.
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</description>
+    </item>
+    
+  </channel>
+</rss>
