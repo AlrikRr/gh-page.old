@@ -6,8 +6,7 @@
     <description>Recent content in Loader on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/loader/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/loader/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Kardon Loader</title>
       <link>https://AlrikRr.github.io/posts/malware/investigations/kardon/</link>
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
@@ -17,6 +16,7 @@
  .text .rdata .data .reloc  Imports Interesting DLLs :
  urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
     </item>
+    
     
   </channel>
 </rss>

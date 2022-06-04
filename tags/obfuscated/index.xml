@@ -6,8 +6,7 @@
     <description>Recent content in Obfuscated on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/obfuscated/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/obfuscated/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>#1 VBS MP3 Downloader</title>
       <link>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</link>
       <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
@@ -17,6 +16,7 @@
 Today we are going to check a VBS code and see what’s inside.
 Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</description>
     </item>
+    
     
   </channel>
 </rss>

@@ -6,175 +6,189 @@
     <description>Recent content in Posts on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Resultados de Búsqueda</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+    <lastBuildDate>Sat, 04 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#1 Astable 555 Timer</title>
+      <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</link>
+      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>Este archivo existe únicamente para responder a la URL /search con la plantilla de diseño search relacionada.
-No se muestra ningún contenido aquí, todo el contenido se basa en la plantilla layouts/page/search.html
-Establecer una prioridad muy baja en el mapa del sitio le dirá a los motores de búsqueda que éste no es un contenido importante.
-Esta implementación utiliza Fusejs, jquery y mark.js
-Configuración inicial La búsqueda depende del tipo de contenido de salida adicional de JSON en config.</description>
+      <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</guid>
+      <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>#1 VBS MP3 Downloader</title>
+      <link>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</link>
+      <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</guid>
+      <description>Identification    Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs     Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990   Size 71K   From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/    VBS - Code Hello There !
+Today we are going to check a VBS code and see what’s inside.
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>Kardon Loader</title>
+      <link>https://AlrikRr.github.io/posts/malware/investigations/kardon/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/malware/investigations/kardon/</guid>
+      <description>Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>P4wnP1 Install</title>
+      <link>https://AlrikRr.github.io/posts/raspberry/p4wnp1/p4wnp1-install/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/raspberry/p4wnp1/p4wnp1-install/</guid>
+      <description>Hello! Today we are going to set up the Swiss army knife of the pentester.
+I&amp;rsquo;m talking about the P4wnP1 ALOA project from RoganDawes!
+Initially, the P4wnP1 project comes from MaMe82.Here I will show you how to install the A.L.O.A (A Little Offensive Appliance) version on your RaspberryPi Zero!
+The ALOA version is a bit easier to configure and has a graphical interface via a web server for payload configuration.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>#3 ret2libc exploit 32-bit linux</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</link>
+      <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</guid>
+      <description>ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
+There are several ways to bypass this protection (ROP, ret2plt, etc&amp;hellip;) but here we will focus on ret2libc.
+In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
+The idea is to go look for the functions that interest us in order to build an exploit.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>#2 ret2win exploit 32-bit linux</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</guid>
+      <description>ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
+The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
+In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
+Code Here is the code of the program we are going to use:</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>#1 Introduction to linux buffer-overflow 32-bit</title>
+      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</link>
+      <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</guid>
+      <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
+Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
+Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>Bellatrix - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</guid>
+      <description>NMAP Okay let&amp;rsquo;s start with the beginning !
+sudo nmap -A -sS bellatrix.vuln
+As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>Y0usef - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</guid>
+      <description>LEVEL : Easy
+TIME SPEND : 1h30
+LINK : y0usef 1
+ NMAP Welcome to a new writeup vulnhub.
+Let&amp;rsquo;s start with an nmap to list the services open on the machine.
+sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>Cuckoo sandbox install</title>
+      <link>https://AlrikRr.github.io/posts/malware/malware-tutorials/cuckoo-sandbox/</link>
+      <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/malware/malware-tutorials/cuckoo-sandbox/</guid>
+      <description>EDIT - 03/03/202021 : I upgrade the Windows 7 install for a Windows 10.
+Hello! it&amp;rsquo;s been a while since I&amp;rsquo;ve done a little tutorial on my blog!
+Today we&amp;rsquo;re going to see how to install and configure cuckoo sandbox for dynamic analysis on a Windows 10 machine!
+INFO : I made this tutorial on a Ubuntu 20.04 updated machine and virtualbox 6.1. You may have version problems depending on the packages you are going to install.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>How to install NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/</guid>
+      <description>Special thanks to Rayan Lahfa
+ISO &amp;amp; VBOX configuration This tutorial was realized with a virtual environment using VirtualBox, don&amp;rsquo;t forget to activate the EFI option into your VM configuration.
+You can download the official NIXOS ISO here : nixos.org/download
+Don&amp;rsquo;t hesitate to read the wiki here : nixos.org
+Installation If you have any issue, Google is your friend
+For this install, I used a Virtual Disk of 25GiB.
+# Display NixOS Wiki $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</description>
     </item>
     
     <item>
-      <title>Search Results</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>How to configure NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-conf/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-conf/</guid>
+      <description>Basic setup file The NixOS configuration file can be found in /etc/nixos/configuration.nix.
+It is recommended to understand the configuration file before pasting it supidly into your own, there are some options to change and configure by yourself !
+# Edit this configuration file to define what should be installed on # your system. Help is available in the configuration.nix(5) man page # and in the NixOS manual (accessible by running ‘nixos-help’).</description>
     </item>
     
     <item>
-      <title>অনুসন্ধানের ফলাফল</title>
-      <link>https://AlrikRr.github.io/search/</link>
-      <pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate>
+      <title>How to setup Wireguard NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/search/</guid>
-      <description>This file exists solely to respond to /search URL with the related search layout template.
-No content shown here is rendered, all content is based in the template layouts/page/search.html
-Setting a very low sitemap priority will tell search engines this is not important content.
-This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</guid>
+      <description>Special thnks to Rayan Lahfa
+and Klaes ;)
+ Wiki ! You can use the default configuration file : Nixos-Wireguard
+Install &amp;amp; setup First, you need to install wireguard using :
+$ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
+$ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</description>
     </item>
+    
+    <item>
+      <title>How to setup your SSH on NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</guid>
+      <description>SSH configuration TO change the confguration of you SSH, you have to edit your configuration.nix.
+You cannot edit the default ssh file located in /etc/ssh/sshd_config.
+Enable openssh First, you need to enable the OpenSSH Daemon.
+[...] # List services that you want to enable: services.openssh.enable = true; [...] Enable root login For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.</description>
+    </item>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
   </channel>
 </rss>

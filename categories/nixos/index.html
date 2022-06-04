@@ -12,11 +12,12 @@
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
-<link rel="stylesheet" href="/css/katex.min.css">
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
 
 
 
@@ -30,13 +31,13 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
 
 <meta property="og:title" content="NixOS" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://AlrikRr.github.io/categories/nixos/" />
-
+<meta property="og:updated_time" content="2020-06-19T00:00:00+00:00" />
 
 
     
@@ -49,8 +50,11 @@
 
 
     
-    
-  </head>
+
+
+
+
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -92,7 +96,7 @@
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -106,10 +110,10 @@
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -137,6 +141,11 @@
 
   
   
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/categories/8bits-computer/" data-taxonomy-term="8bits-computer"><span class="taxonomy-label">8bits-computer</span></a></li>
         
           
             
@@ -219,7 +228,7 @@ You can download the official NIXOS ISO here : nixos.org/download
 Don&rsquo;t hesitate to read the wiki here : nixos.org
 Installation If you have any issue, Google is your friend
 For this install, I used a Virtual Disk of 25GiB.
-# Display NixOS Wiki  $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP  $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition  $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
+# Display NixOS Wiki $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
       </div>
       <div class="card-footer">
         <span class="float-left">June 19, 2020</span>
@@ -296,6 +305,8 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
     </div>
     <div class="paginator">
       
+
+
     </div>
   </div>
 </section>
@@ -316,6 +327,7 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
 
 
 
+
   
       
   
@@ -334,6 +346,9 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
 
   
   
+
+  
+  
     
     
       
@@ -360,7 +375,7 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -422,6 +437,9 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
                   <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -432,8 +450,8 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
           <ul>
             
               
-                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
                 </a></li>
               
             
@@ -455,7 +473,7 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -483,13 +501,12 @@ Enable openssh First, you need to enable the OpenSSH Daemon.
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
-<script type="text/javascript" defer src="/js/katex.min.js"></script>
-<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-
 
     
     
     <script src="/js/list.js"></script>
 
-  </body>
+
+    
+</body>
 </html>

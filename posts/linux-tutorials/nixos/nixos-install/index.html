@@ -12,11 +12,12 @@
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
-<link rel="stylesheet" href="/css/katex.min.css">
 
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
 
 
 
@@ -30,15 +31,14 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
 
 <meta property="og:title" content="How to install NixOS" />
 <meta property="og:description" content="Install for beginners - LUKS, EFI &amp; BTRFS" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-install/" />
 <meta property="article:published_time" content="2020-06-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
-
 
 
     
@@ -56,8 +56,11 @@
 
 
     
-    
-  </head>
+
+
+
+
+</head>
 
   <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
     <div class="container-fluid bg-dimmed wrapper">
@@ -99,7 +102,7 @@
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -113,10 +116,10 @@
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -198,6 +201,47 @@
   
     
     <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/">8 Bits Computer</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/part1-clock/">Part 1 - Clock Module</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/1-astable555timer/" title="#1 Astable 555 Timer">#1 Astable 555 Timer</a></li>
   
 
 
@@ -458,9 +502,9 @@
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/adrien_hue057c72a062dceffbfaeb885c9554130_147455_120x120_fit_box_3.png' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_2.png' alt="Author Image">
           <h5 class="author-name">Adrien Lasalle</h5>
-          <p>Friday, June 19, 2020</p>
+          <p>:date_full</p>
         </div>
 
         <div class="title">
@@ -477,7 +521,7 @@ Don&rsquo;t hesitate to read the <strong>wiki</strong> here : <a href="https://n
 <h2 id="installation">Installation</h2>
 <p><em>If you have any issue, Google is your friend</em></p>
 <p>For this install, I used a Virtual Disk of 25GiB.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Display NixOS Wiki </span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Display NixOS Wiki</span> 
 $ nixos-help  
 
 <span style="color:#75715e"># If you need to change the keyboard layout, use this command with you contry code</span>
@@ -490,7 +534,7 @@ $ sudo -i
 <span style="color:#75715e"># Display disks name and partitions</span>
 $ lsblk  
 
-<span style="color:#75715e"># Open  parted tool and free 2GB for the SWAP  </span>
+<span style="color:#75715e"># Open  parted tool and free 2GB for the SWAP</span>  
 $ parted /dev/sda -- mklabel gpt  
 $ parted /dev/sda -- mkpart primary 512MiB -2GiB  
 $ parted /dev/sda -- mkpart primary -2GiB 100%  
@@ -499,7 +543,7 @@ $ parted /dev/sda -- mkpart primary -2GiB 100%
 $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB  
 $ parted /dev/sda -- set <span style="color:#ae81ff">3</span> boot on  
 
-<span style="color:#75715e"># Encryption of the root partition  </span>
+<span style="color:#75715e"># Encryption of the root partition</span>  
 $ cryptsetup luksFormat /dev/sda1
 $ cryptsetup luksOpen /dev/sda1 nixos-root
 
@@ -550,7 +594,7 @@ $ nixos-generate-config --root /mnt
 $ nixos-install
 </code></pre></div><h2 id="basic-commands">Basic commands</h2>
 <p>Hare are some basic commands for surviving on NixOS :</p>
-<pre tabindex="0"><code class="language-bash/shell" data-lang="bash/shell"># Rebuild the OS, this command will take a &quot;snapshot&quot; of all your nixos files.
+<pre><code class="language-bash/shell" data-lang="bash/shell"># Rebuild the OS, this command will take a &quot;snapshot&quot; of all your nixos files.
 # This way in cas of issues on a nixos configuration, you will be able to 
 # go back to a previous build.
 $ nixos-rebuild switch
@@ -624,6 +668,9 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
   
 
   
+  
+
+  
     
     
   
@@ -681,6 +728,7 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
 
       
       
+
       
       
 
@@ -726,6 +774,7 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
 
 
 
+
   
       
   
@@ -744,6 +793,9 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
 
   
   
+
+  
+  
     
     
       
@@ -770,7 +822,7 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
   
   
 
-  <footer class="container-fluid text-center align-content-center footer pb-2">
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
       <div class="row text-left">
         
@@ -832,6 +884,9 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
                   <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
                 </li>
               
+            
+              
+            
           </ul>
           
         </div>
@@ -842,8 +897,8 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
           <ul>
             
               
-                <li><a href=mailto:alrikrr.contact@protonmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>alrikrr.contact@protonmail.com</span>
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
                 </a></li>
               
             
@@ -865,7 +920,7 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -893,9 +948,6 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
 
-<script type="text/javascript" defer src="/js/katex.min.js"></script>
-<script type="text/javascript" defer src="/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-
 
     
     
@@ -906,5 +958,13 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
 </script>
 
 
-  </body>
+
+
+
+
+
+
+
+    
+</body>
 </html>
