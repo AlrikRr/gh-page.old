@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monostable on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/monostable/</link>
+    <description>Recent content in Monostable on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/monostable/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#2 Monostable 555 Timer</title>
+      <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</guid>
+      <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+    </item>
+    
+    
+  </channel>
+</rss>

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#2 Monostable 555 Timer</title>
+      <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</guid>
+      <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+    </item>
+    
+    <item>
       <title>#1 Astable 555 Timer</title>
       <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</link>
       <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
@@ -86,18 +96,6 @@ Why ?  To crash an application (a DOS) Have a shell with privileged rights To st
     </item>
     
     <item>
-      <title>Bellatrix - easy</title>
-      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</guid>
-      <description>NMAP Okay let&amp;rsquo;s start with the beginning !
-sudo nmap -A -sS bellatrix.vuln
-As we can see, there are two main services :
-   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
-    </item>
-    
-    <item>
       <title>Y0usef - easy</title>
       <link>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</link>
       <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
@@ -110,6 +108,18 @@ LINK : y0usef 1
 Let&amp;rsquo;s start with an nmap to list the services open on the machine.
 sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
    PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</description>
+    </item>
+    
+    <item>
+      <title>Bellatrix - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</guid>
+      <description>NMAP Okay let&amp;rsquo;s start with the beginning !
+sudo nmap -A -sS bellatrix.vuln
+As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
     </item>
     
     <item>
