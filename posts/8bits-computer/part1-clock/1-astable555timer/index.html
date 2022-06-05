@@ -522,10 +522,10 @@
 <h2 id="555-timer---overview">555 Timer - Overview</h2>
 <p><strong>Definition</strong>:<br>
 The 555 timer IC is an integrated circuit (chip) used in a variety of timer, delay, pulse generation, and oscillator applications.</p>
-<p>In this project, the 555 timer will be usefull on all the mods.</p>
+<p>In this project, the 555 timer will be useful on all the mods.</p>
 <h3 id="datasheets">Datasheets</h3>
-<p>The datasheet of thie 555 timer is available here : <a href="https://www.ti.com/lit/ds/symlink/lm555.pdf">Datasheet 555 Timer PDF</a><br>
-Page 3 you can have  a look at the PINs number and usage.</p>
+<p>The datasheet of this 555 timer is available here: <a href="https://www.ti.com/lit/ds/symlink/lm555.pdf">Datasheet 555 Timer PDF</a>.
+Page 3 you can have a look at the PINs number and usage.</p>
 <ul>
 <li>1 : GND</li>
 <li>2 : Trigger</li>
@@ -542,7 +542,7 @@ Here is the list of the components:</p>
 <ul>
 <li>1 Mf capacitor</li>
 <li>1 Led</li>
-<li>1 220 resitor</li>
+<li>1 220 resistor</li>
 <li>1 1k resistor</li>
 <li>1 100k resistor</li>
 <li>1 555 Timer</li>
@@ -568,7 +568,7 @@ Here is the list of the components:</p>
 >
 
 <p>This simple circuit will made the LED blink with 1 or 2 second interval, but how does it really wokr inside this 555 timer ?</p>
-<p>Here is a simplify schema of this circuit and the inside of the 555 timer.</p>
+<p>Here is a simplified schema of this circuit and the inside of the 555 timer.</p>
 <img src="schema.png"
     
         alt="Simple circuit"
@@ -585,7 +585,7 @@ Here is the list of the components:</p>
     
 >
 
-<p>We can see a clear Path inside with 5v at the topm then 3 5k resistors and then GND at the end. This Path is used to create a volatge dividerm so that way the voltage will be divided like so:
+<p>We can see a clear Path inside with 5v at the top, then 3 5k resistors then GND at the end. This Path is used to create a voltage divider, so that way the voltage will be divided like so:
 <img src="schema-2.png"
     
         alt="Simple circuit"
@@ -602,11 +602,11 @@ Here is the list of the components:</p>
     
 >
 </p>
-<p>Som the first stage is 1,67v and then the second stage is 3,33v then on top we got 5v. The Voltage value setup the inputs for the 2 comparators just before the SR Latch.</p>
+<p>Som the first stage is 1,67v and then the second stage is 3,33v then on top we got 5v. The Voltage value set up the inputs for the 2 comparators just before SR Latch.</p>
 <h4 id="comparators">Comparators</h4>
 <ul>
-<li>If the positive input is above the negative input the comparator swith to ON (1)</li>
-<li>If the positive input is below the negative input the switch turn OFF (0)</li>
+<li>If the positive input is above the negative input the comparator switch to ON (1)</li>
+<li>If the positive input is below the negative input the switch turns OFF (0)</li>
 </ul>
 <img src="schema-3.png"
     
@@ -629,9 +629,9 @@ Here is the list of the components:</p>
 </div>
 
 <p>From PIN 2 (red) 0v go to the first comparator and since 0v is below 1,67vm the comparator is going to be turn ON and trigger the SET (S) PIN of the SR Latch. The SET is ON so it will trigger the output to the LED and turn it ON.</p>
-<p>From PIN 6 (blue) 0v go to the second comparator but here 0v is below 3,33v so the comparator will not trigger the R pin of the SR Latch,</p>
+<p>From PIN 6 (blue) 0v go to the second comparator but here 0v is below 3,33v so the comparator will not trigger the R pin of SR Latch,</p>
 <div class="alert alert-info">
-    <strong>As you may notice, the two comparators are not setup the same way, see the negative input of the second one is set to 3,33v and the potivite input of the first one is set to 1,67. It&rsquo;s like a boolean stuff you know.</strong>
+    <strong>As you may notice, the two comparators are not set up the same way, see the negative input of the second one is set to 3,33v and the positive input of the first one is set to 1,67. It&rsquo;s like boolean stuff you know.</strong>
 </div>
 
 <h4 id="stage-change">Stage change</h4>
@@ -656,8 +656,8 @@ Here is the list of the components:</p>
 >
 
 <p>The capacitor (1MF) will charge the current until it reach 1,67v. Then it&rsquo;s going to set the first comparator to 0.</p>
-<p>The current will charge until 3,33v then turn the second capacitor to ON, so that way the LED is OFF and the current flow to through the R PIN of the SR Latch to the Discharge part of the 555 timer.</p>
-<p>The output (Green) is going to be RESET and the current will flow to the discharger through the 1k resistor. The capacitor will also discharge itself to the discharger. In green you can see the discharge Path.</p>
+<p>The current will charge until 3,33v then turn the second capacitor to ON, so that way the LED is OFF and the current flow through the R PIN of SR Latch to the Discharge part of the 555 timer.</p>
+<p>The output (Green) is going to be RESET and the current will flow to the discharger through the 1k resistor. The capacitor will also discharge itself to the discharger. In green, you can see the discharge Path.</p>
 <p>It is much more understandable to see the output on the schema below:</p>
 <img src="output-1.png"
     
@@ -676,7 +676,7 @@ Here is the list of the components:</p>
 >
 
 <p>The output 1 is the state of the LED, 1 ON and 0 off.</p>
-<p>Som the current is RESET at 3,33v and it will reduce until to be below 1,67v. Now the first comparator will be turn ON and the LED too.</p>
+<p>Som the current is RESET at 3,33v and it will reduce until it is below 1,67v. Now the first comparator will be turned ON and the LED too.</p>
 <p>Here is the full output after a few second:</p>
 <img src="output-2.png"
     
@@ -695,14 +695,14 @@ Here is the list of the components:</p>
 >
 
 <h3 id="timing">Timing</h3>
-<p>Depending of the resistors and capacitor value (on the circuit not inside the 555 timer) you can manipulate the discharge timing so it can take more or less time.</p>
+<p>Depending on the resistors and capacitor value (on the circuit not inside the 555 timer) you can manipulate the discharge timing so it can take more or less time.</p>
 <p>In the datasheet, this part is detailed with calculus (page 11)</p>
 <h3 id="reduce-the-noise">Reduce the noise</h3>
 <div class="alert alert-info">
-    <strong>The following screen shot have been done using Ben Eater&rsquo;s video since I don&rsquo;t have an oscillator at home.</strong>
+    <strong>The following screenshot has been done using Ben Eater&rsquo;s video since I don&rsquo;t have an oscillator at home.</strong>
 </div>
 
-<p>For more precision on the output we must add ceramic capacitor next to the component si this will reduce the noise between the reset and the output. You can see the noise using an oscilloscope like so :</p>
+<p>For more precision on the output we must add a ceramic capacitor next to the component si this will reduce the noise between the reset and the output. You can see the noise using an oscilloscope like so :</p>
 <p>Here is an example RAW without zooming.</p>
 <img src="noise-1.png"
     
@@ -772,8 +772,8 @@ Here is the list of the components:</p>
 >
 
 <h3 id="protect-reset-pin">Protect RESET PIN</h3>
-<p>The documentation of the 555 Timer recommand to attach the PIN 4 to 5v to avoid any RESET by mistake.</p>
-<p>PIN 4 is connected inside to the SR Latch and can RESET manually this one, so that&rsquo;s why it is recommanded to link the PIN 4 to 5v.</p>
+<p>The documentation of the 555 Timer recommend attaching the PIN 4 to 5v to avoid any RESET by mistake.</p>
+<p>PIN 4 is connected inside to SR Latch and can RESET manually this one, so that&rsquo;s why it is recommended to link the PIN 4 to 5v.</p>
 <img src="reset.png"
     
         alt="Simple circuit"
@@ -795,8 +795,8 @@ Here is the list of the components:</p>
 </div>
 
 <h2 id="control-the-speed">Control the Speed</h2>
-<p>You can add a variable resistor and remove the 100k resistor to control the speed changing the resistor value.</p>
-<p>We need to add a 1k resistor between PIN 7 and the variable resitor to avoid any bypass of the discharge through the dischargerm that way it will pass by the resistor and take his time to discharge.</p>
+<p>You can add a variable resistor and remove the 100k resistor to control the speed of changing the resistor value.</p>
+<p>We need to add a 1k resistor between PIN 7 and the variable resistor to avoid any bypass of the discharge through the discharger, that way it will pass by the resistor and take its time to discharge.</p>
 <img src="speed.png"
     
         alt="Simple circuit"
@@ -813,7 +813,7 @@ Here is the list of the components:</p>
     
 >
 
-<p>You have now a good look at the first mod of this circuit !</p>
+<p>You have now a good look at the first mod of this circuit!</p>
 <h2 id="demo">Demo</h2>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -828,6 +828,42 @@ Here is the list of the components:</p>
         
         <div class="col-md-6 share-buttons">
         
+            <strong>Share on:</strong>
+            
+            <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            
+            
+                <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f&text=%231%20Astable%20555%20Timer&via=AlrikRr%27s%20Blog" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+            
+            
+                <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f&title=%231%20Astable%20555%20Timer" target="_blank">
+                  <i class="fab fa-reddit"></i>
+                </a>
+            
+            
+            
+            
+                <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f&title=%231%20Astable%20555%20Timer" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+            
+            
+             
+            
+                 <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=%231%20Astable%20555%20Timer https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+            
+            
+                <a class="btn btn-sm email-btn" href="mailto:?subject=%231%20Astable%20555%20Timer&body=https%3a%2f%2fAlrikRr.github.io%2fposts%2f8bits-computer%2fpart1-clock%2f1-astable555timer%2f" target="_blank">
+                  <i class="fas fa-envelope-open-text"></i>
+                </a>
+            
+          
           </div>
 
         
@@ -1146,7 +1182,7 @@ Here is the list of the components:</p>
             Toha
           </a>
         </div>
-        <div class="col-md-4 text-center">© 2022 Copyright.</div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
         <div class="col-md-4 text-right">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
