@@ -6,10 +6,20 @@
     <description>Recent content in 8bits-computer on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/categories/8bits-computer/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 05 Jun 2022 17:27:47 -0400</lastBuildDate><atom:link href="https://AlrikRr.github.io/categories/8bits-computer/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#3 Bistable 555 Timer</title>
+      <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/3-bistable555timer/</link>
+      <pubDate>Sun, 05 Jun 2022 17:27:47 -0400</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/3-bistable555timer/</guid>
+      <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+    </item>
+    
+    <item>
       <title>#2 Monostable 555 Timer</title>
       <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</link>
-      <pubDate>Sun, 05 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Jun 2022 09:27:47 -0400</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
@@ -19,7 +29,7 @@
     <item>
       <title>#1 Astable 555 Timer</title>
       <link>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</link>
-      <pubDate>Sat, 04 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Jun 2022 10:27:47 -0400</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
