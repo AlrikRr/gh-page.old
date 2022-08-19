@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#1 Setup the Domain and Workstations</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
+
+<meta property="og:title" content="#1 Setup the Domain and Workstations" />
+<meta property="og:description" content="Build your domain controller and link the first client" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/" />
+<meta property="article:published_time" content="2022-08-10T12:00:00-04:00" />
+<meta property="article:modified_time" content="2022-08-10T12:00:00-04:00" />
+
+
+    
+    
+<meta name="description" content="Build your domain controller and link the first client" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/vbs-mp3-downloader-1/" title="#1 VBS MP3 Downloader">#1 VBS MP3 Downloader</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/">8 Bits Computer</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/part1-clock/">Part 1 - Clock Module</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/1-astable555timer/" title="#1 Astable 555 Timer">#1 Astable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/2-monostable555timer/" title="#2 Monostable 555 Timer">#2 Monostable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/3-bistable555timer/" title="#3 Bistable 555 Timer">#3 Bistable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/4-clocklogic/" title="#4 Clock Logic">#4 Clock Logic</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/active-directory/">Active Directory Posts</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/active-directory/build-training-lab/">Build your Training Lab</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/active-directory/build-training-lab/1-domain/" title="#1 Setup the Domain and Workstations">#1 Setup the Domain and Workstations</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/active-directory/ad-attacks/" title="Hacking &amp; Attacks">Hacking &amp; Attacks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">Linux Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/">Write-Up</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/binary-exploitation/">Binary exploitation</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/binary-exploitation/binary-tutorials/">Binary Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit">#1 Introduction to linux buffer-overflow 32-bit</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/ret-2-win/" title="#2 ret2win exploit 32-bit linux">#2 ret2win exploit 32-bit linux</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux">#3 ret2libc exploit 32-bit linux</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/">Raspberry Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/p4wnp1/">P4wnP1</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/raspberry/p4wnp1/p4wnp1-install/" title="P4wnP1 Install">P4wnP1 Install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/banner.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_2.png' alt="Author Image">
+          <h5 class="author-name">Adrien Lasalle</h5>
+          <p>:date_full</p>
+        </div>
+
+        <div class="title">
+          <h1>#1 Setup the Domain and Workstations</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <blockquote>
+<p><code>Disclaimer</code> : I&rsquo;m following the amazing series of video from <a href="https://www.youtube.com/c/JohnHammond010">John Hammond</a>! I&rsquo;ll edit as much as possible the code and not try to copy paste John&rsquo;s work 😊</p>
+</blockquote>
+<div class="alert alert-info">
+    <strong>All the code and information are available on my github repo : <a href="https://github.com/AlrikRr/ActiveDirectory_Lab">AlrikRr/ActiveDirectory_Lab</a><br>
+Leave a ⭐ and follow !</strong>
+</div>
+
+<h2 id="prerequisite">Prerequisite</h2>
+<p>Here is the list of stuff you&rsquo;ll need to build this training lab on your own:</p>
+<ul>
+<li>Good PC (At least 16GB of RAM and 500GB SSD)</li>
+<li>ISO files for Windows 11 and Windows Server 2022</li>
+<li>VMWare workstation</li>
+</ul>
+<h3 id="network-schema">Network Schema</h3>
+<p><strong>Domain Controller</strong>:</p>
+<ul>
+<li>Windows Server 2022 CORE (no GUI)</li>
+<li>DC01.NERV.COM / Main DC and Main DNS</li>
+<li>192.168.100.50 (Static IP)</li>
+</ul>
+<p><strong>Workstation</strong>:</p>
+<ul>
+<li>Windows 11</li>
+<li>WS01.NERVE.COM</li>
+<li>192.168.100.0/24</li>
+</ul>
+<p><strong>Management</strong>:</p>
+<ul>
+<li>Not In the Domain</li>
+<li>192.168.100.0/24</li>
+<li>192.168.2.0/24 (My own network)</li>
+</ul>
+<h3 id="template-vm-and-cloning">Template VM and cloning</h3>
+<p>First thing to do is building your template VM using VMWare so you&rsquo;ll be able to clone and create machines as you wich and skipping the install part.<br>
+To do so, I would recommand you to install first a Windows Server 2022 till the configuration of the Administrator password</p>
+<img src="vmware_basetemplate.PNG"
+    
+        alt="Simple circuit"
+    
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h2 id="setup-pssessions">Setup PSSessions</h2>
+<p>From the management Computer, we are going to use PSSESSION to <strong>manage remotely the DC</strong>. First you need to add the DC ip in the trusted hosts list:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Start-Service WinRM
+Set-Item WSMan:localhost<span style="color:#ae81ff">\c</span>lient<span style="color:#ae81ff">\t</span>rustedhosts -Value 192.168.100.50
+</code></pre></div><p>Next, start a new session using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">New-PSSession -ComputerName 192.168.100.50 -Credential <span style="color:#f92672">(</span>Get-Credential<span style="color:#f92672">)</span>
+Enter-PSSession &lt;ID&gt;
+</code></pre></div><p>Add the ID of the PSSession.</p>
+<p>Or you can save the Session using this command:</p>
+<p><img src="pssession.png"
+    
+        alt="New PSSession"
+    
+    
+    
+    
+    
+        class="center"
+    
+>
+
+_
+<img src="pssession_saved.png"
+    
+        alt="PSSession Saved"
+    
+    
+    
+    
+    
+        class="center"
+    
+>
+
+_
+<img src="pssession_enter.png"
+    
+        alt="Enter PSSession"
+    
+    
+    
+    
+    
+        class="center"
+    
+>
+</p>
+<h2 id="install-the-dc">Install the DC</h2>
+<p>If youre are not in configuration mode, just use it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sconfig
+&lt;6&gt; Update Server
+&lt;13&gt; Reboot 
+</code></pre></div><h3 id="install-vm-tools">Install VM Tools</h3>
+<p>Use VMWare to install the vmware tools and go in the disk</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd D:<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>./setup64.exe
+</code></pre></div><p>Then don&rsquo;t forget to change the DC name, here DC01:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;2&gt; Change Computer Name
+Set-SConfig -AutoLaunch $false
+</code></pre></div><h3 id="configure-network-interfaces">Configure Network Interfaces</h3>
+<p>It is very important to setup a static IP for your Domain Controller since it will be used as a default DNS server for your Domain:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
+&lt;Select Network Interface <span style="color:#ae81ff">1</span> - 192.168.100.0&gt;
+&lt;Change Address STATIC&gt;
+&lt;192.168.100.50/255.255.255.0/GW:192.168.100.2&gt;
+</code></pre></div><p>Then change the DNS server to the domain controller IP:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
+&lt;Change Default DNS Address&gt;
+&lt;192.168.100.50&gt;
+</code></pre></div><h3 id="install-forest">Install Forest</h3>
+<p>Once the Server is setup with basic information, do not hesitate to take a snapshot before installing the features.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-WindowsFeature | ? <span style="color:#f92672">{</span>$_.Name -LIKE <span style="color:#e6db74">&#34;ad*&#34;</span><span style="color:#f92672">}</span>
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+</code></pre></div><p>Create your forest</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Import-Module ADDSDeployment
+Install-ADDSForest
+</code></pre></div><p>Press Y then the forest name, here <strong>nerv.com</strong> and then the same password as the current Adminitrator. Press Y Again.</p>
+<p>Once the server reboot, you need to change the DNS and add the IP of the DC (Like we did before but since we install the domain, the DNS was changed).</p>
+<h3 id="remove-password-complexity">Remove Password Complexity</h3>
+<p>It is usefull to remove the password complexity here since we are going to create weak username and password.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">secedit /export /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg
+<span style="color:#f92672">(</span>gc C:<span style="color:#ae81ff">\s</span>ecpol.cfg<span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PasswordComplexity = 1&#34;</span>, <span style="color:#e6db74">&#34;PasswordComplexity = 0&#34;</span><span style="color:#f92672">)</span> | Out-File C:<span style="color:#ae81ff">\s</span>ecpol.cfg
+secedit /configure /db c:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ecurity<span style="color:#ae81ff">\l</span>ocal.sdb /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg /areas SECURITYPOLICY
+rm -force c:<span style="color:#ae81ff">\s</span>ecpol.cfg -confirm:$false
+</code></pre></div><h2 id="workstation-setup">WorkStation Setup</h2>
+<p>First install a local Windows 10 or 11 and create a local administrator.</p>
+<p>Once installed, take a snapshot before putting the client into the domaine, that way you&rsquo;ll be able to clone the machine for other workstations.
+Do not forget to change the name of the machine : WS01</p>
+<h3 id="link-the-workstation">Link the Workstation</h3>
+<p>Before using the &ldquo;Access Work or School&rdquo; feature form the the WorkStation, you need to change the DNS address to you Domain Controller.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-DnsClientServerAddress
+Set-DnsClientServerAddress -InterfaceIndex <span style="color:#ae81ff">3</span> -ServerAddresses 192.168.100.50
+</code></pre></div><p>Once it is done, you just need to search &ldquo;Access Work or Schooll&rdquo; feature on task bar and then use the domain name as local domain.<br>
+Or you can use this command :</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Add-Computer -DomainName nerv.com -Credential nerv<span style="color:#ae81ff">\A</span>dministrateur -Force -Restart
+</code></pre></div><p>Take a snapshot of the DC01 and the WS01 once it is joined BEFORE adding the random users so you can go back anytime you want.</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+            <strong>Share on:</strong>
+            
+            <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            
+            
+                <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f&text=%231%20Setup%20the%20Domain%20and%20Workstations&via=AlrikRr%27s%20Blog" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+            
+            
+                <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f&title=%231%20Setup%20the%20Domain%20and%20Workstations" target="_blank">
+                  <i class="fab fa-reddit"></i>
+                </a>
+            
+            
+            
+            
+                <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f&title=%231%20Setup%20the%20Domain%20and%20Workstations" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+            
+            
+             
+            
+                 <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=%231%20Setup%20the%20Domain%20and%20Workstations https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+            
+            
+                <a class="btn btn-sm email-btn" href="mailto:?subject=%231%20Setup%20the%20Domain%20and%20Workstations&body=https%3a%2f%2fAlrikRr.github.io%2fposts%2factive-directory%2fbuild-training-lab%2f1-domain%2f" target="_blank">
+                  <i class="fas fa-envelope-open-text"></i>
+                </a>
+            
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/active-directory/build-training-lab/1-domain/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/8bits-computer/part1-clock/4-clocklogic/" title="#4 Clock Logic" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">#4 Clock Logic</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/active-directory/ad-attacks/" title="Hacking &amp; Attacks" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Hacking &amp; Attacks</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#prerequisite">Prerequisite</a>
+      <ul>
+        <li><a href="#network-schema">Network Schema</a></li>
+        <li><a href="#template-vm-and-cloning">Template VM and cloning</a></li>
+      </ul>
+    </li>
+    <li><a href="#setup-pssessions">Setup PSSessions</a></li>
+    <li><a href="#install-the-dc">Install the DC</a>
+      <ul>
+        <li><a href="#install-vm-tools">Install VM Tools</a></li>
+        <li><a href="#configure-network-interfaces">Configure Network Interfaces</a></li>
+        <li><a href="#install-forest">Install Forest</a></li>
+        <li><a href="#remove-password-complexity">Remove Password Complexity</a></li>
+      </ul>
+    </li>
+    <li><a href="#workstation-setup">WorkStation Setup</a>
+      <ul>
+        <li><a href="#link-the-workstation">Link the Workstation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Education</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
+                </a></li>
+              
+            
+              
+                <li><span><i class="fas fa-phone-alt"></i></span> <span>&#43;0123456789</span></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

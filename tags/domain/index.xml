@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Domain on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/domain/</link>
+    <description>Recent content in Domain on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Aug 2022 12:00:00 -0400</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/domain/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#1 Setup the Domain and Workstations</title>
+      <link>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</link>
+      <pubDate>Wed, 10 Aug 2022 12:00:00 -0400</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</guid>
+      <description>Disclaimer : I&amp;rsquo;m following the amazing series of video from John Hammond! I&amp;rsquo;ll edit as much as possible the code and not try to copy paste John&amp;rsquo;s work 😊
+ All the code and information are available on my github repo : AlrikRr/ActiveDirectory_Lab
+Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;ll need to build this training lab on your own:
+ Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Windows Server 2022 VMWare workstation  Network Schema Domain Controller:</description>
+    </item>
+    
+    
+  </channel>
+</rss>
