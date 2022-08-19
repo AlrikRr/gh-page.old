@@ -21,6 +21,11 @@
 
 
 
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
 
   
 
@@ -31,7 +36,7 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
 
 <meta property="og:title" content="Search Results" />
 <meta property="og:description" content="This file exists solely to respond to /search URL with the related search layout template.
@@ -40,9 +45,10 @@ Setting a very low sitemap priority will tell search engines this is not importa
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&ldquo;HTML&rdquo;, &ldquo;JSON&rdquo;] ```" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://AlrikRr.github.io/search/" />
+<meta property="og:url" content="https://AlrikRr.github.io/search/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2010-06-08T08:06:25+06:00" />
 <meta property="article:modified_time" content="2010-06-08T08:06:25+06:00" />
+
 
 
     
@@ -101,7 +107,7 @@ Initial setup Search depends on additional output content type of JSON in config
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -110,15 +116,37 @@ Initial setup Search depends on additional output content type of JSON in config
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -754,7 +782,7 @@ Initial setup Search depends on additional output content type of JSON in config
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -781,6 +809,12 @@ Initial setup Search depends on additional output content type of JSON in config
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
 
 
     

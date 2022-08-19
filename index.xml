@@ -6,16 +6,16 @@
     <description>Recent content on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Aug 2022 12:00:00 -0400</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Fri, 19 Aug 2022 11:00:00 -0400</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>#1 Setup the Domain and Workstations</title>
       <link>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</link>
-      <pubDate>Wed, 10 Aug 2022 12:00:00 -0400</pubDate>
+      <pubDate>Fri, 19 Aug 2022 11:00:00 -0400</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of video from John Hammond! I&amp;rsquo;ll edit as much as possible the code and not try to copy paste John&amp;rsquo;s work 😊
- All the code and information are available on my github repo : AlrikRr/ActiveDirectory_Lab
-Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;ll need to build this training lab on your own:
- Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Windows Server 2022 VMWare workstation  Network Schema Domain Controller:</description>
+All the code and information are available on my github repo : AlrikRr/ActiveDirectory_Lab
+Leave a ⭐ and follow ! Prerequisite Here is the list of stuff you&amp;rsquo;ll need to build this training lab on your own:
+Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Windows Server 2022 VMWare workstation Network Schema Domain Controller:</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;l
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/4-clocklogic/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@ Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;l
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/3-bistable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;l
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -55,7 +55,7 @@ Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;l
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -64,9 +64,11 @@ Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;l
       <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</guid>
-      <description>Identification    Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs     Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990   Size 71K   From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/    VBS - Code Hello There !
+      <description>Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
 Today we are going to check a VBS code and see what’s inside.
-Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</description>
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
+VirusTotal
+Clear code - comments First we need to clear the comment since there are a lot of these in the code.</description>
     </item>
     
     <item>
@@ -75,9 +77,9 @@ Here is the VT result, only 17 EDR trigger this file as malicious. We can see so
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/malware/investigations/kardon/</guid>
-      <description>Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
- .text .rdata .data .reloc  Imports Interesting DLLs :
- urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
+      <description>Identification Name kardon.exe Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400 FileType PE 32 bit TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29 FileSize 10KB ImageBase 000011AD EntryPoint(RVA) 00400000 VA(IB+RVA) 004011AD Sections There are 4 sections :
+.text .rdata .data .reloc Imports Interesting DLLs :
+urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.dll: GetCommandLineA(), MoveFileExA(), WinExec(), GetCurrentProcess(), etc. ADVAPI32.dll: RegCreateKeyA(), RegSetValueExA(), etc. 💡 The identification of the malware is done, we have a better understanding of the malware at the moment.</description>
     </item>
     
     <item>
@@ -124,22 +126,7 @@ Code Here is the code of the program we are going to use:</description>
       <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</guid>
       <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
 Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
-Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
-    </item>
-    
-    <item>
-      <title>Y0usef - easy</title>
-      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</guid>
-      <description>LEVEL : Easy
-TIME SPEND : 1h30
-LINK : y0usef 1
- NMAP Welcome to a new writeup vulnhub.
-Let&amp;rsquo;s start with an nmap to list the services open on the machine.
-sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
-   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</description>
+Why ? To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
     </item>
     
     <item>
@@ -151,7 +138,24 @@ sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services
       <description>NMAP Okay let&amp;rsquo;s start with the beginning !
 sudo nmap -A -sS bellatrix.vuln
 As we can see, there are two main services :
-   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
+PORT Status Banner 22 OPEN OpenSSH 8.3p1 80 OPEN Apache http 2.4.46 Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .php at the end.
+Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsiriusblack.php is FORBIDEN.</description>
+    </item>
+    
+    <item>
+      <title>Y0usef - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</guid>
+      <description>LEVEL : Easy
+TIME SPEND : 1h30
+LINK : y0usef 1
+NMAP Welcome to a new writeup vulnhub.
+Let&amp;rsquo;s start with an nmap to list the services open on the machine.
+sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
+PORT Status Banner 22 OPEN OpenSSH 6.6.1p1 80 OPEN Apache http 2.4.10 Let&amp;rsquo;s check the HTTP service.
+Web Application On the index page there is nothing interesting.</description>
     </item>
     
     <item>
@@ -200,7 +204,7 @@ For this install, I used a Virtual Disk of 25GiB.
       <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</guid>
       <description>Special thnks to Rayan Lahfa
 and Klaes ;)
- Wiki ! You can use the default configuration file : Nixos-Wireguard
+Wiki ! You can use the default configuration file : Nixos-Wireguard
 Install &amp;amp; setup First, you need to install wireguard using :
 $ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
 $ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</description>

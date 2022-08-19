@@ -21,6 +21,11 @@
 
 
 
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
 
   
 
@@ -31,14 +36,15 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
 
 <meta property="og:title" content="#1 Setup the Domain and Workstations" />
 <meta property="og:description" content="Build your domain controller and link the first client" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/" />
-<meta property="article:published_time" content="2022-08-10T12:00:00-04:00" />
-<meta property="article:modified_time" content="2022-08-10T12:00:00-04:00" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-19T11:00:00-04:00" />
+<meta property="article:modified_time" content="2022-08-19T11:00:00-04:00" />
+
 
 
     
@@ -102,7 +108,7 @@
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -111,15 +117,37 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -573,15 +601,15 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/banner.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/images/active-directory/build-training-lab/banner.jpg);'>
       </div>
 
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_2.png' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_3.png' alt="Author Image">
           <h5 class="author-name">Adrien Lasalle</h5>
-          <p>:date_full</p>
+          <p>Friday, August 19, 2022</p>
         </div>
 
         <div class="title">
@@ -640,12 +668,12 @@ To do so, I would recommand you to install first a Windows Server 2022 till the 
 
 <h2 id="setup-pssessions">Setup PSSessions</h2>
 <p>From the management Computer, we are going to use PSSESSION to <strong>manage remotely the DC</strong>. First you need to add the DC ip in the trusted hosts list:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Start-Service WinRM
-Set-Item WSMan:localhost<span style="color:#ae81ff">\c</span>lient<span style="color:#ae81ff">\t</span>rustedhosts -Value 192.168.100.50
-</code></pre></div><p>Next, start a new session using:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">New-PSSession -ComputerName 192.168.100.50 -Credential <span style="color:#f92672">(</span>Get-Credential<span style="color:#f92672">)</span>
-Enter-PSSession &lt;ID&gt;
-</code></pre></div><p>Add the ID of the PSSession.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Start-Service WinRM
+</span></span><span style="display:flex;"><span>Set-Item WSMan:localhost<span style="color:#ae81ff">\c</span>lient<span style="color:#ae81ff">\t</span>rustedhosts -Value 192.168.100.50
+</span></span></code></pre></div><p>Next, start a new session using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>New-PSSession -ComputerName 192.168.100.50 -Credential <span style="color:#f92672">(</span>Get-Credential<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Enter-PSSession &lt;ID&gt;
+</span></span></code></pre></div><p>Add the ID of the PSSession.</p>
 <p>Or you can save the Session using this command:</p>
 <p><img src="pssession.png"
     
@@ -687,53 +715,53 @@ _
 </p>
 <h2 id="install-the-dc">Install the DC</h2>
 <p>If youre are not in configuration mode, just use it:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sconfig
-&lt;6&gt; Update Server
-&lt;13&gt; Reboot 
-</code></pre></div><h3 id="install-vm-tools">Install VM Tools</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sconfig
+</span></span><span style="display:flex;"><span>&lt;6&gt; Update Server
+</span></span><span style="display:flex;"><span>&lt;13&gt; Reboot 
+</span></span></code></pre></div><h3 id="install-vm-tools">Install VM Tools</h3>
 <p>Use VMWare to install the vmware tools and go in the disk</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd D:<span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>./setup64.exe
-</code></pre></div><p>Then don&rsquo;t forget to change the DC name, here DC01:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;2&gt; Change Computer Name
-Set-SConfig -AutoLaunch $false
-</code></pre></div><h3 id="configure-network-interfaces">Configure Network Interfaces</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd D:<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>./setup64.exe
+</span></span></code></pre></div><p>Then don&rsquo;t forget to change the DC name, here DC01:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;2&gt; Change Computer Name
+</span></span><span style="display:flex;"><span>Set-SConfig -AutoLaunch $false
+</span></span></code></pre></div><h3 id="configure-network-interfaces">Configure Network Interfaces</h3>
 <p>It is very important to setup a static IP for your Domain Controller since it will be used as a default DNS server for your Domain:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
-&lt;Select Network Interface <span style="color:#ae81ff">1</span> - 192.168.100.0&gt;
-&lt;Change Address STATIC&gt;
-&lt;192.168.100.50/255.255.255.0/GW:192.168.100.2&gt;
-</code></pre></div><p>Then change the DNS server to the domain controller IP:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
-&lt;Change Default DNS Address&gt;
-&lt;192.168.100.50&gt;
-</code></pre></div><h3 id="install-forest">Install Forest</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;8&gt; Change Network
+</span></span><span style="display:flex;"><span>&lt;Select Network Interface <span style="color:#ae81ff">1</span> - 192.168.100.0&gt;
+</span></span><span style="display:flex;"><span>&lt;Change Address STATIC&gt;
+</span></span><span style="display:flex;"><span>&lt;192.168.100.50/255.255.255.0/GW:192.168.100.2&gt;
+</span></span></code></pre></div><p>Then change the DNS server to the domain controller IP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;8&gt; Change Network
+</span></span><span style="display:flex;"><span>&lt;Change Default DNS Address&gt;
+</span></span><span style="display:flex;"><span>&lt;192.168.100.50&gt;
+</span></span></code></pre></div><h3 id="install-forest">Install Forest</h3>
 <p>Once the Server is setup with basic information, do not hesitate to take a snapshot before installing the features.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-WindowsFeature | ? <span style="color:#f92672">{</span>$_.Name -LIKE <span style="color:#e6db74">&#34;ad*&#34;</span><span style="color:#f92672">}</span>
-Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-</code></pre></div><p>Create your forest</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Import-Module ADDSDeployment
-Install-ADDSForest
-</code></pre></div><p>Press Y then the forest name, here <strong>nerv.com</strong> and then the same password as the current Adminitrator. Press Y Again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Get-WindowsFeature | ? <span style="color:#f92672">{</span>$_.Name -LIKE <span style="color:#e6db74">&#34;ad*&#34;</span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+</span></span></code></pre></div><p>Create your forest</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Import-Module ADDSDeployment
+</span></span><span style="display:flex;"><span>Install-ADDSForest
+</span></span></code></pre></div><p>Press Y then the forest name, here <strong>nerv.com</strong> and then the same password as the current Adminitrator. Press Y Again.</p>
 <p>Once the server reboot, you need to change the DNS and add the IP of the DC (Like we did before but since we install the domain, the DNS was changed).</p>
 <h3 id="remove-password-complexity">Remove Password Complexity</h3>
 <p>It is usefull to remove the password complexity here since we are going to create weak username and password.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">secedit /export /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg
-<span style="color:#f92672">(</span>gc C:<span style="color:#ae81ff">\s</span>ecpol.cfg<span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PasswordComplexity = 1&#34;</span>, <span style="color:#e6db74">&#34;PasswordComplexity = 0&#34;</span><span style="color:#f92672">)</span> | Out-File C:<span style="color:#ae81ff">\s</span>ecpol.cfg
-secedit /configure /db c:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ecurity<span style="color:#ae81ff">\l</span>ocal.sdb /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg /areas SECURITYPOLICY
-rm -force c:<span style="color:#ae81ff">\s</span>ecpol.cfg -confirm:$false
-</code></pre></div><h2 id="workstation-setup">WorkStation Setup</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>secedit /export /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>gc C:<span style="color:#ae81ff">\s</span>ecpol.cfg<span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PasswordComplexity = 1&#34;</span>, <span style="color:#e6db74">&#34;PasswordComplexity = 0&#34;</span><span style="color:#f92672">)</span> | Out-File C:<span style="color:#ae81ff">\s</span>ecpol.cfg
+</span></span><span style="display:flex;"><span>secedit /configure /db c:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ecurity<span style="color:#ae81ff">\l</span>ocal.sdb /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg /areas SECURITYPOLICY
+</span></span><span style="display:flex;"><span>rm -force c:<span style="color:#ae81ff">\s</span>ecpol.cfg -confirm:$false
+</span></span></code></pre></div><h2 id="workstation-setup">WorkStation Setup</h2>
 <p>First install a local Windows 10 or 11 and create a local administrator.</p>
 <p>Once installed, take a snapshot before putting the client into the domaine, that way you&rsquo;ll be able to clone the machine for other workstations.
 Do not forget to change the name of the machine : WS01</p>
 <h3 id="link-the-workstation">Link the Workstation</h3>
 <p>Before using the &ldquo;Access Work or School&rdquo; feature form the the WorkStation, you need to change the DNS address to you Domain Controller.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-DnsClientServerAddress
-Set-DnsClientServerAddress -InterfaceIndex <span style="color:#ae81ff">3</span> -ServerAddresses 192.168.100.50
-</code></pre></div><p>Once it is done, you just need to search &ldquo;Access Work or Schooll&rdquo; feature on task bar and then use the domain name as local domain.<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Get-DnsClientServerAddress
+</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceIndex <span style="color:#ae81ff">3</span> -ServerAddresses 192.168.100.50
+</span></span></code></pre></div><p>Once it is done, you just need to search &ldquo;Access Work or Schooll&rdquo; feature on task bar and then use the domain name as local domain.<br>
 Or you can use this command :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Add-Computer -DomainName nerv.com -Credential nerv<span style="color:#ae81ff">\A</span>dministrateur -Force -Restart
-</code></pre></div><p>Take a snapshot of the DC01 and the WS01 once it is joined BEFORE adding the random users so you can go back anytime you want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Add-Computer -DomainName nerv.com -Credential nerv<span style="color:#ae81ff">\A</span>dministrateur -Force -Restart
+</span></span></code></pre></div><p>Take a snapshot of the DC01 and the WS01 once it is joined BEFORE adding the random users so you can go back anytime you want.</p>
 
         </div>
 
@@ -1111,7 +1139,7 @@ Or you can use this command :</p>
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -1138,6 +1166,12 @@ Or you can use this command :</p>
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
 
 
     

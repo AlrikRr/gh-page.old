@@ -21,6 +21,11 @@
 
 
 
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
 
   
 
@@ -31,14 +36,15 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
 
 <meta property="og:title" content="Bellatrix - easy" />
 <meta property="og:description" content="VulnHub Write-Up for Bellatrix machine" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-08-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-08-19T00:00:00+00:00" />
+
 
 
     
@@ -102,7 +108,7 @@
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -111,15 +117,37 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -573,15 +601,15 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/banner.gif);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://AlrikRr.github.io/images/write-up/vulnhub/banner.gif);'>
       </div>
 
       
       <div class="page-content">
         <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_2.png' alt="Author Image">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_3.png' alt="Author Image">
           <h5 class="author-name">Adrien Lasalle</h5>
-          <p>:date_full</p>
+          <p>Wednesday, August 19, 2020</p>
         </div>
 
         <div class="title">
@@ -642,8 +670,8 @@
 <p>Indeed, I was right, we can see that the www-data user has access to the log file of the ssh service  <code>/var/log/auth.log</code>.</p>
 <p><code>http://bellatrix.vuln/ikilledsiriusblack.php?file=../../../..//var/log/auth.log</code></p>
 <p>Then an idea comes to me. If I have the possibility to display the logs of the ssh service, I also have technically the possibility to inject anything I want. Let&rsquo;s do a test. I will try to connect in SSH but my user will be a bit different:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> ssh <span style="color:#e6db74">&#39;&lt;?php system($_GET[&#34;c&#34;]); ?&gt;&#39;</span>@bellatrix.vuln 
-</code></pre></div><p>As you can see, my user is actually a PHP code that calls the system function with a GET variable. If everything goes as expected, then I will be able to inject the linux commands I want with this parameter because they will be executed by system().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ssh <span style="color:#e6db74">&#39;&lt;?php system($_GET[&#34;c&#34;]); ?&gt;&#39;</span>@bellatrix.vuln 
+</span></span></code></pre></div><p>As you can see, my user is actually a PHP code that calls the system function with a GET variable. If everything goes as expected, then I will be able to inject the linux commands I want with this parameter because they will be executed by system().</p>
 <p>As you can see, if I use the base64 filter to get the RAW data of the <code>auth.log</code> I can see my PHP code.</p>
 <p><img src="php_auth_log.png" alt="php_auth_log"></p>
 <h3 id="ssh-log-poisoning">SSH log poisoning</h3>
@@ -1051,7 +1079,7 @@
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -1078,6 +1106,12 @@
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
 
 
     

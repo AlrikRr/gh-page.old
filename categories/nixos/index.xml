@@ -40,7 +40,7 @@ For this install, I used a Virtual Disk of 25GiB.
       <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</guid>
       <description>Special thnks to Rayan Lahfa
 and Klaes ;)
- Wiki ! You can use the default configuration file : Nixos-Wireguard
+Wiki ! You can use the default configuration file : Nixos-Wireguard
 Install &amp;amp; setup First, you need to install wireguard using :
 $ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
 $ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</description>

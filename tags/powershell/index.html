@@ -21,6 +21,11 @@
 
 
 
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
 
   
 
@@ -31,13 +36,13 @@
   
   
 
-  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" />
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
 
 <meta property="og:title" content="Powershell" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://AlrikRr.github.io/tags/powershell/" />
-<meta property="og:updated_time" content="2022-01-29T00:00:00+00:00" />
+
 
 
     
@@ -96,7 +101,7 @@
     </button>
     <a class="navbar-brand" href="/">
       
-        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" alt="Logo">
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
       AlrikRr&#39;s Blog</a>
     <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
       <span class="navbar-toggler-icon"></span>
@@ -105,15 +110,37 @@
     <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
       <ul class="navbar-nav ml-auto">
       
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
       </ul>
     </div>
   </div>
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="main-logo" alt="Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
   
   
-    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_2.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
   
 </nav>
 
@@ -361,13 +388,15 @@
   <a href="/posts/malware/investigations/vbs-mp3-downloader-1/" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/posts/malware/investigations/vbs-mp3-downloader-1/banner.jpg' alt="Hero Image">
+        <img class="card-img-top" src='/images/malware/investigations/banner.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
         <h5 class="card-title">#1 VBS MP3 Downloader</h5>
-        <p class="card-text post-summary">Identification    Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs     Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990   Size 71K   From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/    VBS - Code Hello There !
+        <p class="card-text post-summary">Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
 Today we are going to check a VBS code and see what’s inside.
-Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</p>
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
+VirusTotal
+Clear code - comments First we need to clear the comment since there are a lot of these in the code.</p>
       </div>
       <div class="card-footer">
         <span class="float-left">January 29, 2022</span>
@@ -386,8 +415,6 @@ Here is the VT result, only 17 EDR trigger this file as malicious. We can see so
     </div>
     <div class="paginator">
       
-
-
     </div>
   </div>
 </section>
@@ -554,7 +581,7 @@ Here is the VT result, only 17 EDR trigger this file as malicious. We can see so
       <div class="row text-left">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
-            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png" alt="Toha Theme Logo">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
         </div>
@@ -581,6 +608,12 @@ Here is the VT result, only 17 EDR trigger this file as malicious. We can see so
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
 
 
     
