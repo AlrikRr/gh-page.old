@@ -190,7 +190,7 @@
   
   
     
-    <li><a class="" href="/posts/malware/investigations/vbs-mp3-downloader-1/" title="#1 VBS MP3 Downloader">#1 VBS MP3 Downloader</a></li>
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
   
 
   
@@ -199,7 +199,7 @@
   
   
     
-    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+    <li><a class="" href="/posts/malware/investigations/vbs-mp3-downloader-1/" title="VBS MP3 Downloader">VBS MP3 Downloader</a></li>
   
 
 
@@ -225,6 +225,31 @@
   
     
     <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/dev-projects/">Malware Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/dev-projects/simple-vba-bypass-defender/" title="ByPass Defender with Simple VBA">ByPass Defender with Simple VBA</a></li>
   
 
 
@@ -592,6 +617,32 @@
       
         
           <div class="post-card">
+  <a href="/posts/malware/dev-projects/simple-vba-bypass-defender/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/malware/dev-projects/banner.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Almost ByPass Defender with VBA Script</h5>
+        <p class="card-text post-summary">Disclaimer : Hello This is actually my first real Macro while trying to obfuscate and ByPass Defender (Sort Of) ! This Code will escape Defender but the remote payload will not since it was a Meterpreter PowerShell, maybe in the next part 👨‍💻
+Someone asked me to create a file that contains a Macro for downloading a malicious file while evading Defender ! Here is my first attempt, it was cool and might create more with more elaborate code !</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">August 22, 2022</span>
+        <a
+        href="/posts/malware/dev-projects/simple-vba-bypass-defender/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
   <a href="/posts/active-directory/build-training-lab/1-domain/" class="post-card-link">
     <div class="card">
       <div class="card-head">
@@ -730,7 +781,7 @@ Disclaimer 2 : I&rsquo;m not an expert at all, Just a beginner who wants to lear
         <img class="card-img-top" src='/images/malware/investigations/banner.jpg' alt="Hero Image">
       </div>
       <div class="card-body">
-        <h5 class="card-title">#1 VBS MP3 Downloader</h5>
+        <h5 class="card-title">VBS MP3 Downloader</h5>
         <p class="card-text post-summary">Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
 Today we are going to check a VBS code and see what’s inside.
 Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
@@ -889,35 +940,6 @@ Why ? To crash an application (a DOS) Have a shell with privileged rights To ste
 
         
       
-        
-          <div class="post-card">
-  <a href="/posts/write-up/vulnhub/bellatrix/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/write-up/vulnhub/banner.gif' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Bellatrix - easy</h5>
-        <p class="card-text post-summary">NMAP Okay let&rsquo;s start with the beginning !
-sudo nmap -A -sS bellatrix.vuln
-As we can see, there are two main services :
-PORT Status Banner 22 OPEN OpenSSH 8.3p1 80 OPEN Apache http 2.4.46 Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .php at the end.
-Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsiriusblack.php is FORBIDEN.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 19, 2020</span>
-        <a
-        href="/posts/write-up/vulnhub/bellatrix/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
     </div>
     <div class="paginator">
       
@@ -1023,6 +1045,15 @@ Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsirius
                   
                 
                 <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
                   <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
                 </li>
               
@@ -1051,15 +1082,6 @@ Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsirius
                 
                 <li class="nav-item">
                   <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
-                </li>
-              
-              
-                
-                
-                  
-                
-                <li class="nav-item">
-                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
                 </li>
               
               
