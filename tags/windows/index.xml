@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/windows/</link>
+    <description>Recent content in Windows on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Forest - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/forest/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/forest/</guid>
+      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
+The machine is part of the HTB.local network.
+Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+LDAPSearch Since there is an LDAP port, we can try if there is a way to gather information on the LDAP server using ldapsearch with anonymous account.</description>
+    </item>
+    
+    
+  </channel>
+</rss>

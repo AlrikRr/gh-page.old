@@ -6,7 +6,32 @@
     <description>Recent content on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 04 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>My eJPT feedback</title>
+      <link>https://AlrikRr.github.io/posts/updates/my-ejpt/</link>
+      <pubDate>Sun, 04 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/updates/my-ejpt/</guid>
+      <description>eJPT Experience Hello There ! Here is a small post about my eJPT feedback !
+I passed my eJPT on the 27th of August and validate it after 3h. I didn&amp;rsquo;t take the course, only one voucher.
+To pass the exam, you may need to answer 15 correct questions.
+Exam Guide The Exam for the eJPT is well guided, you&amp;rsquo;ll need to answer 20 multiple choices question before the 3 days due date after starting your exam.</description>
+    </item>
+    
+    <item>
+      <title>Forest - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/forest/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/forest/</guid>
+      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
+The machine is part of the HTB.local network.
+Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+LDAPSearch Since there is an LDAP port, we can try if there is a way to gather information on the LDAP server using ldapsearch with anonymous account.</description>
+    </item>
+    
+    <item>
       <title>Almost ByPass Defender with VBA Script</title>
       <link>https://AlrikRr.github.io/posts/malware/dev-projects/simple-vba-bypass-defender/</link>
       <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
