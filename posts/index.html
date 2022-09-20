@@ -169,6 +169,47 @@
   
     
     <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/">Flipper Zero</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/flipper-gpio/">Flipper Zero - GPIO</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/flipper-zero/flipper-gpio/tty-shell/" title="USB to tty">USB to tty</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
       <i class="fas fa-plus-circle"></i><a class="" href="/posts/updates/">Personal Updates</a>
       
       <ul class="">
@@ -667,6 +708,34 @@
       
         
           <div class="post-card">
+  <a href="/posts/flipper-zero/flipper-gpio/tty-shell/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/flipper/gpio/banner.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">USB to tty</h5>
+        <p class="card-text post-summary">The following command have been performed on my MacBook, but the commands are the same on linux.
+#MacOS brew install tio #Linux apt install tio Once installed, you may locate the tty device of your flipper.
+If you have issue finding it, just check the path on the qflipper app
+In the screenshot, you can see the cu device, we are looking for the tty interface, it should be in the same path and have the name of your flipper.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 20, 2022</span>
+        <a
+        href="/posts/flipper-zero/flipper-gpio/tty-shell/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
   <a href="/posts/updates/my-ejpt/" class="post-card-link">
     <div class="card">
       <div class="card-head">
@@ -954,34 +1023,6 @@ The ALOA version is a bit easier to configure and has a graphical interface via 
         <span class="float-left">November 11, 2020</span>
         <a
         href="/posts/raspberry/p4wnp1/p4wnp1-install/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
-  <a href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/binary-exploitation/binary-tutorials/ret2libc.png' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">#3 ret2libc exploit 32-bit linux</h5>
-        <p class="card-text post-summary">ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
-There are several ways to bypass this protection (ROP, ret2plt, etc&hellip;) but here we will focus on ret2libc.
-In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
-The idea is to go look for the functions that interest us in order to build an exploit.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">September 18, 2020</span>
-        <a
-        href="/posts/binary-exploitation/binary-tutorials/ret-2-libc/"
         class="float-right btn btn-outline-info btn-sm"
         >Read</a
         >

@@ -103,10 +103,40 @@
     <priority>0.1</priority>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/flipper/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/flipper-zero/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/gpio/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/shell/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/tty/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/tty-shell/</loc>
+    <lastmod>2022-09-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/certification/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
@@ -118,12 +148,6 @@
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/updates/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/updates/</loc>
