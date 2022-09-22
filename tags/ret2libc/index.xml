@@ -8,10 +8,10 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/ret2libc/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>#3 ret2libc exploit 32-bit linux</title>
-      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</link>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</link>
       <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</guid>
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</guid>
       <description>ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
 There are several ways to bypass this protection (ROP, ret2plt, etc&amp;hellip;) but here we will focus on ret2libc.
 In our program, the stack is not executable but the libc contains many interesting functions and it is executable.

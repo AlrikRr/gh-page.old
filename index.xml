@@ -6,7 +6,17 @@
     <description>Recent content on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Thu, 22 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>D-Link - DCS-932L</title>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/d-link-dcs-932l/</link>
+      <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/d-link-dcs-932l/</guid>
+      <description>This is actually my first firmware &amp;ldquo;Reverse&amp;rdquo;. This post will also serve as a tutorial for myself and others ! For education purpose Sources Version : 1.14.04 MD5 : b93d60f595c4736a153ca8c61d77ffc6 Download link http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/ This test we perfomed on Kali Linux VM.
+Stage 1 - Analysis Using binwalk we can &amp;ldquo;walk&amp;rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address. of what&amp;rsquo;s inside the binary.</description>
+    </item>
+    
+    <item>
       <title>UART Bridge RPi4 to Flipper</title>
       <link>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/</link>
       <pubDate>Wed, 21 Sep 2022 00:00:00 +0000</pubDate>
@@ -155,10 +165,10 @@ The ALOA version is a bit easier to configure and has a graphical interface via 
     
     <item>
       <title>#3 ret2libc exploit 32-bit linux</title>
-      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</link>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</link>
       <pubDate>Fri, 18 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</guid>
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</guid>
       <description>ret2libc ? This is a flaw that we will exploit on a binary that has the NX (non-executable) protection enabled.
 There are several ways to bypass this protection (ROP, ret2plt, etc&amp;hellip;) but here we will focus on ret2libc.
 In our program, the stack is not executable but the libc contains many interesting functions and it is executable.
@@ -167,10 +177,10 @@ The idea is to go look for the functions that interest us in order to build an e
     
     <item>
       <title>#2 ret2win exploit 32-bit linux</title>
-      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</link>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-win/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</guid>
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-win/</guid>
       <description>ROP 32 ? A ROP 32 works in the same way as a buffer overflow except that there is no shellcode here!
 The purpose of a ROP 32 is to call a function of the program that is never called once in the program code.
 In this tutorial I will show you how to execute a ROP exploit on a 32bits binary.
@@ -179,10 +189,10 @@ Code Here is the code of the program we are going to use:</description>
     
     <item>
       <title>#1 Introduction to linux buffer-overflow 32-bit</title>
-      <link>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</link>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/buffer-overflow/</link>
       <pubDate>Sat, 12 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</guid>
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/buffer-overflow/</guid>
       <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
 Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
 Why ? To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>

@@ -102,16 +102,46 @@
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/binary/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/d-link/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/d-link-dcs-932l/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/firmware/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/firmware-reverse/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/reverse/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/flipper/</loc>
-    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/</loc>
@@ -123,13 +153,7 @@
     <loc>https://AlrikRr.github.io/tags/gpio/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/shell/</loc>
-    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/tty/</loc>
@@ -150,11 +174,14 @@
     <loc>https://AlrikRr.github.io/posts/updates/my-ejpt/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/categories/updates/</loc>
+    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/updates/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/categories/updates/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
+    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
+    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/bloodhound/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
@@ -177,9 +204,6 @@
     <loc>https://AlrikRr.github.io/tags/windows/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/posts/malware/dev-projects/simple-vba-bypass-defender/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -195,19 +219,16 @@
     <loc>https://AlrikRr.github.io/categories/malware/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/malware/</loc>
-    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/posts/malware/dev-projects/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/vba/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</loc>
-    <lastmod>2022-08-19T11:00:00-04:00</lastmod>
+    <loc>https://AlrikRr.github.io/posts/malware/</loc>
+    <lastmod>2022-08-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/active-directory/</loc>
+    <loc>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</loc>
     <lastmod>2022-08-19T11:00:00-04:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/active-directory/</loc>
@@ -225,13 +246,16 @@
     <loc>https://AlrikRr.github.io/tags/workstation/</loc>
     <lastmod>2022-08-19T11:00:00-04:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/active-directory/</loc>
+    <lastmod>2022-08-19T11:00:00-04:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/4-clocklogic/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/tags/555timer/</loc>
+    <loc>https://AlrikRr.github.io/posts/8bits-computer/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/8bits-computer/</loc>
+    <loc>https://AlrikRr.github.io/tags/555timer/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/8bits/</loc>
@@ -297,6 +321,9 @@
     <loc>https://AlrikRr.github.io/tags/unpacked/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/raspberry/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/categories/binary/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -315,13 +342,10 @@
     <loc>https://AlrikRr.github.io/tags/raspberry/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/raspberry/</loc>
-    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/redteam/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-libc/</loc>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</loc>
     <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/32-bit/</loc>
@@ -330,25 +354,19 @@
     <loc>https://AlrikRr.github.io/tags/asm/</loc>
     <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/tags/binary/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/</loc>
-    <lastmod>2020-09-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/</loc>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/</loc>
     <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/ret2libc/</loc>
     <lastmod>2020-09-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/ret-2-win/</loc>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-win/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/ret2win/</loc>
     <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/binary-exploitation/binary-tutorials/buffer-overflow/</loc>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/buffer-overflow/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/bufferoverflow/</loc>
@@ -381,6 +399,9 @@
     <loc>https://AlrikRr.github.io/tags/sandboxing/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/tags/android/</loc>
     <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -400,9 +421,6 @@
     <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/install/</loc>
-    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/linux-tutorials/</loc>
     <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/luks/</loc>
