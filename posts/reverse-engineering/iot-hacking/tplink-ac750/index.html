@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#1 TP-Link AC750 Wifi Router</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="#1 TP-Link AC750 Wifi Router" />
+<meta property="og:description" content="#1 TP-Link AC750 Wifi Router IoT hacking" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-23T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="#1 TP-Link AC750 Wifi Router IoT hacking" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/updates/">🧑🏼‍💻 Personal Updates</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/updates/my-ejpt/" title="My eJPT feedback">My eJPT feedback</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/">🐬 Flipper Zero</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/flipper-gpio/">Flipper Zero - GPIO</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/" title="UART Bridge RPi4 to Flipper">UART Bridge RPi4 to Flipper</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/flipper-zero/flipper-gpio/tty-shell/" title="USB to tty">USB to tty</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/">💾 8 Bits Computer</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/part1-clock/">Part 1 - Clock Module</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/1-astable555timer/" title="#1 Astable 555 Timer">#1 Astable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/2-monostable555timer/" title="#2 Monostable 555 Timer">#2 Monostable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/3-bistable555timer/" title="#3 Bistable 555 Timer">#3 Bistable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/4-clocklogic/" title="#4 Clock Logic">#4 Clock Logic</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/active-directory/">🖥 Active Directory Posts</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/active-directory/build-training-lab/">Build your Training Lab</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/active-directory/build-training-lab/1-domain/" title="#1 Setup the Domain and Workstations">#1 Setup the Domain and Workstations</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/active-directory/ad-attacks/" title="Hacking &amp; Attacks">Hacking &amp; Attacks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/reverse-engineering/">👾 Reverse Engineering</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/reverse-engineering/iot-hacking/">IoT Hacking</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/" title="D-Link - DCS-932L">D-Link - DCS-932L</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/reverse-engineering/iot-hacking/tplink-ac750/" title="#1 TP-Link AC750 Wifi Router">#1 TP-Link AC750 Wifi Router</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/reverse-engineering/binary-exploitation/">Binary Exploitation</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit">#1 Introduction to linux buffer-overflow 32-bit</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/ret-2-win/" title="#2 ret2win exploit 32-bit linux">#2 ret2win exploit 32-bit linux</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux">#3 ret2libc exploit 32-bit linux</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">🪲 Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/vbs-mp3-downloader-1/" title="VBS MP3 Downloader">VBS MP3 Downloader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/dev-projects/">Malware Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/dev-projects/simple-vba-bypass-defender/" title="ByPass Defender with Simple VBA">ByPass Defender with Simple VBA</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/">🍓 Raspberry Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/p4wnp1/">P4wnP1</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/raspberry/p4wnp1/p4wnp1-install/" title="P4wnP1 Install">P4wnP1 Install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">🐧 Linux Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/">📝 Write-Up</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/forest/" title="Forest - easy">Forest - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/reverse/iot.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien</h5>
+          <p>Friday, September 23, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>#1 TP-Link AC750 Wifi Router</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <div class="alert alert-danger">
+    <strong>Improper handling of electronic components can lead to component destruction</strong>
+</div>
+
+<div class="alert alert-info">
+    <strong>Here is my LinkedIn post related to this article : <a href="https://www.linkedin.com/feed/update/urn:li:activity:6978797904089989120/">LinkedIn-Post</a></strong>
+</div>
+
+<h2 id="what-you-need">What you need</h2>
+<p>Here are all the tools you need to perform this kind of IoT Assessment on a device.  For my part I didn&rsquo;t have my soldering kit so I did it without but it was not very stable.</p>
+<ul>
+<li>Basic knowledge on UART ad IOT Hacking</li>
+<li>UART Bridge (Simple USB or Flipper Zero)</li>
+<li>Multimeter</li>
+<li>Cables</li>
+<li>Solder Iron (Optionnal)</li>
+<li>UART Device like Wifi Router</li>
+</ul>
+<h2 id="uart-">UART ?</h2>
+<p>If you are not familiar with UART ports, I would recommend you to check my article on Flipper-Zero Section <a href="https://alrikrr.github.io/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/">UART USB Bridge</a></p>
+<p>If this is not enough, check out this video of FlashBack-Team <a href="https://youtu.be/01mw0oTHwxg">Hacker&rsquo;s Guide to UART Root Shells
+</a></p>
+<h2 id="tp-link-ac750">TP-Link AC750</h2>
+<h3 id="informations">Informations</h3>
+<p>The device I used was a <a href="https://www.tp-link.com/ca/home-networking/wifi-router/archer-c20/">TP-Link Wifi Router AC750</a></p>
+<ul>
+<li>Supports 802.11ac standard - the next generation of Wi-Fi</li>
+<li>Simultaneous 2.4GHz 300Mbps and 5GHz 433Mbps connections for 733Mbps of total available bandwidth</li>
+<li>3 external antennas provide stable omnidirectional signal and superior wireless coverage</li>
+</ul>
+<p>While doing OSINT on the device, you can easly found internal and externl picture of it.</p>
+<ul>
+<li><a href="https://fccid.io/TE7C20">https://fccid.io/TE7C20</a></li>
+<li><a href="https://fccid.io/TE7C20/Internal-Photos/Internal-Photos-2582175">Internal Pictures</a></li>
+</ul>
+<p>Each WIFI device has a FCC ID which is very usefull to search specs and internal pictures.</p>
+<h3 id="uart-port">UART port</h3>
+<p>I was lucky on this one since the UART ports are labeled, so no need to test them with multimeter</p>
+<p><img src="uart-port.png" alt="Uart port"></p>
+<h3 id="components">Components</h3>
+<ul>
+<li>Wifi Chip - MT7628an
+<ul>
+<li><a href="http://vonger.cn/upload/MT7628_Full.pdf">Datasheet</a></li>
+</ul>
+</li>
+<li>DDR SDRAM - M14D5121632A
+<ul>
+<li><a href="https://www.endrich.com/fm/2/M14D5121632A-2.5BG2K.pdf">Datasheet</a></li>
+</ul>
+</li>
+<li>Wifi Chip - MT7610EN
+<ul>
+<li><a href="https://datasheetspdf.com/pdf/851068/Ralink/MT7610EN/1">Datasheet</a></li>
+</ul>
+</li>
+<li>Flash - 25Q64CSIG (Back of the PCB)
+<ul>
+<li><a href="https://www.alldatasheet.com/view_datasheet.jsp?Searchword=25Q64CSIG&amp;sField=1">Datasheet</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="uart-bridge-usb">UART Bridge USB</h2>
+<p>Here is what my setup looks like. Like you can see I didn&rsquo;t use any soldering Iron because I didn&rsquo;t have one during this time.</p>
+<p><img src="uart-bridge.png" alt="UART Bridge"></p>
+<p>The UART bridge is very simple, here is a small schemas :</p>
+<p><img src="plan.png" alt="Plan"></p>
+<p>I&rsquo;ll recommand you to check my post about this part : <a href="https://alrikrr.github.io/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/">UART USB Bridge</a></p>
+<p>Using <code>minicom</code> we can get a shell once the device is powered on !</p>
+<p><img src="2_filesystem.png" alt="FileSystem"></p>
+<h2 id="shell-and-enumeration">Shell and Enumeration</h2>
+<p>Let&rsquo;s start the enumeration part on the device.<br>
+Just for the context I didn&rsquo;t have any password for this Wifi router, SSID passwords and Admin Web password.</p>
+<p>The system is on read only so we can&rsquo;t edit anything unfortunatly.</p>
+<p><img src="9_readonly_fs.png" alt="Read Only FS"></p>
+<h3 id="etcpasswd">/etc/passwd</h3>
+<p>The first goodies we can get is the users and the passwords of the system.</p>
+<p><img src="3_etcpasswd.png" alt="etc passwd"></p>
+<p>The admin user has its hash on the passwd file and is easly crackable</p>
+<p><img src="8_crack_admin_linux.png" alt="Crack Admin"></p>
+<ul>
+<li><code>admin:1234</code>  &ndash;&gt; root account</li>
+</ul>
+<p>We can guess that there is a dropbear for SSH Service because of the username but also during the boot of the device, it geneate new RSA keys.</p>
+<h3 id="device-information">Device information</h3>
+<p>During my enumeration I could find more precise information about the device.</p>
+<p><img src="13_router_info.png" alt="DeviceInfo"></p>
+<h3 id="ssid-password">SSID Password</h3>
+<p>After a while I was able to locate the SSID information and retreive the passwords.</p>
+<p>Here is the PATH where to find the password stored in clear text :
+<img src="16_location_passwords_ap.png" alt="PathPassword"></p>
+<p>Here is the default SSID password which is <code>12345678</code>, classic.<br>
+<img src="14_default_AP_password.png" alt="DefaultPassword"></p>
+<p>And finally the Password of the SSID that is currently in use on the device.<br>
+<img src="15_inuse_AP_password.png" alt="SSIDPassword"></p>
+<h2 id="admin-panel">Admin Panel</h2>
+<p>Since I now have access to the Wifi network I can now get access to the Admin Panel but unfortunatly I need to find a way to grab the admin password !</p>
+<p><img src="6_login_http.png" alt="SSIDPassword"></p>
+<p>Next time i&rsquo;ll dig into the admin panel and find maybe a way to get inside (Hardcoded password ?)</p>
+<p>See ya !</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+            <strong>Share on:</strong>
+            
+            <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            
+            
+                <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f&text=%231%20TP-Link%20AC750%20Wifi%20Router&via=AlrikRr%27s%20Blog" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+            
+            
+                <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f&title=%231%20TP-Link%20AC750%20Wifi%20Router" target="_blank">
+                  <i class="fab fa-reddit"></i>
+                </a>
+            
+            
+            
+            
+                <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f&title=%231%20TP-Link%20AC750%20Wifi%20Router" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+            
+            
+             
+            
+                 <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=%231%20TP-Link%20AC750%20Wifi%20Router https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+            
+            
+                <a class="btn btn-sm email-btn" href="mailto:?subject=%231%20TP-Link%20AC750%20Wifi%20Router&body=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2ftplink-ac750%2f" target="_blank">
+                  <i class="fas fa-envelope-open-text"></i>
+                </a>
+            
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/reverse-engineering/iot-hacking/TPLink-AC750/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/" title="D-Link - DCS-932L" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">D-Link - DCS-932L</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/reverse-engineering/binary-exploitation/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">#1 Introduction to linux buffer-overflow 32-bit</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-you-need">What you need</a></li>
+    <li><a href="#uart-">UART ?</a></li>
+    <li><a href="#tp-link-ac750">TP-Link AC750</a>
+      <ul>
+        <li><a href="#informations">Informations</a></li>
+        <li><a href="#uart-port">UART port</a></li>
+        <li><a href="#components">Components</a></li>
+      </ul>
+    </li>
+    <li><a href="#uart-bridge-usb">UART Bridge USB</a></li>
+    <li><a href="#shell-and-enumeration">Shell and Enumeration</a>
+      <ul>
+        <li><a href="#etcpasswd">/etc/passwd</a></li>
+        <li><a href="#device-information">Device information</a></li>
+        <li><a href="#ssid-password">SSID Password</a></li>
+      </ul>
+    </li>
+    <li><a href="#admin-panel">Admin Panel</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Achievements</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>

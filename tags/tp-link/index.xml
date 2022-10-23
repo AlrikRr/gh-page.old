@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TP-LINK on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/tags/tp-link/</link>
+    <description>Recent content in TP-LINK on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/tp-link/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>#1 TP-Link AC750 Wifi Router</title>
+      <link>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</link>
+      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</guid>
+      <description>Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
+Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router UART ?</description>
+    </item>
+    
+    
+  </channel>
+</rss>

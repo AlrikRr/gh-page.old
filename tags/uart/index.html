@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UART</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="UART" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://AlrikRr.github.io/tags/uart/" />
+
+
+
+    
+    
+    <link rel="stylesheet" href="/css/layouts/list.css">
+    <link rel="stylesheet" href="/css/navigators/sidebar.css">
+    
+    <link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  
+  
+
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/tags" data-filter="all">Tags</a></li>
+            <div class="subtree taxonomy-terms">
+              
+              
+
+
+
+  
+  
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/32-bit/" data-taxonomy-term="32-bit"><span class="taxonomy-label">32-bit</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/555timer/" data-taxonomy-term="555timer"><span class="taxonomy-label">555Timer</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/8bits/" data-taxonomy-term="8bits"><span class="taxonomy-label">8bits</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/android/" data-taxonomy-term="android"><span class="taxonomy-label">Android</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/anti-virus/" data-taxonomy-term="anti-virus"><span class="taxonomy-label">Anti-Virus</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/anti-vm/" data-taxonomy-term="anti-vm"><span class="taxonomy-label">Anti-VM</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/asm/" data-taxonomy-term="asm"><span class="taxonomy-label">ASM</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/astable/" data-taxonomy-term="astable"><span class="taxonomy-label">Astable</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/binary/" data-taxonomy-term="binary"><span class="taxonomy-label">Binary</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/bistable/" data-taxonomy-term="bistable"><span class="taxonomy-label">Bistable</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/bloodhound/" data-taxonomy-term="bloodhound"><span class="taxonomy-label">Bloodhound</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/btrfs/" data-taxonomy-term="btrfs"><span class="taxonomy-label">BTRFS</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/bufferoverflow/" data-taxonomy-term="bufferoverflow"><span class="taxonomy-label">bufferoverflow</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/certification/" data-taxonomy-term="certification"><span class="taxonomy-label">certification</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/clock/" data-taxonomy-term="clock"><span class="taxonomy-label">Clock</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/cuckoo/" data-taxonomy-term="cuckoo"><span class="taxonomy-label">Cuckoo</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/d-link/" data-taxonomy-term="d-link"><span class="taxonomy-label">D-LINK</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/domain/" data-taxonomy-term="domain"><span class="taxonomy-label">Domain</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/downloader/" data-taxonomy-term="downloader"><span class="taxonomy-label">Downloader</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ejpt/" data-taxonomy-term="ejpt"><span class="taxonomy-label">eJPT</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/excel/" data-taxonomy-term="excel"><span class="taxonomy-label">Excel</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/firmware/" data-taxonomy-term="firmware"><span class="taxonomy-label">Firmware</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/flipper/" data-taxonomy-term="flipper"><span class="taxonomy-label">Flipper</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/gpio/" data-taxonomy-term="gpio"><span class="taxonomy-label">gpio</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/hacking/" data-taxonomy-term="hacking"><span class="taxonomy-label">Hacking</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/install/" data-taxonomy-term="install"><span class="taxonomy-label">Install</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/kerbrute/" data-taxonomy-term="kerbrute"><span class="taxonomy-label">Kerbrute</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/loader/" data-taxonomy-term="loader"><span class="taxonomy-label">Loader</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/logic/" data-taxonomy-term="logic"><span class="taxonomy-label">Logic</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/luks/" data-taxonomy-term="luks"><span class="taxonomy-label">LUKS</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/macro/" data-taxonomy-term="macro"><span class="taxonomy-label">Macro</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/monostable/" data-taxonomy-term="monostable"><span class="taxonomy-label">Monostable</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/nixos/" data-taxonomy-term="nixos"><span class="taxonomy-label">NixOS</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/obfuscated/" data-taxonomy-term="obfuscated"><span class="taxonomy-label">Obfuscated</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/p4wnp1/" data-taxonomy-term="p4wnp1"><span class="taxonomy-label">P4wnP1</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/powershell/" data-taxonomy-term="powershell"><span class="taxonomy-label">Powershell</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/raspberry/" data-taxonomy-term="raspberry"><span class="taxonomy-label">Raspberry</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/redteam/" data-taxonomy-term="redteam"><span class="taxonomy-label">RedTeam</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ret2libc/" data-taxonomy-term="ret2libc"><span class="taxonomy-label">ret2libc</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ret2win/" data-taxonomy-term="ret2win"><span class="taxonomy-label">ret2win</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/reverse/" data-taxonomy-term="reverse"><span class="taxonomy-label">Reverse</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/sandboxing/" data-taxonomy-term="sandboxing"><span class="taxonomy-label">Sandboxing</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/shell/" data-taxonomy-term="shell"><span class="taxonomy-label">shell</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/spn/" data-taxonomy-term="spn"><span class="taxonomy-label">SPN</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/ssh/" data-taxonomy-term="ssh"><span class="taxonomy-label">SSH</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/tp-link/" data-taxonomy-term="tp-link"><span class="taxonomy-label">TP-LINK</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/training/" data-taxonomy-term="training"><span class="taxonomy-label">Training</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/tty/" data-taxonomy-term="tty"><span class="taxonomy-label">tty</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term active" href="https://AlrikRr.github.io/tags/uart/" data-taxonomy-term="uart"><span class="taxonomy-label">UART</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/unpacked/" data-taxonomy-term="unpacked"><span class="taxonomy-label">Unpacked</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/vba/" data-taxonomy-term="vba"><span class="taxonomy-label">VBA</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/vbs/" data-taxonomy-term="vbs"><span class="taxonomy-label">VBS</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/vpn/" data-taxonomy-term="vpn"><span class="taxonomy-label">VPN</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/vulnhub/" data-taxonomy-term="vulnhub"><span class="taxonomy-label">VulnHub</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/windows/" data-taxonomy-term="windows"><span class="taxonomy-label">Windows</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/wireguard/" data-taxonomy-term="wireguard"><span class="taxonomy-label">Wireguard</span></a></li>
+        
+          
+            
+          
+          <li><a class="taxonomy-term " href="https://AlrikRr.github.io/tags/workstation/" data-taxonomy-term="workstation"><span class="taxonomy-label">Workstation</span></a></li>
+        
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid post-card-holder" id="post-card-holder">
+      
+      
+      
+        
+          <div class="post-card">
+  <a href="/posts/reverse-engineering/iot-hacking/tplink-ac750/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/reverse/iot.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">#1 TP-Link AC750 Wifi Router</h5>
+        <p class="card-text post-summary">Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&rsquo;t have my soldering kit so I did it without but it was not very stable.
+Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router UART ?</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 23, 2022</span>
+        <a
+        href="/posts/reverse-engineering/iot-hacking/tplink-ac750/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+    </div>
+    <div class="paginator">
+      
+    </div>
+  </div>
+</section>
+
+
+      
+       
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Achievements</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+    <script src="/js/list.js"></script>
+
+
+    
+</body>
+</html>

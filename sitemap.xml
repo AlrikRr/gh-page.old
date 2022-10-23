@@ -102,40 +102,52 @@
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/binary/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/firmware/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/iot-hacking/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/reverse/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/tp-link/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/uart/</loc>
+    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/binary/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/d-link/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/d-link-dcs-932l/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/firmware/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/reverse-engineering/firmware-reverse/</loc>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/firmware-reverse/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/reverse/</loc>
-    <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>

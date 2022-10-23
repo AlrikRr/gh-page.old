@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>D-Link - DCS-932L</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="D-Link - DCS-932L" />
+<meta property="og:description" content="D-Link - DCS-932L" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-22T00:00:00+00:00" />
+
+
+
+    
+    
+<meta name="description" content="D-Link - DCS-932L" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/updates/">🧑🏼‍💻 Personal Updates</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/updates/my-ejpt/" title="My eJPT feedback">My eJPT feedback</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/">🐬 Flipper Zero</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/flipper-zero/flipper-gpio/">Flipper Zero - GPIO</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/" title="UART Bridge RPi4 to Flipper">UART Bridge RPi4 to Flipper</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/flipper-zero/flipper-gpio/tty-shell/" title="USB to tty">USB to tty</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/">💾 8 Bits Computer</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/8bits-computer/part1-clock/">Part 1 - Clock Module</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/1-astable555timer/" title="#1 Astable 555 Timer">#1 Astable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/2-monostable555timer/" title="#2 Monostable 555 Timer">#2 Monostable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/3-bistable555timer/" title="#3 Bistable 555 Timer">#3 Bistable 555 Timer</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/8bits-computer/part1-clock/4-clocklogic/" title="#4 Clock Logic">#4 Clock Logic</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/active-directory/">🖥 Active Directory Posts</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/active-directory/build-training-lab/">Build your Training Lab</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/active-directory/build-training-lab/1-domain/" title="#1 Setup the Domain and Workstations">#1 Setup the Domain and Workstations</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/active-directory/ad-attacks/" title="Hacking &amp; Attacks">Hacking &amp; Attacks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/reverse-engineering/">👾 Reverse Engineering</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/reverse-engineering/iot-hacking/">IoT Hacking</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/" title="D-Link - DCS-932L">D-Link - DCS-932L</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/iot-hacking/tplink-ac750/" title="#1 TP-Link AC750 Wifi Router">#1 TP-Link AC750 Wifi Router</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/reverse-engineering/binary-exploitation/">Binary Exploitation</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/buffer-overflow/" title="#1 Introduction to linux buffer-overflow 32-bit">#1 Introduction to linux buffer-overflow 32-bit</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/ret-2-win/" title="#2 ret2win exploit 32-bit linux">#2 ret2win exploit 32-bit linux</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/reverse-engineering/binary-exploitation/ret-2-libc/" title="#3 ret2libc exploit 32-bit linux">#3 ret2libc exploit 32-bit linux</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/">🪲 Malware</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/investigations/">Investigations</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/kardon/" title="Kardon Loader">Kardon Loader</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/investigations/vbs-mp3-downloader-1/" title="VBS MP3 Downloader">VBS MP3 Downloader</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/malware-tutorials/">Malware Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/malware-tutorials/cuckoo-sandbox/" title="Cuckoo sandbox install">Cuckoo sandbox install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/malware/dev-projects/">Malware Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/malware/dev-projects/simple-vba-bypass-defender/" title="ByPass Defender with Simple VBA">ByPass Defender with Simple VBA</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/">🍓 Raspberry Projects</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/raspberry/p4wnp1/">P4wnP1</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/raspberry/p4wnp1/p4wnp1-install/" title="P4wnP1 Install">P4wnP1 Install</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/">🐧 Linux Tutorials</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/linux-tutorials/nixos/">NixOS</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-conf/" title="How to configure NixOS">How to configure NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-install/" title="How to install NixOS">How to install NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-ssh/" title="How to setup SSH on NixOS">How to setup SSH on NixOS</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/linux-tutorials/nixos/nixos-wireguard/" title="How to setup Wireguard NixOS">How to setup Wireguard NixOS</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/">📝 Write-Up</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/forest/" title="Forest - easy">Forest - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/bellatrix/" title="Bellatrix - easy">Bellatrix - easy</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/reverse/firmware.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/adrien_hu3506b078850a2b7b20331c4ea2092816_75131_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">Adrien</h5>
+          <p>Thursday, September 22, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>D-Link - DCS-932L</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <div class="alert alert-warning">
+    <strong>This is actually my first firmware &ldquo;Reverse&rdquo;. This post will also serve as a tutorial for myself and others !</strong>
+</div>
+
+<div class="alert alert-danger">
+    <strong>For education purpose</strong>
+</div>
+
+<h2 id="sources">Sources</h2>
+<ul>
+<li>Version : <code>1.14.04</code></li>
+<li>MD5 : <code>b93d60f595c4736a153ca8c61d77ffc6</code></li>
+<li>Download link <a href="http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/">http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/</a></li>
+</ul>
+<p>This test we perfomed on Kali Linux VM.</p>
+<h2 id="stage-1---analysis">Stage 1 - Analysis</h2>
+<p>Using <code>binwalk</code> we can &ldquo;walk&rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address. of what&rsquo;s inside the binary.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>binwalk dcs932l_v1.14.04.bin
+</span></span></code></pre></div><p>Here is the output</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>DECIMAL       HEXADECIMAL     DESCRIPTION
+</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">106352</span>        0x19F70         U-Boot version string, <span style="color:#e6db74">&#34;U-Boot 1.1.3&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">106816</span>        0x1A140         CRC32 polynomial table, little endian
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">124544</span>        0x1E680         HTML document header
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">124890</span>        0x1E7DA         HTML document footer
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">124900</span>        0x1E7E4         HTML document header
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">125092</span>        0x1E8A4         HTML document footer
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">125260</span>        0x1E94C         HTML document header
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">125953</span>        0x1EC01         HTML document footer
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">327680</span>        0x50000         uImage header, header size: <span style="color:#ae81ff">64</span> bytes, header CRC: 0x88345E96, created: 2016-09-09 13:52:27, image size: <span style="color:#ae81ff">3804958</span> bytes, Data Address: 0x80000000, Entry Point: 0x803B8000, data CRC: 0x531E94DE, OS: Linux, CPU: MIPS, image type: OS Kernel Image, compression type: lzma, image name: <span style="color:#e6db74">&#34;Linux Kernel Image&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">327744</span>        0x50040         LZMA compressed data, properties: 0x5D, dictionary size: <span style="color:#ae81ff">33554432</span> bytes, uncompressed size: <span style="color:#ae81ff">6558763</span> bytes
+</span></span></code></pre></div><h3 id="binwalk-result">Binwalk Result</h3>
+<ul>
+<li><code>106352 - 0x19F70</code> : U-Boot 1.1.3</li>
+<li><code>327680 - 0x50000</code> : Linux Kernel Image</li>
+<li><code>327744 - 0x50040</code> : LZMA Compress Data</li>
+</ul>
+<p>uImage Header at <code>327680</code> tell us that we can found a LInux Kerne Image in a LZMA arhcive format.</p>
+<h3 id="decompress-lzma">Decompress LZMA</h3>
+<p>Unpack the LZMA Archive using <code>dd</code> tool. We output the result inside the <code>kernal.lzma</code> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>dd <span style="color:#66d9ef">if</span><span style="color:#f92672">=</span>dcs932l_v1.14.04.bin skip<span style="color:#f92672">=</span><span style="color:#ae81ff">327744</span> bs<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> of<span style="color:#f92672">=</span>kernel.lzma
+</span></span></code></pre></div><p><img src="kernellzmq.jpeg" alt="kernel.lzma"></p>
+<p>Make sure the LZMA file is well extracted</p>
+<p><img src="kernel-check.jpeg" alt="kernel.lzma.check"></p>
+<p>Now let&rsquo;s extract the LZMA achive using <code>unlzma</code> tool</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>unlzma -d &lt; kernel.lzma &gt; kernel
+</span></span></code></pre></div><p><img src="lzma-check.jpeg" alt="kernel.lzma.check"></p>
+<div class="alert alert-warning">
+    <strong>Got an error while extracting the kernel bit it seems working just fine for now
+, lucky me.</strong>
+</div>
+
+<h2 id="stage-2---kernel">Stage 2 - Kernel</h2>
+<p>Now we have the kernel in our hands, let&rsquo;s see what&rsquo;s in there.</p>
+<p>Again we use <code>binwalk</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>DECIMAL       HEXADECIMAL     DESCRIPTION
+</span></span><span style="display:flex;"><span>--------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3145804</span>       0x30004C        Linux kernel version 2.6.21
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3175792</span>       0x307570        SHA256 hash constants, little endian
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3183312</span>       0x3092D0        AES Inverse S-Box
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3184080</span>       0x3095D0        AES S-Box
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3389960</span>       0x33BA08        Unix path: /usr/gnemul/irix/
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3392244</span>       0x33C2F4        Unix path: /usr/lib/libc.so.1
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3393940</span>       0x33C994        Unix path: /dev/vc/0
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3408260</span>       0x340184        Copyright string: <span style="color:#e6db74">&#34;Copyright (c) 2010 Alpha Networks Inc.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3491536</span>       0x3546D0        Unix path: /etc/Wireless/RT2860STA/RT2860STA.dat
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3573187</span>       0x3685C3        Neighborly text, <span style="color:#e6db74">&#34;neighbor %.2x%.2x.%.2x:%.2x:%.2x:%.2x:%.2x:%.2x lost on port %d(%s)(%s)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3807776</span>       0x3A1A20        CRC32 polynomial table, little endian
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3811440</span>       0x3A2870        AES S-Box
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4038656</span>       0x3DA000        LZMA compressed data, properties: 0x5D, dictionary size: <span style="color:#ae81ff">1048576</span> bytes, uncompressed size: <span style="color:#ae81ff">8072704</span> bytes
+</span></span></code></pre></div><p>Another LZMA archive is visible at 4038656</p>
+<h3 id="extract-unkown-lzma-archive">Extract Unkown LZMA archive</h3>
+<p><img src="unkown.jpeg" alt="kernel.lzma.check"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>unlzma -d &lt; unknown.lzma &gt; unkown
+</span></span></code></pre></div><p><img src="unknown1.jpeg" alt="kernel.lzma.check"></p>
+<p>And here we go, Here is the <code>CPIO</code> archive thta contain the file system of the firnware.</p>
+<h3 id="cves">CVEs</h3>
+<p>In the same time, the first <code>binwalk</code> on the kernel file  give us the CVE output of the current kernel version
+<strong><code>Linux Kernel 2.6.21 - 15 CVE</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>1	CVE-2012-1583	399		DoS	2012-06-16	2016-08-23	5.0	None	Remote	Low	Not
+</span></span><span style="display:flex;"><span>2	CVE-2009-2406	119		DoS
+</span></span><span style="display:flex;"><span>3	CVE-2009-1389	119		DoS
+</span></span><span style="display:flex;"><span>4	CVE-2009-0778			DoS	2009-03-12	2020-08-28	7.1	None	Remote	Medium	Not
+</span></span><span style="display:flex;"><span>5	CVE-2008-4609	16		DoS	2008-10-20	2021-07-07	7.1	None	Remote	Medium	Not
+</span></span><span style="display:flex;"><span>6	CVE-2008-2750	20		DoS
+</span></span><span style="display:flex;"><span>7	CVE-2008-1669	94		Exec
+</span></span><span style="display:flex;"><span>8	CVE-2008-1294	20		Bypass	2008-05-02	2018-10-30	2.1	None	Local	Low	Not
+</span></span><span style="display:flex;"><span>9	CVE-2008-0600	94		+Priv	2008-02-12	2018-10-30	7.2	None	Local	Low	Not
+</span></span><span style="display:flex;"><span>10	CVE-2008-0352	119		DoS
+</span></span><span style="display:flex;"><span>11	CVE-2007-2876			DoS	2007-06-11	2018-10-30	6.1	None	Local
+</span></span><span style="display:flex;"><span>12	CVE-2007-2453				2007-06-11	2018-10-30	1.2	None	Local	High	Not
+</span></span><span style="display:flex;"><span>13	CVE-2007-2451			+Info	2007-05-29	2018-10-30	5.0	None	Remote	Low	Not
+</span></span><span style="display:flex;"><span>14	CVE-2007-2172	20			2007-04-22	2018-10-19	4.7	None	Local	Medium	Not
+</span></span><span style="display:flex;"><span>15	CVE-2006-6058	189		DoS
+</span></span></code></pre></div><h2 id="stage-3---unpack-cpio">Stage 3 - Unpack CPIO</h2>
+<p>Now let&rsquo;s unpack this arhive CPIO and see if we an get the file system.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo cpio -idm --no-absolute-filenames &lt; ../unkown
+</span></span></code></pre></div><p><img src="cpiounpack.jpeg" alt="kernel.lzma.check"></p>
+<p>The filesystem is here we can now explore it on our own</p>
+<h2 id="stage-4---filesystem">Stage 4 - Filesystem</h2>
+<h3 id="etc_ro">/etc_ro/</h3>
+<p>Inside the <code>/etc_ro/</code> folder we can see custom script and a web folder application.</p>
+<p><img src="etc_ro.jpeg" alt="kernel.lzma.check"></p>
+<p>Simple Web application and private keys auto signed for the web server</p>
+<p><img src="etc_ro2.jpeg" alt="kernel.lzma.check"></p>
+<p>Another firmware in the WLAN folder
+<img src="etc_ro3.jpeg" alt="kernel.lzma.check"></p>
+<p>And then the private RSA key fo the web server</p>
+<p><img src="etc_ro4.png" alt="kernel.lzma.check"></p>
+<h3 id="sbin">/sbin/</h3>
+<p>The sbin folder seems to be more interesting since we can check the custom scripts.
+<img src="sbin1.jpeg" alt="sbin"></p>
+<p>First thing I see while checking the custom scripts is that the absolute path of the binaries is not mentionned, this can be used as an exploit to bypass the real binary and use a malicious one if the <code>$PATH</code> variable is changed.</p>
+<p><img src="sbin2.jpeg" alt="sbin"></p>
+<h4 id="internetsh"><code>internet.sh</code></h4>
+<p>This script is interesting, since we can see the process of creating a new user on the system which is added directly to the <code>/ect/passwd</code>.</p>
+<p><img src="sbin3.jpeg" alt="sbin"></p>
+<p>Here is some source code for the <a href="https://github.com/Nossiac/mtk-openwrt-feeds/blob/master/applications/wificonf/files/usr/bin/nvram_get">nvram_get(click-me)</a> function, from <code>wificonf</code> package.</p>
+<p>This function seems to retreive a value from a device</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>nvram_get <span style="color:#f92672">[</span>dev<span style="color:#f92672">]</span> &lt;key&gt;
+</span></span></code></pre></div><p>The value 2880 seems to be a default value for the first card</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># else, try default mapping with l1profile:</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     2880  -&gt; 1st card</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     rtdev -&gt; 2nd card</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#     wifi3 -&gt; 3rd card</span>
+</span></span></code></pre></div><h4 id="storagesh"><code>storage.sh</code></h4>
+<p>From this script we can see a nasty <code>chmod 777</code> on the home directory of the current user or the ser created.</p>
+<p><img src="storage.jpeg" alt="storage"></p>
+<p>Here is the github that contains all the scripts files : <a href="https://github.com/socoola/yhrouter/blob/master/user/rt2880_app/scripts/storage.sh">github-scripts</a></p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+            <strong>Share on:</strong>
+            
+            <a class="btn btn-sm facebook-btn" href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            
+            
+                <a class="btn btn-sm twitter-btn" href="https://twitter.com/share?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f&text=D-Link%20-%20DCS-932L&via=AlrikRr%27s%20Blog" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+            
+            
+                <a  class="btn btn-sm reddit-btn" href="https://reddit.com/submit?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f&title=D-Link%20-%20DCS-932L" target="_blank">
+                  <i class="fab fa-reddit"></i>
+                </a>
+            
+            
+            
+            
+                <a class="btn btn-sm linkedin-btn" href="https://www.linkedin.com/shareArticle?url=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f&title=D-Link%20-%20DCS-932L" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+            
+            
+             
+            
+                 <a class="btn btn-sm whatsapp-btn" href="https://api.whatsapp.com/send?text=D-Link%20-%20DCS-932L https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+            
+            
+                <a class="btn btn-sm email-btn" href="mailto:?subject=D-Link%20-%20DCS-932L&body=https%3a%2f%2fAlrikRr.github.io%2fposts%2freverse-engineering%2fiot-hacking%2fd-link-dcs-932l%2f" target="_blank">
+                  <i class="fas fa-envelope-open-text"></i>
+                </a>
+            
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/alrikrr/alrikrr.github.io/edit/main/content/posts/reverse-engineering/iot-hacking/D-Link-DCS-932L/index.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/active-directory/ad-attacks/" title="Hacking &amp; Attacks" class="btn btn-outline-info">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Hacking &amp; Attacks</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/reverse-engineering/iot-hacking/tplink-ac750/" title="#1 TP-Link AC750 Wifi Router" class="btn btn-outline-info">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">#1 TP-Link AC750 Wifi Router</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#sources">Sources</a></li>
+    <li><a href="#stage-1---analysis">Stage 1 - Analysis</a>
+      <ul>
+        <li><a href="#binwalk-result">Binwalk Result</a></li>
+        <li><a href="#decompress-lzma">Decompress LZMA</a></li>
+      </ul>
+    </li>
+    <li><a href="#stage-2---kernel">Stage 2 - Kernel</a>
+      <ul>
+        <li><a href="#extract-unkown-lzma-archive">Extract Unkown LZMA archive</a></li>
+        <li><a href="#cves">CVEs</a></li>
+      </ul>
+    </li>
+    <li><a href="#stage-3---unpack-cpio">Stage 3 - Unpack CPIO</a></li>
+    <li><a href="#stage-4---filesystem">Stage 4 - Filesystem</a>
+      <ul>
+        <li><a href="#etc_ro">/etc_ro/</a></li>
+        <li><a href="#sbin">/sbin/</a>
+          <ul>
+            <li><a href="#internetsh"><code>internet.sh</code></a></li>
+            <li><a href="#storagesh"><code>storage.sh</code></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Achievements</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
