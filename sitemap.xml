@@ -103,40 +103,40 @@
     <priority>0.1</priority>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/firmware/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/iot-hacking/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/reverse/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/tp-link/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/uart/</loc>
-    <lastmod>2022-09-23T00:00:00+00:00</lastmod>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/binary/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
@@ -191,30 +191,6 @@
   </url><url>
     <loc>https://AlrikRr.github.io/posts/updates/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/bloodhound/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/htb/forest/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/htb/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/categories/htb/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/kerbrute/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/spn/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/windows/</loc>
-    <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/malware/dev-projects/simple-vba-bypass-defender/</loc>
     <lastmod>2022-08-22T00:00:00+00:00</lastmod>
@@ -333,6 +309,45 @@
     <loc>https://AlrikRr.github.io/tags/unpacked/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/htb/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/eternalblue/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/htb/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/htb/easy/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/legacyos/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/windows/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/xp/</loc>
+    <lastmod>2021-10-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/bloodhound/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/kerbrute/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/spn/</loc>
+    <lastmod>2021-09-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/raspberry/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -383,6 +398,9 @@
   </url><url>
     <loc>https://AlrikRr.github.io/tags/bufferoverflow/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
+    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>

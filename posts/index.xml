@@ -6,10 +6,10 @@
     <description>Recent content in AlrikRr Posts on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sun, 23 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>#1 TP-Link AC750 Wifi Router</title>
       <link>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</link>
-      <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</guid>
       <description>Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
@@ -60,19 +60,6 @@ In the screenshot, you can see the cu device, we are looking for the tty interfa
 I passed my eJPT on the 27th of August and validate it after 3h. I didn&amp;rsquo;t take the course, only one voucher.
 To pass the exam, you may need to answer 15 correct questions.
 Exam Guide The Exam for the eJPT is well guided, you&amp;rsquo;ll need to answer 20 multiple choices question before the 3 days due date after starting your exam.</description>
-    </item>
-    
-    <item>
-      <title>Forest - easy</title>
-      <link>https://AlrikRr.github.io/posts/write-up/htb/forest/</link>
-      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/posts/write-up/htb/forest/</guid>
-      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
-As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
-The machine is part of the HTB.local network.
-Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
-LDAPSearch Since there is an LDAP port, we can try if there is a way to gather information on the LDAP server using ldapsearch with anonymous account.</description>
     </item>
     
     <item>
@@ -159,6 +146,29 @@ Clear code - comments First we need to clear the comment since there are a lot o
       <description>Identification Name kardon.exe Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400 FileType PE 32 bit TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29 FileSize 10KB ImageBase 000011AD EntryPoint(RVA) 00400000 VA(IB+RVA) 004011AD Sections There are 4 sections :
 .text .rdata .data .reloc Imports Interesting DLLs :
 urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.dll: GetCommandLineA(), MoveFileExA(), WinExec(), GetCurrentProcess(), etc. ADVAPI32.dll: RegCreateKeyA(), RegSetValueExA(), etc. 💡 The identification of the malware is done, we have a better understanding of the malware at the moment.</description>
+    </item>
+    
+    <item>
+      <title>Legacy</title>
+      <link>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</guid>
+      <description>Re-Post from October 2021, 13rd Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
+Exploit CVE-2008-4250 msfconsole search ms08_067 use 0 After the exploit the meterpreter gives us a SYSTEM shell, no need to privesc !</description>
+    </item>
+    
+    <item>
+      <title>Forest</title>
+      <link>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</guid>
+      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
+The machine is part of the HTB.local network.
+Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+LDAPSearch Since there is an LDAP port, we can try if there is a way to gather information on the LDAP server using ldapsearch with anonymous account.</description>
     </item>
     
     <item>

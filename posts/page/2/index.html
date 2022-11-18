@@ -675,31 +675,6 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/write-up/htb/forest/" title="Forest - easy">Forest - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
       <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/vulnhub/">VulnHub</a>
       
       <ul class="">
@@ -732,6 +707,72 @@
     </li>
   
 
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
             </div>
           </ul>
@@ -751,35 +792,6 @@
       
         
           <div class="post-card">
-  <a href="/posts/malware/investigations/vbs-mp3-downloader-1/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/malware/investigations/banner.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">VBS MP3 Downloader</h5>
-        <p class="card-text post-summary">Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
-Today we are going to check a VBS code and see what’s inside.
-Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
-VirusTotal
-Clear code - comments First we need to clear the comment since there are a lot of these in the code.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">January 29, 2022</span>
-        <a
-        href="/posts/malware/investigations/vbs-mp3-downloader-1/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
   <a href="/posts/malware/investigations/kardon/" class="post-card-link">
     <div class="card">
       <div class="card-head">
@@ -795,6 +807,61 @@ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.dll: G
         <span class="float-left">January 28, 2022</span>
         <a
         href="/posts/malware/investigations/kardon/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/htb/easy/windows/legacy/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/write-up/htb/legacy.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Legacy</h5>
+        <p class="card-text post-summary">Re-Post from October 2021, 13rd Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
+Exploit CVE-2008-4250 msfconsole search ms08_067 use 0 After the exploit the meterpreter gives us a SYSTEM shell, no need to privesc !</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">October 13, 2021</span>
+        <a
+        href="/posts/htb/easy/windows/legacy/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/htb/easy/windows/forest/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/write-up/htb/forest.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Forest</h5>
+        <p class="card-text post-summary">Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &hellip;
+The machine is part of the HTB.local network.
+Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+LDAPSearch Since there is an LDAP port, we can try if there is a way to gather information on the LDAP server using ldapsearch with anonymous account.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">September 2, 2021</span>
+        <a
+        href="/posts/htb/easy/windows/forest/"
         class="float-right btn btn-outline-info btn-sm"
         >Read</a
         >
@@ -1053,36 +1120,6 @@ For this install, I used a Virtual Disk of 25GiB.
         <span class="float-left">June 19, 2020</span>
         <a
         href="/posts/linux-tutorials/nixos/nixos-install/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
-        
-          <div class="post-card">
-  <a href="/posts/linux-tutorials/nixos/nixos-wireguard/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/linux-tutorials/nixos/banner.png' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">How to setup Wireguard NixOS</h5>
-        <p class="card-text post-summary">Special thnks to Rayan Lahfa
-and Klaes ;)
-Wiki ! You can use the default configuration file : Nixos-Wireguard
-Install &amp; setup First, you need to install wireguard using :
-$ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
-$ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">June 19, 2020</span>
-        <a
-        href="/posts/linux-tutorials/nixos/nixos-wireguard/"
         class="float-right btn btn-outline-info btn-sm"
         >Read</a
         >
