@@ -21,10 +21,11 @@
 <link rel="stylesheet" href="/css/layouts/main.css"/>
 <link rel="stylesheet" href="/css/navigators/navbar.css"/>
 <link rel="stylesheet" href="/css/plyr.css"/>
+
 <link rel="stylesheet" href="/css/flag-icon.min.css"/>
 
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600">
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
 
 
 <link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
@@ -238,7 +239,7 @@
         
         
           <li class="nav-item">
-            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+            <a class="nav-link" id="blog-link" href="/posts/">Posts</a>
           </li>
         
         
@@ -251,17 +252,17 @@
   default-theme="system"></div>
 <a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
 </a>
 <div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
   <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
-    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
   </a>
   <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
-    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
   </a>
   <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
-    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
   </a>
 </div>
 </li>
@@ -409,7 +410,7 @@
         
           
         
-        <a href="#recent-posts" aria-label="Read More - Adrien aka AlrikRr 👺"><i class="arrow bounce fa fa-chevron-down"></i></a>
+        <a href="#recent-posts" class="arrow-center" aria-label="Read More - Adrien aka AlrikRr 👺"><i class="arrow bounce fa fa-chevron-down"></i></a>
       
     
   </div>
@@ -512,6 +513,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
       
     </div>
   </div>
+  
 </div>
 
           </div>
@@ -568,6 +570,12 @@ To synchornize communications, the UART transmitter and receiver must agree on a
           <li>
             
               <a href="https://twitter.com/AlrikRr" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            
+          </li>
+          
+          <li>
+            
+              <a href="https://infosec.exchange/@AlrikRr" title="Infosec.Exchange" target="_blank" rel="noopener"><i class="fa-brands fa-mastodon"></i></a>
             
           </li>
           
@@ -648,7 +656,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
       
       ></span>
     </span>
-    <div class="circular-progress-value">Coding</div>
+    <div class="circular-progress-value">Coding &amp; Scripting</div>
   </div>
 </div>
 
@@ -670,7 +678,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
       
       ></span>
     </span>
-    <div class="circular-progress-value">Linux</div>
+    <div class="circular-progress-value">DFIR - Forensic</div>
   </div>
 </div>
 
@@ -682,7 +690,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
   <div class="circular-progress pink">
     <span class="circular-progress-left">
       <span
-        class="circular-progress-bar circular-progress-percentage-95"
+        class="circular-progress-bar circular-progress-percentage-65"
         
       ></span>
     </span>
@@ -692,7 +700,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
       
       ></span>
     </span>
-    <div class="circular-progress-value">Team Work</div>
+    <div class="circular-progress-value">Lockpicking</div>
   </div>
 </div>
 
@@ -762,7 +770,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
         
       </div>
       <div class="card-body">
-        <p class="card-text">Web Pentesting, OSINT, SCADA, Azure Cloud, Active Directory</p>
+        <p class="card-text">Web Pentesting, OSINT, SCADA, Azure Cloud, Active Directory, Network device, Physical Pentesting</p>
       </div>
     </div>
   </a>
@@ -780,12 +788,12 @@ To synchornize communications, the UART transmitter and receiver must agree on a
             
           
         
-          <img class="card-img-xs" src="/images/sections/skills/python_hu366696e6f01622ab7c35c065aea03f4e_37415_24x24_fit_box_3.png" alt="Coding" />
-          <h5 class="card-title">Coding</h5>
+          <img class="card-img-xs" src="/images/sections/skills/python_hu366696e6f01622ab7c35c065aea03f4e_37415_24x24_fit_box_3.png" alt="Coding &amp; Scripting" />
+          <h5 class="card-title">Coding &amp; Scripting</h5>
         
       </div>
       <div class="card-body">
-        <p class="card-text">Scripting in Python, Bash and PowerShell</p>
+        <p class="card-text">Scripting in Python, Bash and PowerShell, working on Github projects</p>
       </div>
     </div>
   </a>
@@ -808,7 +816,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
         
       </div>
       <div class="card-body">
-        <p class="card-text">I know how linux works, I know how to install Archlinux and use basics command and advanced ! But I&rsquo;m not a guru Linux !</p>
+        <p class="card-text">Linux troubleshooting expert, I used Arch btw !</p>
       </div>
     </div>
   </a>
@@ -854,7 +862,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
         
       </div>
       <div class="card-body">
-        <p class="card-text">Started learning IOT and electronic by build the clock of a 8-bit computer !</p>
+        <p class="card-text">Started learning IOT and electronic by build the clock of a 8-bit computer ! Working on IoT Hacking !</p>
       </div>
     </div>
   </a>
@@ -922,7 +930,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
     <div class="experience-entry-heading">
         
         
-        <h5>Penetration Tester &amp; Security Consultant</h5>
+        <h5>Penetration Tester | Offensive Team</h5>
         <h6><a href=https://www.bradleyrollins.com title="Bradley &amp; Rollins" target="_blank" rel="noopener">Bradley &amp; Rollins</a></h6>
         
         <p class="text-muted">Jully 2021 - Present,
@@ -936,19 +944,25 @@ To synchornize communications, the UART transmitter and receiver must agree on a
     <h6 class="text-muted">Responsibilities:</h6>
     <ul class="justify-content-around">
     
-        <li>External Pentesting, Web application, OSINT.</li>
+        <li>Pentesting External Web Application</li>
     
-        <li>Internal Pentesting Active Directorym Linux Server &amp; SCADA</li>
+        <li>Pentesting Internal Active Directory &amp; Network Devices</li>
     
-        <li>Cloud Pentesting Azure AD.</li>
+        <li>Pentesting Cloud Microsoft Azure &amp; AWS</li>
     
-        <li>Performing IoT audits on industrial sites.</li>
+        <li>Industrial Audit (OT) &amp; Pentesting SCADA</li>
     
-        <li>Training and assistance to analysts and defense teams.</li>
+        <li>Forensic &amp; DFIR</li>
     
-        <li>Lead on Pentest projects, client meeting, scope and delivery.</li>
+        <li>Malware coding &amp; Live demo</li>
     
-        <li>Writing of reports and procedures (French &amp; English)</li>
+        <li>Writing of Technical &amp; Executive reports (French/English)</li>
+    
+        <li>Lead and follow-up with Bradley&amp;Rollins clients</li>
+    
+        <li>Bradley&amp;Rollins Internal Employee Training</li>
+    
+        <li>Supporting the operational teams on the Offensive Security part</li>
     
     </ul>
     
@@ -994,17 +1008,27 @@ To synchornize communications, the UART transmitter and receiver must agree on a
     <h6 class="text-muted">Responsibilities:</h6>
     <ul class="justify-content-around">
     
-        <li>Completed security audit reports on web applications.</li>
+        <li>Pentest External Application Web</li>
     
-        <li>Assisted and advised the Chief of Information Security Officer.</li>
+        <li>Pentest Internal Active Directory</li>
     
-        <li>Worked on Python and PowerShell scripts.</li>
+        <li>Development of Forensic Investigation tools</li>
     
-        <li>Trained users in IT security best-practices with demonstrations.</li>
+        <li>White Station development (Open Source - USBGuardian)</li>
     
-        <li>Analyzed logs in cooperation with the ANSSI (French National Agency for the Security of Information Systems)</li>
+        <li>Forensic investigation with ANSSI</li>
     
-        <li>Managed internal projects such as Forensics evidence automation, USB malware scanning and Dynamic malware analysis.</li>
+        <li>Intelligence and Advice on emerging cyber threats.</li>
+    
+        <li>Recommendations report on new threats</li>
+    
+        <li>Writing of technical and executive reports</li>
+    
+        <li>Help and training of development teams in Cyber best practices</li>
+    
+        <li>Training and awareness of diplomats</li>
+    
+        <li>Production of videos for Cyber awareness</li>
     
     </ul>
     
@@ -1119,6 +1143,75 @@ To synchornize communications, the UART transmitter and receiver must agree on a
   </div>
   <div class="container filtr-projects">
     <div class="row" id="project-card-holder">
+      
+        <div
+  class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item"
+  data-category='all, DFIR,security,hobby'
+>
+  <div class="card mt-1">
+    <div class="card">
+      <a class="card-header" href="https://github.com/AlrikRr/DFIR-ExtracTux" target="_blank" rel="noopener">
+        <div>
+          <div class="d-flex">
+            
+
+            
+            
+            
+            
+              
+            
+
+            <img class="card-img-xs" src="/images/sections/projects/tux_hud0c70f4796d7176ca6380c7b07287d17_11913_24x24_fit_box_3.png" alt="DFIR-ExtracTux" />
+            
+            
+            <h5 class="card-title mb-0">DFIR-ExtracTux</h5>
+          </div>
+          <div class="sub-title">
+            <span>Owner</span>
+            <span>October - 2022 - Present</span>
+          </div>
+        </div>
+      </a>
+      <div class="card-body text-justify pt-1 pb-1">
+        <p>DFIR Tool for Linux System to collect and gather all kind of data in case of compromised system.</p>
+        
+        <div class="project-card-footer">
+          
+            <div class="project-tags-holder">
+              
+                  <span class="badge btn-info">
+                    DFIR
+                  </span>
+              
+                  <span class="badge btn-info">
+                    security
+                  </span>
+              
+                  <span class="badge btn-info">
+                    hobby
+                  </span>
+              
+            </div>
+          
+          <div class="project-btn-holder">
+            
+            <a
+              class="github-button-inactive project-btn"
+              href="https://github.com/AlrikRr/DFIR-ExtracTux"
+              data-icon="octicon-standard"
+              data-show-count="true"
+              aria-label="Star DFIR-ExtracTux"
+              >Star</a
+            >
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
       
         <div
   class="col-sm-12 col-md-6 col-lg-4 p-2 filtr-item"
@@ -1824,7 +1917,7 @@ To synchornize communications, the UART transmitter and receiver must agree on a
     <div class="container">
       <div class="row text-left">
         <div class="col-md-4">
-          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
             Toha
           </a>
