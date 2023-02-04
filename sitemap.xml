@@ -2,9 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://AlrikRr.github.io/search/</loc>
-    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
-    <priority>0.1</priority>
+    <loc>https://AlrikRr.github.io/notes/active-directory/documentation/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/attacks/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/0-recon/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</loc>
   </url><url>
     <loc>https://AlrikRr.github.io/search/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
@@ -101,20 +109,42 @@
     <loc>https://AlrikRr.github.io/search/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
+  </url><url>
+    <loc>https://AlrikRr.github.io/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/certification/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/crts/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/updates/my-crts/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/updates/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/updates/</loc>
+    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
-    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/categories/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/firmware/</loc>
@@ -127,9 +157,6 @@
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/reverse/</loc>
-    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/tp-link/</loc>
@@ -177,19 +204,10 @@
     <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/tty-shell/</loc>
     <lastmod>2022-09-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/tags/certification/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/ejpt/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/updates/my-ejpt/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/categories/updates/</loc>
-    <lastmod>2022-09-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/updates/</loc>
     <lastmod>2022-09-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/malware/dev-projects/simple-vba-bypass-defender/</loc>
@@ -481,5 +499,7 @@
   </url><url>
     <loc>https://AlrikRr.github.io/search/</loc>
     <priority>0.1</priority>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/</loc>
   </url>
 </urlset>

@@ -45,7 +45,6 @@
 <meta property="og:url" content="https://AlrikRr.github.io/posts/" />
 
 
-
     
     
     <link rel="stylesheet" href="/css/layouts/list.css">
@@ -174,6 +173,15 @@
       
       <ul class="">
         
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/updates/my-crts/" title="My CRTS Feedback">My CRTS Feedback</a></li>
+  
+
   
   
   
@@ -793,6 +801,35 @@
       
         
           <div class="post-card">
+  <a href="/posts/malware/investigations/vbs-mp3-downloader-1/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/malware/investigations/banner.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">VBS MP3 Downloader</h5>
+        <p class="card-text post-summary">Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
+Today we are going to check a VBS code and see what’s inside.
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
+VirusTotal
+Clear code - comments First we need to clear the comment since there are a lot of these in the code.</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">January 29, 2022</span>
+        <a
+        href="/posts/malware/investigations/vbs-mp3-downloader-1/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
   <a href="/posts/malware/investigations/kardon/" class="post-card-link">
     <div class="card">
       <div class="card-head">
@@ -1100,37 +1137,6 @@ It is recommended to understand the configuration file before pasting it supidly
 
         
       
-        
-          <div class="post-card">
-  <a href="/posts/linux-tutorials/nixos/nixos-install/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/linux-tutorials/nixos/banner.png' alt="Hero Image">
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">How to install NixOS</h5>
-        <p class="card-text post-summary">Special thanks to Rayan Lahfa
-ISO &amp; VBOX configuration This tutorial was realized with a virtual environment using VirtualBox, don&rsquo;t forget to activate the EFI option into your VM configuration.
-You can download the official NIXOS ISO here : nixos.org/download
-Don&rsquo;t hesitate to read the wiki here : nixos.org
-Installation If you have any issue, Google is your friend
-For this install, I used a Virtual Disk of 25GiB.
-# Display NixOS Wiki $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">June 19, 2020</span>
-        <a
-        href="/posts/linux-tutorials/nixos/nixos-install/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
-        
-      
     </div>
     <div class="paginator">
       
@@ -1300,8 +1306,8 @@ For this install, I used a Virtual Disk of 25GiB.
           <ul>
             
               
-                <li><a href=mailto:adrienlasalle.pro&#43;contact@gmail.com target="_blank" rel="noopener">
-                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle.pro&#43;contact@gmail.com</span>
+                <li><a href=mailto:adrienlasalle[dot]pro[&#43;]contact[at]gmail[dot]com target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>adrienlasalle[dot]pro[&#43;]contact[at]gmail[dot]com</span>
                 </a></li>
               
             

