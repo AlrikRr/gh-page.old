@@ -114,14 +114,41 @@
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/badgelife/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/ctf/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/nsec/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/tags/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/categories/write-up/</loc>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/1-flag/</loc>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/certification/</loc>
     <lastmod>2023-01-19T00:00:00+00:00</lastmod>
@@ -130,9 +157,6 @@
     <lastmod>2023-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/updates/my-crts/</loc>
-    <lastmod>2023-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/tags/</loc>
     <lastmod>2023-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/updates/</loc>
@@ -417,9 +441,6 @@
     <loc>https://AlrikRr.github.io/tags/bufferoverflow/</loc>
     <lastmod>2020-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
-    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -427,9 +448,6 @@
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/vulnhub/</loc>
-    <lastmod>2020-08-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/categories/write-up/</loc>
     <lastmod>2020-08-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/vulnhub/y0usef/</loc>

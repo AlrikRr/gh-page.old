@@ -6,7 +6,30 @@
     <description>Recent content in AlrikRr Posts on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Flag #5 - Punk Down</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</guid>
+      <description>Okay for this one I don&amp;rsquo;t have the reference but I managed to found it by accident ! It&amp;rsquo;s actually the second one I found during my journey.
+Punk Guy I was playing around the place and speak to this Punk Guy right here
+During the conversation, I found the flag by accident by pressing the Down Button Flag 5 The flag is FLAG-KLJV490uhkEJF28</description>
+    </item>
+    
+    <item>
+      <title>Flag #1 - Welcome</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/1-flag/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/1-flag/</guid>
+      <description>Hello everyone ! It&amp;rsquo;s been a while since my last post but I&amp;rsquo;m still alive no worries 😁
+Today I&amp;rsquo;m gonna post some write-up for the NorthSec 2021 Badge CTF ! I purchase the badge last year and din&amp;rsquo;t have time to play with it so here I am !
+It&amp;rsquo;s actually my first CTF Badge and I hope im going to fine all the flags !
+Device Here is a full spec of the nsec badge : available here</description>
+    </item>
+    
+    <item>
       <title>My CRTS Feedback</title>
       <link>https://AlrikRr.github.io/posts/updates/my-crts/</link>
       <pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate>
