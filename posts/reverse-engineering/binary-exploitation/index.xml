@@ -38,7 +38,7 @@ Code Here is the code of the program we are going to use:</description>
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/buffer-overflow/</guid>
       <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
 Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
-Why ? To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
+Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
     </item>
     
     

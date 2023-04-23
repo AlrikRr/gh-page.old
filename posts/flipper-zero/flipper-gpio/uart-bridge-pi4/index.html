@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2022-09-21T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="UART Bridge RPi4 to Flipper" />
@@ -252,6 +253,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -958,13 +1020,13 @@ The <code>TX(8)</code> pin from Raspberry Pi must be connected to the <code>RX(1
 <p>The Raspberry is also powered on the laptop just for the power.</p>
 <h2 id="minicom">minicom</h2>
 <p>First you need to install minicom</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># MacOs</span>
-</span></span><span style="display:flex;"><span>brew install minicom
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Linux</span>
-</span></span><span style="display:flex;"><span>apt install minicom
-</span></span></code></pre></div><p>Once installed, change the default serial port `/dev/modem/ to your flipper.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minicom -s
-</span></span></code></pre></div><p>Go to <code>Serial Port Setup</code> and then enter <code>A</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># MacOs</span>
+brew install minicom
+<span style="color:#75715e"># Linux</span>
+apt install minicom
+</code></pre></div><p>Once installed, change the default serial port `/dev/modem/ to your flipper.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">minicom -s
+</code></pre></div><p>Go to <code>Serial Port Setup</code> and then enter <code>A</code>.</p>
 <p>Here I&rsquo;m using the <code>/dev/tty.usbmodemflip_Il4l0w1</code> port of my Flipper.</p>
 <img src="minicom-serial.png"
     
@@ -979,8 +1041,8 @@ The <code>TX(8)</code> pin from Raspberry Pi must be connected to the <code>RX(1
 >
 
 <p>Now you can start minicom</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>minicom
-</span></span></code></pre></div><p>Once minicom is started, you just need to plug the UART pin to your Flipper then use the UART Bridge fonction on GPIO menu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">minicom
+</code></pre></div><p>Once minicom is started, you just need to plug the UART pin to your Flipper then use the UART Bridge fonction on GPIO menu.</p>
 <img src="uart-app.png"
     
         alt="UART APp"
@@ -1115,6 +1177,21 @@ TO find the right Baud, you need to check the documentation or use the most comm
   
     
     
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
   
   
 

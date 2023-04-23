@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="Install for beginners - LUKS, EFI &amp; BTRFS" />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -887,80 +949,80 @@ Don&rsquo;t hesitate to read the <strong>wiki</strong> here : <a href="https://n
 <h2 id="installation">Installation</h2>
 <p><em>If you have any issue, Google is your friend</em></p>
 <p>For this install, I used a Virtual Disk of 25GiB.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Display NixOS Wiki </span>
-</span></span><span style="display:flex;"><span>$ nixos-help  
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># If you need to change the keyboard layout, use this command with you contry code</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># here I used French layout</span>
-</span></span><span style="display:flex;"><span>$ loadkeys fr
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch with root</span>
-</span></span><span style="display:flex;"><span>$ sudo -i
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display disks name and partitions</span>
-</span></span><span style="display:flex;"><span>$ lsblk  
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Open  parted tool and free 2GB for the SWAP  </span>
-</span></span><span style="display:flex;"><span>$ parted /dev/sda -- mklabel gpt  
-</span></span><span style="display:flex;"><span>$ parted /dev/sda -- mkpart primary 512MiB -2GiB  
-</span></span><span style="display:flex;"><span>$ parted /dev/sda -- mkpart primary -2GiB 100%  
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create boot ESP</span>
-</span></span><span style="display:flex;"><span>$ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB  
-</span></span><span style="display:flex;"><span>$ parted /dev/sda -- set <span style="color:#ae81ff">3</span> boot on  
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Encryption of the root partition  </span>
-</span></span><span style="display:flex;"><span>$ cryptsetup luksFormat /dev/sda1
-</span></span><span style="display:flex;"><span>$ cryptsetup luksOpen /dev/sda1 nixos-root
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check if you nixos-root is open</span>
-</span></span><span style="display:flex;"><span>$ ls -l /dev/mapper
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Format the nixos-root into BTRFS</span>
-</span></span><span style="display:flex;"><span>mkfs.btrfs -L nixroot /dev/mapper/nixos-root
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create the SWAP partition</span>
-</span></span><span style="display:flex;"><span>$ mkswap /dev/sda2
-</span></span><span style="display:flex;"><span>$ swapon /dev/sda2
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check if the SWAP is working</span>
-</span></span><span style="display:flex;"><span>$ free -hm
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Format the BOOT partition with vfat</span>
-</span></span><span style="display:flex;"><span>$ mkfs.vfat -n BOOT /dev/sda3
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount nixos-root into /mnt</span>
-</span></span><span style="display:flex;"><span>$ mount -t btrfs /dev/mapper/nixos-root /mnt
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create btrfs subvolume, the top level will be nios</span>
-</span></span><span style="display:flex;"><span>$ btrfs subvolume create /mnt/nixos
-</span></span><span style="display:flex;"><span>$ btrfs subvolume list /mnt
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># umount /mnt and mount again nixos-root but this time using btrfs options</span>
-</span></span><span style="display:flex;"><span>$ umount /mnt
-</span></span><span style="display:flex;"><span>$ mount -t btrfs -o subvol<span style="color:#f92672">=</span>nixos /dev/mapper/nixos-root /mnt
-</span></span><span style="display:flex;"><span>$ cd /mnt
-</span></span><span style="display:flex;"><span>$ ls
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create btrfs subvolume, this part replaces LVM</span>
-</span></span><span style="display:flex;"><span>$ btrfs subvolume create /mnt/home
-</span></span><span style="display:flex;"><span>$ btrfs subvolume create /mnt/var
-</span></span><span style="display:flex;"><span>$ btrfs subvolume create /mnt/nix
-</span></span><span style="display:flex;"><span>$ btrfs subvolume list /mnt
-</span></span><span style="display:flex;"><span>$ mkdir /mnt/boot
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Mount BOOT into /mnt/boot</span>
-</span></span><span style="display:flex;"><span>$ mount /dev/sda3 /mnt/boot
-</span></span><span style="display:flex;"><span>$ ls -l /mnt
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Generate all the default configuration files for nixos</span>
-</span></span><span style="display:flex;"><span>$ nixos-generate-config --root /mnt
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start the install and enter root password</span>
-</span></span><span style="display:flex;"><span>$ nixos-install
-</span></span></code></pre></div><h2 id="basic-commands">Basic commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Display NixOS Wiki </span>
+$ nixos-help  
+
+<span style="color:#75715e"># If you need to change the keyboard layout, use this command with you contry code</span>
+<span style="color:#75715e"># here I used French layout</span>
+$ loadkeys fr
+
+<span style="color:#75715e"># Switch with root</span>
+$ sudo -i
+
+<span style="color:#75715e"># Display disks name and partitions</span>
+$ lsblk  
+
+<span style="color:#75715e"># Open  parted tool and free 2GB for the SWAP  </span>
+$ parted /dev/sda -- mklabel gpt  
+$ parted /dev/sda -- mkpart primary 512MiB -2GiB  
+$ parted /dev/sda -- mkpart primary -2GiB 100%  
+
+<span style="color:#75715e"># Create boot ESP</span>
+$ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB  
+$ parted /dev/sda -- set <span style="color:#ae81ff">3</span> boot on  
+
+<span style="color:#75715e"># Encryption of the root partition  </span>
+$ cryptsetup luksFormat /dev/sda1
+$ cryptsetup luksOpen /dev/sda1 nixos-root
+
+<span style="color:#75715e"># Check if you nixos-root is open</span>
+$ ls -l /dev/mapper
+
+<span style="color:#75715e"># Format the nixos-root into BTRFS</span>
+mkfs.btrfs -L nixroot /dev/mapper/nixos-root
+
+<span style="color:#75715e"># Create the SWAP partition</span>
+$ mkswap /dev/sda2
+$ swapon /dev/sda2
+
+<span style="color:#75715e"># Check if the SWAP is working</span>
+$ free -hm
+
+<span style="color:#75715e"># Format the BOOT partition with vfat</span>
+$ mkfs.vfat -n BOOT /dev/sda3
+
+<span style="color:#75715e"># Mount nixos-root into /mnt</span>
+$ mount -t btrfs /dev/mapper/nixos-root /mnt
+
+<span style="color:#75715e"># Create btrfs subvolume, the top level will be nios</span>
+$ btrfs subvolume create /mnt/nixos
+$ btrfs subvolume list /mnt
+
+<span style="color:#75715e"># umount /mnt and mount again nixos-root but this time using btrfs options</span>
+$ umount /mnt
+$ mount -t btrfs -o subvol<span style="color:#f92672">=</span>nixos /dev/mapper/nixos-root /mnt
+$ cd /mnt
+$ ls
+
+<span style="color:#75715e"># Create btrfs subvolume, this part replaces LVM</span>
+$ btrfs subvolume create /mnt/home
+$ btrfs subvolume create /mnt/var
+$ btrfs subvolume create /mnt/nix
+$ btrfs subvolume list /mnt
+$ mkdir /mnt/boot
+
+<span style="color:#75715e"># Mount BOOT into /mnt/boot</span>
+$ mount /dev/sda3 /mnt/boot
+$ ls -l /mnt
+
+<span style="color:#75715e"># Generate all the default configuration files for nixos</span>
+$ nixos-generate-config --root /mnt
+
+<span style="color:#75715e"># Start the install and enter root password</span>
+$ nixos-install
+</code></pre></div><h2 id="basic-commands">Basic commands</h2>
 <p>Hare are some basic commands for surviving on NixOS :</p>
-<pre tabindex="0"><code class="language-bash/shell" data-lang="bash/shell"># Rebuild the OS, this command will take a &#34;snapshot&#34; of all your nixos files.
+<pre tabindex="0"><code class="language-bash/shell" data-lang="bash/shell"># Rebuild the OS, this command will take a &quot;snapshot&quot; of all your nixos files.
 # This way in cas of issues on a nixos configuration, you will be able to 
 # go back to a previous build.
 $ nixos-rebuild switch
@@ -973,6 +1035,7 @@ $ nix search &lt;name&gt;
 
 # Install a nixos packet
 $ nix-env -iA nixos.&lt;name&gt;
+
 </code></pre><p>All the magic of NixOS lies in its configuration.nix and the *.nix files you&rsquo;ll be adding to it !<br>
 Indeed, configuration you NixOS via <code>/etc/nixos/configuration.nix</code>.<br>
 Once done, you can copy/paste your configuration.nix file to another freshly installed NixOS to automatically configure it with your settings !</p>
@@ -1124,8 +1187,23 @@ Once done, you can copy/paste your configuration.nix file to another freshly ins
   
 
   
+  
+
+  
+  
+
+  
     
     
+  
+  
+
+  
+  
+
+  
+  
+
   
   
 

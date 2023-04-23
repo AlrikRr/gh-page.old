@@ -45,6 +45,7 @@
 <meta property="og:url" content="https://AlrikRr.github.io/tags/ctf/" />
 
 
+
     
     
     <link rel="stylesheet" href="/css/layouts/list.css">
@@ -507,6 +508,92 @@
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
+      
+        
+          <div class="post-card">
+  <a href="/posts/write-up/nsec-2021/9-flag/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Flag #9 - Tom&#39;s Hut part2</h5>
+        <p class="card-text post-summary">If you want to fully understand this post I can only recommand you to read the previous one (Flag 8 part1)
+RE102 Reverse Like the previous one, the architecture is Xtensa, but this time I already have the right module for Ghidra !
+Using Ghidra I&rsquo;m doing the import and the analysis of the binary.
+App Main The app_main function is very similar to RE101, so this time let&rsquo;s jump on the verify function !</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">April 22, 2023</span>
+        <a
+        href="/posts/write-up/nsec-2021/9-flag/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/write-up/nsec-2021/8-flag/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Flag #8 - Tom&#39;s Hut part1</h5>
+        <p class="card-text post-summary">The next 2 Flags are binary reverse, I was very very rusty on this one &hellip;
+Wi-Fi Join So, this challenge is accessible from Tom&rsquo;s Hut after you have joined a Wi-Fi network !
+To join a Wi-Fi network, you need to access the serial port using screen (check Chall 7 !) and use the following command:
+You should receive an IP, you can now go to Tom&rsquo;s Hut and see the following message !</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">April 21, 2023</span>
+        <a
+        href="/posts/write-up/nsec-2021/8-flag/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <a href="/posts/write-up/nsec-2021/7-flag/" class="post-card-link">
+    <div class="card">
+      <div class="card-head">
+        <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg' alt="Hero Image">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Flag #7 - Reboot</h5>
+        <p class="card-text post-summary">I was also lucky on this one.
+tty CLI After connecting to the device using the serial port with the screen command:
+sudo screen /dev/ttyUSB0 115200 If you can´t see your ttyUSB, try using dmesg after connecting the badge on your computer.
+And also check your /dev/ folder
+Reboot ! As you can see, behind the badge, there is a reboot button, and I keep pressing it by mistake!
+However, after looking at the terminal, I saw the full message and a small help menu before the shell!</p>
+      </div>
+      <div class="card-footer">
+        <span class="float-left">April 20, 2023</span>
+        <a
+        href="/posts/write-up/nsec-2021/7-flag/"
+        class="float-right btn btn-outline-info btn-sm"
+        >Read</a
+        >
+      </div>
+    </div>
+  </a>
+</div>
+
+        
       
         
           <div class="post-card">

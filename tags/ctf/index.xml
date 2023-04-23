@@ -6,7 +6,45 @@
     <description>Recent content in CTF on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Flag #9 - Tom&#39;s Hut part2</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/9-flag/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/9-flag/</guid>
+      <description>If you want to fully understand this post I can only recommand you to read the previous one (Flag 8 part1)
+RE102 Reverse Like the previous one, the architecture is Xtensa, but this time I already have the right module for Ghidra !
+Using Ghidra I&amp;rsquo;m doing the import and the analysis of the binary.
+App Main The app_main function is very similar to RE101, so this time let&amp;rsquo;s jump on the verify function !</description>
+    </item>
+    
+    <item>
+      <title>Flag #8 - Tom&#39;s Hut part1</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/8-flag/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/8-flag/</guid>
+      <description>The next 2 Flags are binary reverse, I was very very rusty on this one &amp;hellip;
+Wi-Fi Join So, this challenge is accessible from Tom&amp;rsquo;s Hut after you have joined a Wi-Fi network !
+To join a Wi-Fi network, you need to access the serial port using screen (check Chall 7 !) and use the following command:
+You should receive an IP, you can now go to Tom&amp;rsquo;s Hut and see the following message !</description>
+    </item>
+    
+    <item>
+      <title>Flag #7 - Reboot</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/7-flag/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/7-flag/</guid>
+      <description>I was also lucky on this one.
+tty CLI After connecting to the device using the serial port with the screen command:
+sudo screen /dev/ttyUSB0 115200 If you can´t see your ttyUSB, try using dmesg after connecting the badge on your computer.
+And also check your /dev/ folder
+Reboot ! As you can see, behind the badge, there is a reboot button, and I keep pressing it by mistake!
+However, after looking at the terminal, I saw the full message and a small help menu before the shell!</description>
+    </item>
+    
+    <item>
       <title>Flag #5 - Punk Down</title>
       <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</link>
       <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>

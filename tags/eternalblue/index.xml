@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/tags/eternalblue/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Legacy</title>
-      <link>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</link>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</link>
       <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</guid>
-      <description>Re-Post from October 2021, 13rd Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</guid>
+      <description>Re-Post from October 2021, 13rd  Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
 Exploit CVE-2008-4250 msfconsole search ms08_067 use 0 After the exploit the meterpreter gives us a SYSTEM shell, no need to privesc !</description>
     </item>
     

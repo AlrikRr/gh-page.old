@@ -12,8 +12,8 @@
       <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</guid>
-      <description>Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
-Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router UART ?</description>
+      <description>Improper handling of electronic components can lead to component destruction  Here is my LinkedIn post related to this article : LinkedIn-Post  What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
+ Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router  UART ?</description>
     </item>
     
     <item>
@@ -22,8 +22,8 @@ Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) 
       <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/</guid>
-      <description>This is actually my first firmware &amp;ldquo;Reverse&amp;rdquo;. This post will also serve as a tutorial for myself and others ! For education purpose Sources Version : 1.14.04 MD5 : b93d60f595c4736a153ca8c61d77ffc6 Download link http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/ This test we perfomed on Kali Linux VM.
-Stage 1 - Analysis Using binwalk we can &amp;ldquo;walk&amp;rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address. of what&amp;rsquo;s inside the binary.</description>
+      <description>This is actually my first firmware &amp;ldquo;Reverse&amp;rdquo;. This post will also serve as a tutorial for myself and others !  For education purpose  Sources  Version : 1.14.04 MD5 : b93d60f595c4736a153ca8c61d77ffc6 Download link http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/  This test we perfomed on Kali Linux VM.
+Stage 1 - Analysis Using binwalk we can &amp;ldquo;walk&amp;rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address.</description>
     </item>
     
     

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.111.3">
+	<meta name="generator" content="Hugo 0.92.2" />
     <title>AlrikRr&#39;s Blog</title>
     
     
@@ -448,7 +448,7 @@
     <div class="row" id="recent-post-cards">
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down" class="post-card-link">
+  <a href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2" class="post-card-link">
     <div class="card">
       <div class="card-head">
         <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg'
@@ -456,14 +456,15 @@
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Flag #5 - Punk Down</h5>
-        <p class="card-text post-summary"> Okay for this one I don&rsquo;t have the reference but I managed to found it by accident ! It&rsquo;s actually the second one I found during my journey.
-Punk Guy I was playing around the place and speak to this Punk Guy right here
-During the conversation, I found the flag by accident by pressing the Down Button Flag 5 The flag is FLAG-KLJV490uhkEJF28</p>
+        <h5 class="card-title">Flag #9 - Tom&#39;s Hut part2</h5>
+        <p class="card-text post-summary"> If you want to fully understand this post I can only recommand you to read the previous one (Flag 8 part1)
+RE102 Reverse Like the previous one, the architecture is Xtensa, but this time I already have the right module for Ghidra !
+Using Ghidra I&rsquo;m doing the import and the analysis of the binary.
+App Main The app_main function is very similar to RE101, so this time let&rsquo;s jump on the verify function !</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">April 6, 2023</span>
-        <a href="/posts/write-up/nsec-2021/5-flag/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">April 22, 2023</span>
+        <a href="/posts/write-up/nsec-2021/9-flag/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -471,7 +472,7 @@ During the conversation, I found the flag by accident by pressing the Down Butto
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/write-up/nsec-2021/1-flag/" title="Flag #1 - Welcome" class="post-card-link">
+  <a href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1" class="post-card-link">
     <div class="card">
       <div class="card-head">
         <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg'
@@ -479,15 +480,15 @@ During the conversation, I found the flag by accident by pressing the Down Butto
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">Flag #1 - Welcome</h5>
-        <p class="card-text post-summary"> Hello everyone ! It&rsquo;s been a while since my last post but I&rsquo;m still alive no worries 😁
-Today I&rsquo;m gonna post some write-up for the NorthSec 2021 Badge CTF ! I purchase the badge last year and din&rsquo;t have time to play with it so here I am !
-It&rsquo;s actually my first CTF Badge and I hope im going to fine all the flags !
-Device Here is a full spec of the nsec badge : available here</p>
+        <h5 class="card-title">Flag #8 - Tom&#39;s Hut part1</h5>
+        <p class="card-text post-summary"> The next 2 Flags are binary reverse, I was very very rusty on this one &hellip;
+Wi-Fi Join So, this challenge is accessible from Tom&rsquo;s Hut after you have joined a Wi-Fi network !
+To join a Wi-Fi network, you need to access the serial port using screen (check Chall 7 !) and use the following command:
+You should receive an IP, you can now go to Tom&rsquo;s Hut and see the following message !</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">April 5, 2023</span>
-        <a href="/posts/write-up/nsec-2021/1-flag/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">April 21, 2023</span>
+        <a href="/posts/write-up/nsec-2021/8-flag/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>
@@ -495,23 +496,25 @@ Device Here is a full spec of the nsec badge : available here</p>
 
       
         <div class="col-lg-4 col-md-6 pt-2 post-card">
-  <a href="/posts/updates/my-crts/" title="My CRTS Feedback" class="post-card-link">
+  <a href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot" class="post-card-link">
     <div class="card">
       <div class="card-head">
-        <img class="card-img-top" src='/images/updates/my-crts.jpg'
+        <img class="card-img-top" src='/images/write-up/nsec-2021/nsec-Badge.jpg'
           alt="Card image cap"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title">My CRTS Feedback</h5>
-        <p class="card-text post-summary"> Hello everyone, Happy New Year !
-This is actually my first post of 2023 and nothing better than to tell you about a certification I just completed.
-What&rsquo;s CRTS ? CRTS or Certified Red Team Specialist from Cyber Warfare is a Technical Certification designed to improve your Red Team skills in many Offensive Fields. Your goal is to compromise an entire lab including 4 different networks !
-You must use one of three attack paths to do this.</p>
+        <h5 class="card-title">Flag #7 - Reboot</h5>
+        <p class="card-text post-summary"> I was also lucky on this one.
+tty CLI After connecting to the device using the serial port with the screen command:
+sudo screen /dev/ttyUSB0 115200 If you can´t see your ttyUSB, try using dmesg after connecting the badge on your computer.
+And also check your /dev/ folder
+Reboot ! As you can see, behind the badge, there is a reboot button, and I keep pressing it by mistake!
+However, after looking at the terminal, I saw the full message and a small help menu before the shell!</p>
       </div>
       <div class="card-footer">
-        <span class="float-left">January 19, 2023</span>
-        <a href="/posts/updates/my-crts/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
+        <span class="float-left">April 20, 2023</span>
+        <a href="/posts/write-up/nsec-2021/7-flag/" title="Read" class="float-right btn btn-outline-info btn-sm">Read</a>
       </div>
     </div>
   </a>

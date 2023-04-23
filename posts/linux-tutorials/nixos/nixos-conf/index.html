@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="Basic NixOS setup for beginners." />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -875,87 +937,89 @@
           <h2 id="basic-setup-file">Basic setup file</h2>
 <p>The NixOS configuration file can be found in <code>/etc/nixos/configuration.nix</code>.<br>
 It is recommended to understand the configuration file before pasting it supidly into your own, there are some options to change and configure by yourself !</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># Edit this configuration file to define what should be installed on</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># your system.  Help is available in the configuration.nix(5) man page</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># and in the NixOS manual (accessible by running ‘nixos-help’).</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{ config<span style="color:#f92672">,</span> pkgs<span style="color:#f92672">,</span> <span style="color:#f92672">...</span> }:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>imports <span style="color:#f92672">=</span>
-</span></span><span style="display:flex;"><span>[ <span style="color:#75715e"># Include the results of the hardware scan.</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">./hardware-configuration.nix</span>
-</span></span><span style="display:flex;"><span>];
-</span></span><span style="display:flex;"><span>nixpkgs<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>allowUnfree <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Use the systemd-boot EFI boot loader.</span>
-</span></span><span style="display:flex;"><span>boot<span style="color:#f92672">.</span>loader<span style="color:#f92672">.</span>systemd-boot<span style="color:#f92672">.</span>enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>boot<span style="color:#f92672">.</span>loader<span style="color:#f92672">.</span>efi<span style="color:#f92672">.</span>canTouchEfiVariables <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>networking<span style="color:#f92672">.</span>hostName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tanjiro&#34;</span>; <span style="color:#75715e"># Define your hostname.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># The global useDHCP flag is deprecated, therefore explicitly set to false here.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Per-interface useDHCP will be mandatory in the future, so this generated config</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># replicates the default behaviour.</span>
-</span></span><span style="display:flex;"><span>networking<span style="color:#f92672">.</span>useDHCP <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>networking<span style="color:#f92672">.</span>interfaces<span style="color:#f92672">.</span>enp0s3<span style="color:#f92672">.</span>useDHCP <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Configure network proxy if necessary</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># networking.proxy.default = &#34;http://user:password@proxy:port/&#34;;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># networking.proxy.noProxy = &#34;127.0.0.1,localhost,internal.domain&#34;;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Select internationalisation properties.</span>
-</span></span><span style="display:flex;"><span>i18n<span style="color:#f92672">.</span>defaultLocale <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fr_FR.UTF-8&#34;</span>; <span style="color:#75715e"># French UTF-8</span>
-</span></span><span style="display:flex;"><span>console <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>font <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Lat2-Terminus16&#34;</span>;
-</span></span><span style="display:flex;"><span>keyMap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fr&#34;</span>; <span style="color:#75715e"># French Keyboard</span>
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set your time zone.</span>
-</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>timeZone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Europe/Paris&#34;</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># List packages installed in system profile. To search, run:</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># $ nix search wget</span>
-</span></span><span style="display:flex;"><span>environment<span style="color:#f92672">.</span>systemPackages <span style="color:#f92672">=</span> <span style="color:#66d9ef">with</span> pkgs; [
-</span></span><span style="display:flex;"><span>wget vim dirb aircrack-ng mitmproxy git nmap metasploit wfuzz iftop file tree htop python3 ngrok
-</span></span><span style="display:flex;"><span>];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Some programs need SUID wrappers, can be configured further or are</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># started in user sessions.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># programs.mtr.enable = true;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># programs.gnupg.agent = {</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#   enable = true;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#   enableSSHSupport = true;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#   pinentryFlavor = &#34;gnome3&#34;;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># };</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># List services that you want to enable:</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Enable the OpenSSH daemon.</span>
-</span></span><span style="display:flex;"><span>services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Open ports in the firewall.</span>
-</span></span><span style="display:flex;"><span>networking<span style="color:#f92672">.</span>firewall<span style="color:#f92672">.</span>allowedTCPPorts <span style="color:#f92672">=</span> [ <span style="color:#ae81ff">22</span> ];
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define a user account. Don&#39;t forget to set a password with ‘passwd’.</span>
-</span></span><span style="display:flex;"><span>users<span style="color:#f92672">.</span>users<span style="color:#f92672">.</span>eidorian <span style="color:#f92672">=</span> {
-</span></span><span style="display:flex;"><span>isNormalUser <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>extraGroups <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;wheel&#34;</span> ]; <span style="color:#75715e"># Enable ‘sudo’ for the user.</span>
-</span></span><span style="display:flex;"><span>openssh<span style="color:#f92672">.</span>authorizedKeys<span style="color:#f92672">.</span>keys <span style="color:#f92672">=</span> [
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&lt;Add your pub key here for SSH&gt;&#34;</span>
-</span></span><span style="display:flex;"><span>];
-</span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># This value determines the NixOS release from which the default</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># settings for stateful data, like file locations and database versions</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># on your system were taken. It‘s perfectly fine and recommended to leave</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># this value at the release version of the first install of this system.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Before changing this value read the documentation for this option</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).</span>
-</span></span><span style="display:flex;"><span>system<span style="color:#f92672">.</span>stateVersion <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;20.03&#34;</span>; <span style="color:#75715e"># Did you read the comment?</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Edit this configuration file to define what should be installed on</span>
+<span style="color:#75715e"># your system.  Help is available in the configuration.nix(5) man page</span>
+<span style="color:#75715e"># and in the NixOS manual (accessible by running ‘nixos-help’).</span>
+
+{ config<span style="color:#f92672">,</span> pkgs<span style="color:#f92672">,</span> <span style="color:#f92672">...</span> }:
+
+{
+imports <span style="color:#f92672">=</span>
+[ <span style="color:#75715e"># Include the results of the hardware scan.</span>
+<span style="color:#e6db74">./hardware-configuration.nix</span>
+];
+nixpkgs<span style="color:#f92672">.</span>config<span style="color:#f92672">.</span>allowUnfree <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+<span style="color:#75715e"># Use the systemd-boot EFI boot loader.</span>
+boot<span style="color:#f92672">.</span>loader<span style="color:#f92672">.</span>systemd-boot<span style="color:#f92672">.</span>enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+boot<span style="color:#f92672">.</span>loader<span style="color:#f92672">.</span>efi<span style="color:#f92672">.</span>canTouchEfiVariables <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+networking<span style="color:#f92672">.</span>hostName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tanjiro&#34;</span>; <span style="color:#75715e"># Define your hostname.</span>
+<span style="color:#75715e"># networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.</span>
+
+<span style="color:#75715e"># The global useDHCP flag is deprecated, therefore explicitly set to false here.</span>
+<span style="color:#75715e"># Per-interface useDHCP will be mandatory in the future, so this generated config</span>
+<span style="color:#75715e"># replicates the default behaviour.</span>
+networking<span style="color:#f92672">.</span>useDHCP <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+networking<span style="color:#f92672">.</span>interfaces<span style="color:#f92672">.</span>enp0s3<span style="color:#f92672">.</span>useDHCP <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#75715e"># Configure network proxy if necessary</span>
+<span style="color:#75715e"># networking.proxy.default = &#34;http://user:password@proxy:port/&#34;;</span>
+<span style="color:#75715e"># networking.proxy.noProxy = &#34;127.0.0.1,localhost,internal.domain&#34;;</span>
+
+<span style="color:#75715e"># Select internationalisation properties.</span>
+i18n<span style="color:#f92672">.</span>defaultLocale <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fr_FR.UTF-8&#34;</span>; <span style="color:#75715e"># French UTF-8</span>
+console <span style="color:#f92672">=</span> {
+font <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Lat2-Terminus16&#34;</span>;
+keyMap <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fr&#34;</span>; <span style="color:#75715e"># French Keyboard</span>
+};
+
+<span style="color:#75715e"># Set your time zone.</span>
+time<span style="color:#f92672">.</span>timeZone <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Europe/Paris&#34;</span>;
+
+<span style="color:#75715e"># List packages installed in system profile. To search, run:</span>
+<span style="color:#75715e"># $ nix search wget</span>
+environment<span style="color:#f92672">.</span>systemPackages <span style="color:#f92672">=</span> <span style="color:#66d9ef">with</span> pkgs; [
+wget vim dirb aircrack-ng mitmproxy git nmap metasploit wfuzz iftop file tree htop python3 ngrok
+];
+
+<span style="color:#75715e"># Some programs need SUID wrappers, can be configured further or are</span>
+<span style="color:#75715e"># started in user sessions.</span>
+<span style="color:#75715e"># programs.mtr.enable = true;</span>
+<span style="color:#75715e"># programs.gnupg.agent = {</span>
+<span style="color:#75715e">#   enable = true;</span>
+<span style="color:#75715e">#   enableSSHSupport = true;</span>
+<span style="color:#75715e">#   pinentryFlavor = &#34;gnome3&#34;;</span>
+<span style="color:#75715e"># };</span>
+
+<span style="color:#75715e"># List services that you want to enable:</span>
+
+<span style="color:#75715e"># Enable the OpenSSH daemon.</span>
+services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>enable <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+
+<span style="color:#75715e"># Open ports in the firewall.</span>
+networking<span style="color:#f92672">.</span>firewall<span style="color:#f92672">.</span>allowedTCPPorts <span style="color:#f92672">=</span> [ <span style="color:#ae81ff">22</span> ];
+
+<span style="color:#75715e"># Define a user account. Don&#39;t forget to set a password with ‘passwd’.</span>
+users<span style="color:#f92672">.</span>users<span style="color:#f92672">.</span>eidorian <span style="color:#f92672">=</span> {
+isNormalUser <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+extraGroups <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;wheel&#34;</span> ]; <span style="color:#75715e"># Enable ‘sudo’ for the user.</span>
+openssh<span style="color:#f92672">.</span>authorizedKeys<span style="color:#f92672">.</span>keys <span style="color:#f92672">=</span> [
+<span style="color:#e6db74">&#34;&lt;Add your pub key here for SSH&gt;&#34;</span>
+];
+};
+
+<span style="color:#75715e"># This value determines the NixOS release from which the default</span>
+<span style="color:#75715e"># settings for stateful data, like file locations and database versions</span>
+<span style="color:#75715e"># on your system were taken. It‘s perfectly fine and recommended to leave</span>
+<span style="color:#75715e"># this value at the release version of the first install of this system.</span>
+<span style="color:#75715e"># Before changing this value read the documentation for this option</span>
+<span style="color:#75715e"># (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).</span>
+system<span style="color:#f92672">.</span>stateVersion <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;20.03&#34;</span>; <span style="color:#75715e"># Did you read the comment?</span>
+
+}
+
+
+</code></pre></div>
         </div>
 
         
@@ -1100,8 +1164,23 @@ It is recommended to understand the configuration file before pasting it supidly
   
 
   
+  
+
+  
+  
+
+  
     
     
+  
+  
+
+  
+  
+
+  
+  
+
   
   
 

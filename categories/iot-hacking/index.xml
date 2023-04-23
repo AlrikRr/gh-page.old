@@ -12,8 +12,8 @@
       <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</guid>
-      <description>Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
-Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router UART ?</description>
+      <description>Improper handling of electronic components can lead to component destruction  Here is my LinkedIn post related to this article : LinkedIn-Post  What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
+ Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router  UART ?</description>
     </item>
     
     

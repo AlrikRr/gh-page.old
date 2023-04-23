@@ -6,13 +6,23 @@
     <description>Recent content in HackTheBox on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/write-up/htb/index.xml" rel="self" type="application/rss+xml" /><item>
-      <title>Forest - easy</title>
-      <link>https://AlrikRr.github.io/posts/write-up/htb/forest/</link>
-      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+    <lastBuildDate>Wed, 13 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/posts/write-up/htb/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Legacy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</link>
+      <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/write-up/htb/forest/</guid>
-      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</guid>
+      <description>Re-Post from October 2021, 13rd  Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
+Exploit CVE-2008-4250 msfconsole search ms08_067 use 0 After the exploit the meterpreter gives us a SYSTEM shell, no need to privesc !</description>
+    </item>
+    
+    <item>
+      <title>Forest</title>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/forest/</link>
+      <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/forest/</guid>
+      <description>Re-Post from October 2021, 13rd  Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
 As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
 The machine is part of the HTB.local network.
 Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)

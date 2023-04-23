@@ -42,12 +42,12 @@
 <meta property="og:title" content="1️⃣ Enum - No Credentials" />
 <meta property="og:description" content="SMB Hosts crackmapexec smb 192.168.1.0/24 nmap -Pn --script smb-vuln\* -p139,445 If SMBv1 not signed, get the lits of target for NTLM-relay attack
 crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Check NTLM-Relay Multi-Targets
-Ping Sweep nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt grep Up ping-sweep.txt | cut -d &#34; &#34; -f 2 Nmap Scans Quick Scan
+    Ping Sweep nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt grep Up ping-sweep.txt | cut -d &#34; &#34; -f 2     Nmap Scans Quick Scan
 nmap -Pn -sV --top-ports 50 --open Classic Scan
-nmap -Pn -sC -sV &lt;ip\&gt; Full Scan
-nmap -Pn -sC -sV -p- &lt;ip\&gt; UDP Scan" />
+nmap -Pn -sC -sV &lt;ip\&gt; Full Scan" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/" /><meta property="article:section" content="notes" />
+
 
 
 
@@ -272,11 +272,11 @@ nmap -Pn -sC -sV -p- &lt;ip\&gt; UDP Scan" />
         <h5 class="note-title"><span>SMB Hosts</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24  
-</span></span><span style="display:flex;"><span>nmap -Pn --script smb-vuln<span style="color:#ae81ff">\*</span> -p139,445
-</span></span></code></pre></div><p>If <code>SMBv1</code> not signed, get the lits of target for NTLM-relay attack</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
-</span></span></code></pre></div><p>Check <a href="https://alrikrr.github.io/notes/active-directory/attacks/ntlm-relay/">NTLM-Relay Multi-Targets</a></p>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crackmapexec smb 192.168.1.0/24  
+nmap -Pn --script smb-vuln<span style="color:#ae81ff">\*</span> -p139,445
+</code></pre></div><p>If <code>SMBv1</code> not signed, get the lits of target for NTLM-relay attack</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt
+</code></pre></div><p>Check <a href="https://alrikrr.github.io/notes/active-directory/attacks/ntlm-relay/">NTLM-Relay Multi-Targets</a></p>
 </div>
             </div>
         
@@ -288,9 +288,9 @@ nmap -Pn -sC -sV -p- &lt;ip\&gt; UDP Scan" />
         <h5 class="note-title"><span>Ping Sweep</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt
-</span></span><span style="display:flex;"><span>grep Up ping-sweep.txt | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">2</span>
-</span></span></code></pre></div></div>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt
+grep Up ping-sweep.txt | cut -d <span style="color:#e6db74">&#34; &#34;</span> -f <span style="color:#ae81ff">2</span>
+</code></pre></div></div>
             </div>
         
     </div>
@@ -302,14 +302,14 @@ nmap -Pn -sC -sV -p- &lt;ip\&gt; UDP Scan" />
         
             <div class="card">
                 <div class="card-body"><p><strong>Quick Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sV --top-ports <span style="color:#ae81ff">50</span> --open
-</span></span></code></pre></div><p><strong>Classic Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>Full Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -Pn -sC -sV -p- &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>UDP Scan</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sU -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
-</span></span></code></pre></div><p><strong>Find Vulnerable Host :</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sV --top-ports <span style="color:#ae81ff">50</span> --open
+</code></pre></div><p><strong>Classic Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>Full Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -Pn -sC -sV -p- &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>UDP Scan</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmap -sU -sC -sV &lt;ip<span style="color:#ae81ff">\&gt;</span>
+</code></pre></div><p><strong>Find Vulnerable Host :</strong>
 [[3️⃣ Low Hanging Fruit]]</p>
 </div>
             </div>
@@ -325,12 +325,12 @@ nmap -Pn -sC -sV -p- &lt;ip\&gt; UDP Scan" />
                 <div class="card-body"><p>⚠️ Good to know : Main DomainController is always the Main DNS Server</p>
 <p>Check : <a href="https://alrikrr.github.io/notes/active-directory/0-recon/">0️⃣ Recon AD</a></p>
 <p><strong>Show Domain name &amp; DNS</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmcli dev show eth0
-</span></span><span style="display:flex;"><span>ip a <span style="color:#75715e">#Linux</span>
-</span></span><span style="display:flex;"><span>ifconfig /all <span style="color:#75715e">#Windows</span>
-</span></span></code></pre></div><p><strong>Enum Domain</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nslookup -type<span style="color:#ae81ff">\=</span>SRV<span style="color:#ae81ff">\_</span>ldap.<span style="color:#ae81ff">\_</span>tcp.dc.<span style="color:#ae81ff">\_</span>msdc.//DOMAIN/
-</span></span></code></pre></div><p>Check : <a href="https://alrikrr.github.io/notes/active-directory/attacks/dns/">DNS-Attacks</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nmcli dev show eth0
+ip a <span style="color:#75715e">#Linux</span>
+ifconfig /all <span style="color:#75715e">#Windows</span>
+</code></pre></div><p><strong>Enum Domain</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">nslookup -type<span style="color:#ae81ff">\=</span>SRV<span style="color:#ae81ff">\_</span>ldap.<span style="color:#ae81ff">\_</span>tcp.dc.<span style="color:#ae81ff">\_</span>msdc.//DOMAIN/
+</code></pre></div><p>Check : <a href="https://alrikrr.github.io/notes/active-directory/attacks/dns/">DNS-Attacks</a></p>
 </div>
             </div>
         

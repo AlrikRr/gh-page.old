@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2022-09-20T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="Connect to tty flipper zero" />
@@ -252,6 +253,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -879,11 +941,11 @@
         
         <div class="post-content" id="post-content">
           <p>The following command have been performed on my MacBook, but the commands are the same on linux.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#MacOS</span>
-</span></span><span style="display:flex;"><span>brew install tio
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#Linux</span>
-</span></span><span style="display:flex;"><span>apt install tio
-</span></span></code></pre></div><p>Once installed, you may locate the tty device of your flipper.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#MacOS</span>
+brew install tio
+<span style="color:#75715e">#Linux</span>
+apt install tio
+</code></pre></div><p>Once installed, you may locate the tty device of your flipper.</p>
 <p>If you have issue finding it, just check the path on the qflipper app</p>
 <img src="qflipper.png"
     
@@ -911,8 +973,8 @@
 >
 
 <p>use the following command to get a shell on your flipper zero</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo tio /dev/tty.usbmodemflip_Il4l0w1
-</span></span></code></pre></div><img src="cli.png"
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo tio /dev/tty.usbmodemflip_Il4l0w1
+</code></pre></div><img src="cli.png"
     
         alt="tty cli"
     
@@ -1105,6 +1167,21 @@
   
   
 
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
 
 <div class="row next-prev-navigator">
   
@@ -1121,9 +1198,9 @@
         
       
       <div class="col-md-6 next-article">
-        <a href="/posts/8bits-computer/part1-clock/1-astable555timer/" title="#1 Astable 555 Timer" class="btn btn-outline-info">
+        <a href="/posts/forensic/dead/" title="Dead Acquisition" class="btn btn-outline-info">
           <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">#1 Astable 555 Timer</div>
+          <div class="next-prev-text">Dead Acquisition</div>
         </a>
       </div>
     

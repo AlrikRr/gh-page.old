@@ -15,8 +15,7 @@
       <description>NMAP Okay let&amp;rsquo;s start with the beginning !
 sudo nmap -A -sS bellatrix.vuln
 As we can see, there are two main services :
-PORT Status Banner 22 OPEN OpenSSH 8.3p1 80 OPEN Apache http 2.4.46 Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .php at the end.
-Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsiriusblack.php is FORBIDEN.</description>
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
     </item>
     
     <item>
@@ -28,11 +27,10 @@ Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsirius
       <description>LEVEL : Easy
 TIME SPEND : 1h30
 LINK : y0usef 1
-NMAP Welcome to a new writeup vulnhub.
+ NMAP Welcome to a new writeup vulnhub.
 Let&amp;rsquo;s start with an nmap to list the services open on the machine.
 sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
-PORT Status Banner 22 OPEN OpenSSH 6.6.1p1 80 OPEN Apache http 2.4.10 Let&amp;rsquo;s check the HTTP service.
-Web Application On the index page there is nothing interesting.</description>
+   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</description>
     </item>
     
     

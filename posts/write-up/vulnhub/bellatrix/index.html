@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2020-08-19T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="VulnHub Write-Up for Bellatrix machine" />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -713,6 +748,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -922,8 +984,8 @@
 <p>Indeed, I was right, we can see that the www-data user has access to the log file of the ssh service  <code>/var/log/auth.log</code>.</p>
 <p><code>http://bellatrix.vuln/ikilledsiriusblack.php?file=../../../..//var/log/auth.log</code></p>
 <p>Then an idea comes to me. If I have the possibility to display the logs of the ssh service, I also have technically the possibility to inject anything I want. Let&rsquo;s do a test. I will try to connect in SSH but my user will be a bit different:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> ssh <span style="color:#e6db74">&#39;&lt;?php system($_GET[&#34;c&#34;]); ?&gt;&#39;</span>@bellatrix.vuln 
-</span></span></code></pre></div><p>As you can see, my user is actually a PHP code that calls the system function with a GET variable. If everything goes as expected, then I will be able to inject the linux commands I want with this parameter because they will be executed by system().</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"> ssh <span style="color:#e6db74">&#39;&lt;?php system($_GET[&#34;c&#34;]); ?&gt;&#39;</span>@bellatrix.vuln 
+</code></pre></div><p>As you can see, my user is actually a PHP code that calls the system function with a GET variable. If everything goes as expected, then I will be able to inject the linux commands I want with this parameter because they will be executed by system().</p>
 <p>As you can see, if I use the base64 filter to get the RAW data of the <code>auth.log</code> I can see my PHP code.</p>
 <p><img src="php_auth_log.png" alt="php_auth_log"></p>
 <h3 id="ssh-log-poisoning">SSH log poisoning</h3>
@@ -1121,14 +1183,29 @@
   
 
   
-    
-    
+  
+
+  
+  
+
   
   
 
   
   
 
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
   
   
 
@@ -1139,9 +1216,9 @@
 <div class="row next-prev-navigator">
   
     <div class="col-md-6 previous-article">
-      <a href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down" class="btn btn-outline-info">
+      <a href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy" class="btn btn-outline-info">
         <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
-        <div class="next-prev-text">Flag #5 - Punk Down</div>
+        <div class="next-prev-text">Legacy</div>
       </a>
     </div>
   

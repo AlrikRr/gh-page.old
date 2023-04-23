@@ -6,7 +6,45 @@
     <description>Recent content on AlrikRr&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://AlrikRr.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>Flag #9 - Tom&#39;s Hut part2</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/9-flag/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/9-flag/</guid>
+      <description>If you want to fully understand this post I can only recommand you to read the previous one (Flag 8 part1)
+RE102 Reverse Like the previous one, the architecture is Xtensa, but this time I already have the right module for Ghidra !
+Using Ghidra I&amp;rsquo;m doing the import and the analysis of the binary.
+App Main The app_main function is very similar to RE101, so this time let&amp;rsquo;s jump on the verify function !</description>
+    </item>
+    
+    <item>
+      <title>Flag #8 - Tom&#39;s Hut part1</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/8-flag/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/8-flag/</guid>
+      <description>The next 2 Flags are binary reverse, I was very very rusty on this one &amp;hellip;
+Wi-Fi Join So, this challenge is accessible from Tom&amp;rsquo;s Hut after you have joined a Wi-Fi network !
+To join a Wi-Fi network, you need to access the serial port using screen (check Chall 7 !) and use the following command:
+You should receive an IP, you can now go to Tom&amp;rsquo;s Hut and see the following message !</description>
+    </item>
+    
+    <item>
+      <title>Flag #7 - Reboot</title>
+      <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/7-flag/</link>
+      <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/nsec-2021/7-flag/</guid>
+      <description>I was also lucky on this one.
+tty CLI After connecting to the device using the serial port with the screen command:
+sudo screen /dev/ttyUSB0 115200 If you can´t see your ttyUSB, try using dmesg after connecting the badge on your computer.
+And also check your /dev/ folder
+Reboot ! As you can see, behind the badge, there is a reboot button, and I keep pressing it by mistake!
+However, after looking at the terminal, I saw the full message and a small help menu before the shell!</description>
+    </item>
+    
+    <item>
       <title>Flag #5 - Punk Down</title>
       <link>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</link>
       <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
@@ -47,8 +85,8 @@ You must use one of three attack paths to do this.</description>
       <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</guid>
-      <description>Improper handling of electronic components can lead to component destruction Here is my LinkedIn post related to this article : LinkedIn-Post What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
-Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router UART ?</description>
+      <description>Improper handling of electronic components can lead to component destruction  Here is my LinkedIn post related to this article : LinkedIn-Post  What you need Here are all the tools you need to perform this kind of IoT Assessment on a device. For my part I didn&amp;rsquo;t have my soldering kit so I did it without but it was not very stable.
+ Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) Multimeter Cables Solder Iron (Optionnal) UART Device like Wifi Router  UART ?</description>
     </item>
     
     <item>
@@ -57,8 +95,8 @@ Basic knowledge on UART ad IOT Hacking UART Bridge (Simple USB or Flipper Zero) 
       <pubDate>Thu, 22 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/d-link-dcs-932l/</guid>
-      <description>This is actually my first firmware &amp;ldquo;Reverse&amp;rdquo;. This post will also serve as a tutorial for myself and others ! For education purpose Sources Version : 1.14.04 MD5 : b93d60f595c4736a153ca8c61d77ffc6 Download link http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/ This test we perfomed on Kali Linux VM.
-Stage 1 - Analysis Using binwalk we can &amp;ldquo;walk&amp;rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address. of what&amp;rsquo;s inside the binary.</description>
+      <description>This is actually my first firmware &amp;ldquo;Reverse&amp;rdquo;. This post will also serve as a tutorial for myself and others !  For education purpose  Sources  Version : 1.14.04 MD5 : b93d60f595c4736a153ca8c61d77ffc6 Download link http://files.dlink.com.au/products/DCS-932L/REV_A/Firmware/  This test we perfomed on Kali Linux VM.
+Stage 1 - Analysis Using binwalk we can &amp;ldquo;walk&amp;rdquo; through the firmware and check signatures inside the binary, those signatures return known Desciption and Hex address.</description>
     </item>
     
     <item>
@@ -104,7 +142,7 @@ Exam Guide The Exam for the eJPT is well guided, you&amp;rsquo;ll need to answer
       
       <guid>https://AlrikRr.github.io/posts/malware/dev-projects/simple-vba-bypass-defender/</guid>
       <description>Disclaimer : Hello This is actually my first real Macro while trying to obfuscate and ByPass Defender (Sort Of) ! This Code will escape Defender but the remote payload will not since it was a Meterpreter PowerShell, maybe in the next part 👨‍💻
-Someone asked me to create a file that contains a Macro for downloading a malicious file while evading Defender ! Here is my first attempt, it was cool and might create more with more elaborate code !</description>
+ Someone asked me to create a file that contains a Macro for downloading a malicious file while evading Defender ! Here is my first attempt, it was cool and might create more with more elaborate code !</description>
     </item>
     
     <item>
@@ -114,9 +152,9 @@ Someone asked me to create a file that contains a Macro for downloading a malici
       
       <guid>https://AlrikRr.github.io/posts/active-directory/build-training-lab/1-domain/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of video from John Hammond! I&amp;rsquo;ll edit as much as possible the code and not try to copy paste John&amp;rsquo;s work 😊
-All the code and information are available on my github repo : AlrikRr/ActiveDirectory_Lab
-Leave a ⭐ and follow ! Prerequisite Here is the list of stuff you&amp;rsquo;ll need to build this training lab on your own:
-Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Windows Server 2022 VMWare workstation Network Schema Domain Controller:</description>
+ All the code and information are available on my github repo : AlrikRr/ActiveDirectory_Lab
+Leave a ⭐ and follow !  Prerequisite Here is the list of stuff you&amp;rsquo;ll need to build this training lab on your own:
+ Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Windows Server 2022 VMWare workstation  Network Schema Domain Controller:</description>
     </item>
     
     <item>
@@ -126,7 +164,7 @@ Good PC (At least 16GB of RAM and 500GB SSD) ISO files for Windows 11 and Window
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/4-clocklogic/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -136,7 +174,7 @@ Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to 
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/3-bistable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -146,7 +184,7 @@ Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to 
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/2-monostable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -156,7 +194,7 @@ Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to 
       
       <guid>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/1-astable555timer/</guid>
       <description>Disclaimer : I&amp;rsquo;m following the amazing series of videos from Ben Eater using his electronic built kit for the 8 bits computer. This series of post is only there for my personnal understanding about electronic and this amazing project. I ablsolutly recommand you to watch his series of videos instead of reading this post of course ! Play-List-Link
-Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
+  Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to learn, I stay tuned for corrections or advice!</description>
     </item>
     
     <item>
@@ -165,11 +203,9 @@ Disclaimer 2 : I&amp;rsquo;m not an expert at all, Just a beginner who wants to 
       <pubDate>Sat, 29 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/malware/investigations/vbs-mp3-downloader-1/</guid>
-      <description>Identification Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990 Size 71K From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/ VBS - Code Hello There !
+      <description>Identification    Name 71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043.vbs     Hash (256) 3dbfb4bcbc5432a332fa3f21ffcefcf2cbf1c990   Size 71K   From https://bazaar.abuse.ch/download/71f51f194201d9d3a86fa99255909017632302bd7007b50b400490a5cd4a4043/    VBS - Code Hello There !
 Today we are going to check a VBS code and see what’s inside.
-Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.
-VirusTotal
-Clear code - comments First we need to clear the comment since there are a lot of these in the code.</description>
+Here is the VT result, only 17 EDR trigger this file as malicious. We can see some title and tags, it seems to be a downloader trojan.</description>
     </item>
     
     <item>
@@ -178,28 +214,28 @@ Clear code - comments First we need to clear the comment since there are a lot o
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/malware/investigations/kardon/</guid>
-      <description>Identification Name kardon.exe Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400 FileType PE 32 bit TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29 FileSize 10KB ImageBase 000011AD EntryPoint(RVA) 00400000 VA(IB+RVA) 004011AD Sections There are 4 sections :
-.text .rdata .data .reloc Imports Interesting DLLs :
-urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.dll: GetCommandLineA(), MoveFileExA(), WinExec(), GetCurrentProcess(), etc. ADVAPI32.dll: RegCreateKeyA(), RegSetValueExA(), etc. 💡 The identification of the malware is done, we have a better understanding of the malware at the moment.</description>
+      <description>Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
     </item>
     
     <item>
       <title>Legacy</title>
-      <link>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</link>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</link>
       <pubDate>Wed, 13 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</guid>
-      <description>Re-Post from October 2021, 13rd Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</guid>
+      <description>Re-Post from October 2021, 13rd  Enumeration nmap sudo nmap -v -sS -A -Pn legacy.htb Using nmap we can definitly see the NetBIOS protocol on the SMB port. This machine is a XP Legacy OS so we can maybe try some old exploit if the system is not patched.
 Exploit CVE-2008-4250 msfconsole search ms08_067 use 0 After the exploit the meterpreter gives us a SYSTEM shell, no need to privesc !</description>
     </item>
     
     <item>
       <title>Forest</title>
-      <link>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</link>
+      <link>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/forest/</link>
       <pubDate>Thu, 02 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</guid>
-      <description>Re-Post from October 2021, 13rd Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
+      <guid>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/forest/</guid>
+      <description>Re-Post from October 2021, 13rd  Enumeration NMAP sudo nmap -v -sS -A -Pn 10.10.10.161 Simple NMAP scan to check the most commun ports and grab banner or version number.
 As we can see, there are a lot of Windows server services as Kerberos, DNS LDAP, &amp;hellip;
 The machine is part of the HTB.local network.
 Bonus : Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
@@ -250,20 +286,7 @@ Code Here is the code of the program we are going to use:</description>
       <guid>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/buffer-overflow/</guid>
       <description>What&amp;rsquo;s a BufferOverflow ? A BufferOverflow consists in overwriting the EIP stack of a program at a given time in order to compromise an application.
 Stack overflow can be done by different means, but the main problem comes from a bad management of a buffer during the input by a user.
-Why ? To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
-    </item>
-    
-    <item>
-      <title>Bellatrix - easy</title>
-      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
-      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</guid>
-      <description>NMAP Okay let&amp;rsquo;s start with the beginning !
-sudo nmap -A -sS bellatrix.vuln
-As we can see, there are two main services :
-PORT Status Banner 22 OPEN OpenSSH 8.3p1 80 OPEN Apache http 2.4.46 Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .php at the end.
-Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsiriusblack.php is FORBIDEN.</description>
+Why ?  To crash an application (a DOS) Have a shell with privileged rights To steal information (Leak Memory) Have a reverse shell or a remote bind shell  Requirements Before starting the exploitation of our binary, we must disable the ASLR protection activated by default under linux.</description>
     </item>
     
     <item>
@@ -275,11 +298,22 @@ Unfortunatle, the page http://192.168.1.166/ikilledsiriusblack[...]ikilledsirius
       <description>LEVEL : Easy
 TIME SPEND : 1h30
 LINK : y0usef 1
-NMAP Welcome to a new writeup vulnhub.
+ NMAP Welcome to a new writeup vulnhub.
 Let&amp;rsquo;s start with an nmap to list the services open on the machine.
 sudo nmap -A -p- -Pn -T 5 yousef.vuln As we can see, there are two main services :
-PORT Status Banner 22 OPEN OpenSSH 6.6.1p1 80 OPEN Apache http 2.4.10 Let&amp;rsquo;s check the HTTP service.
-Web Application On the index page there is nothing interesting.</description>
+   PORT Status Banner     22 OPEN OpenSSH 6.6.1p1   80 OPEN Apache http 2.</description>
+    </item>
+    
+    <item>
+      <title>Bellatrix - easy</title>
+      <link>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</link>
+      <pubDate>Wed, 19 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/write-up/vulnhub/bellatrix/</guid>
+      <description>NMAP Okay let&amp;rsquo;s start with the beginning !
+sudo nmap -A -sS bellatrix.vuln
+As we can see, there are two main services :
+   PORT Status Banner     22 OPEN OpenSSH 8.3p1   80 OPEN Apache http 2.4.46    Web Application The web application is using the http port 80. This page is a static html with a gif and a strange text with a .</description>
     </item>
     
     <item>
@@ -292,6 +326,18 @@ Web Application On the index page there is nothing interesting.</description>
 Hello! it&amp;rsquo;s been a while since I&amp;rsquo;ve done a little tutorial on my blog!
 Today we&amp;rsquo;re going to see how to install and configure cuckoo sandbox for dynamic analysis on a Windows 10 machine!
 INFO : I made this tutorial on a Ubuntu 20.04 updated machine and virtualbox 6.1. You may have version problems depending on the packages you are going to install.</description>
+    </item>
+    
+    <item>
+      <title>How to setup your SSH on NixOS</title>
+      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</link>
+      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</guid>
+      <description>SSH configuration TO change the confguration of you SSH, you have to edit your configuration.nix.
+You cannot edit the default ssh file located in /etc/ssh/sshd_config.
+Enable openssh First, you need to enable the OpenSSH Daemon.
+[...] # List services that you want to enable: services.openssh.enable = true; [...] Enable root login For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.</description>
     </item>
     
     <item>
@@ -317,7 +363,7 @@ You can download the official NIXOS ISO here : nixos.org/download
 Don&amp;rsquo;t hesitate to read the wiki here : nixos.org
 Installation If you have any issue, Google is your friend
 For this install, I used a Virtual Disk of 25GiB.
-# Display NixOS Wiki $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</description>
+# Display NixOS Wiki  $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP  $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition  $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</description>
     </item>
     
     <item>
@@ -328,47 +374,60 @@ For this install, I used a Virtual Disk of 25GiB.
       <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-wireguard/</guid>
       <description>Special thnks to Rayan Lahfa
 and Klaes ;)
-Wiki ! You can use the default configuration file : Nixos-Wireguard
+ Wiki ! You can use the default configuration file : Nixos-Wireguard
 Install &amp;amp; setup First, you need to install wireguard using :
 $ nix-env -iA nixos.wireguard Now, you need to create the wireguard.nix file, this file will contain the default configuration of Wireguard :
 $ vim /etc/nixos/wireguard.nix Generate keys You need to creat a bunch of public/private keys for your server and your android client :</description>
     </item>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <item>
-      <title>How to setup your SSH on NixOS</title>
-      <link>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</link>
-      <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+      <title>0️⃣ Recon AD</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/0-recon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://AlrikRr.github.io/posts/linux-tutorials/nixos/nixos-ssh/</guid>
-      <description>SSH configuration TO change the confguration of you SSH, you have to edit your configuration.nix.
-You cannot edit the default ssh file located in /etc/ssh/sshd_config.
-Enable openssh First, you need to enable the OpenSSH Daemon.
-[...] # List services that you want to enable: services.openssh.enable = true; [...] Enable root login For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.</description>
+      <guid>https://AlrikRr.github.io/notes/active-directory/0-recon/</guid>
+      <description>DNS Recon dig -t SRV _ldap._tcp.dc._msdcs.domainnam You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.
+dig -t SRV _gc._tcp.domainname dig -t SRV __kerberos.__tcp._tcp.domainname dig -t SRV _kpasswd._tcp._tcp.domainname Don&amp;rsquo;t forget to add the local domain inside the /etc/hosts file.
+    Get DFL of Domain &amp;amp; Forest If you have the DFL, you can easily check whether the network uses legacy protocol.</description>
     </item>
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    <item>
+      <title>1️⃣ Enum - No Credentials</title>
+      <link>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</guid>
+      <description>SMB Hosts crackmapexec smb 192.168.1.0/24 nmap -Pn --script smb-vuln\* -p139,445 If SMBv1 not signed, get the lits of target for NTLM-relay attack
+crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Check NTLM-Relay Multi-Targets
+    Ping Sweep nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt grep Up ping-sweep.txt | cut -d &amp;#34; &amp;#34; -f 2     Nmap Scans Quick Scan
+nmap -Pn -sV --top-ports 50 --open Classic Scan
+nmap -Pn -sC -sV &amp;lt;ip\&amp;gt; Full Scan</description>
+    </item>
     
     
     <item>
@@ -382,7 +441,7 @@ crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Then edit responder
 sudo vim /usr/share/responder/responder.conf Turn off the SMB and HTTP option, then run
 sudo responder -I ppp0 -v Once the responder is up, you can run ntlm relay attack using impacket tools
 ntlmrelayx.py -t 192.168.64.129 -smb2support ntlmrelayx.py -tf targets.txt -smb2support -i More about it :
-viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
+ viperone blog fox-it      NTLM-Relay One-Shot The hacker (192.</description>
     </item>
     
     <item>
@@ -391,34 +450,8 @@ viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</guid>
-      <description> Zone Transfer dig axfr xyz.local@dc01.xyz.local </description>
+      <description>Zone Transfer dig axfr xyz.local@dc01.xyz.local     </description>
     </item>
-    
-    <item>
-      <title>0️⃣ Recon AD</title>
-      <link>https://AlrikRr.github.io/notes/active-directory/0-recon/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/notes/active-directory/0-recon/</guid>
-      <description>DNS Recon dig -t SRV _ldap._tcp.dc._msdcs.domainnam You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.
-dig -t SRV _gc._tcp.domainname dig -t SRV __kerberos.__tcp._tcp.domainname dig -t SRV _kpasswd._tcp._tcp.domainname Don&amp;rsquo;t forget to add the local domain inside the /etc/hosts file.
-Get DFL of Domain &amp;amp; Forest If you have the DFL, you can easily check whether the network uses legacy protocol.</description>
-    </item>
-    
-    <item>
-      <title>1️⃣ Enum - No Credentials</title>
-      <link>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://AlrikRr.github.io/notes/active-directory/1-enum-no-creds/</guid>
-      <description>SMB Hosts crackmapexec smb 192.168.1.0/24 nmap -Pn --script smb-vuln\* -p139,445 If SMBv1 not signed, get the lits of target for NTLM-relay attack
-crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Check NTLM-Relay Multi-Targets
-Ping Sweep nmap -v -sn 192.168.1.0/24 -oG ping-sweep.txt grep Up ping-sweep.txt | cut -d &amp;#34; &amp;#34; -f 2 Nmap Scans Quick Scan
-nmap -Pn -sV --top-ports 50 --open Classic Scan
-nmap -Pn -sC -sV &amp;lt;ip\&amp;gt; Full Scan
-nmap -Pn -sC -sV -p- &amp;lt;ip\&amp;gt; UDP Scan</description>
-    </item>
-    
     
     
   </channel>

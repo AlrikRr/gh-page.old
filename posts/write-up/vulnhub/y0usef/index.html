@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2020-08-19T00:00:00+00:00" />
 
 
+
     
     
 <meta name="description" content="VulnHub Write-Up for Y0usef machine" />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -713,6 +748,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="active" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -876,8 +938,8 @@
 <h2 id="nmap">NMAP</h2>
 <p>Welcome to a new writeup vulnhub.</p>
 <p>Let&rsquo;s start with an nmap to list the services open on the machine.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nmap -A -p- -Pn -T <span style="color:#ae81ff">5</span> yousef.vuln
-</span></span></code></pre></div><p><img src="nmap.png" alt="nmap"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo nmap -A -p- -Pn -T <span style="color:#ae81ff">5</span> yousef.vuln
+</code></pre></div><p><img src="nmap.png" alt="nmap"></p>
 <p>As we can see, there are two main services :</p>
 <table>
 <thead>
@@ -948,8 +1010,8 @@ I think that this is a good excuse to FUZZ this application !</p>
 <h3 id="enumeration">Enumeration</h3>
 <p>As the FUZZING I&rsquo;m not going to show all my enumeration, just know that I used LinEnum, LSE and LinPeas and at the end none of them were useful to me.</p>
 <p>I also use this command to found some interesting binary that I might have missed out:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>find / -perm -u<span style="color:#f92672">=</span>s -type f 2&gt;/dev/null
-</span></span></code></pre></div><h3 id="linux-kernel">Linux Kernel</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find / -perm -u<span style="color:#f92672">=</span>s -type f 2&gt;/dev/null
+</code></pre></div><h3 id="linux-kernel">Linux Kernel</h3>
 <p>Well, after a few minutes I just use <code>uname</code> and <code>searchsploit</code> and I found a kernel privesc !</p>
 <p><img src="uname.png" alt="uname"></p>
 <p>Download the exploit, compile and run !</p>
@@ -1123,14 +1185,29 @@ I think that this is a good excuse to FUZZ this application !</p>
   
 
   
-    
-    
+  
+
+  
+  
+
   
   
 
   
   
 
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
   
   
 
@@ -1145,17 +1222,6 @@ I think that this is a good excuse to FUZZ this application !</p>
     </div>
   
   
-      
-      
-        
-      
-      <div class="col-md-6 next-article">
-        <a href="/posts/htb/easy/windows/forest/" title="Forest" class="btn btn-outline-info">
-          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
-          <div class="next-prev-text">Forest</div>
-        </a>
-      </div>
-    
 </div>
 
       <hr />

@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://AlrikRr.github.io/notes/active-directory/documentation/</loc>
-  </url><url>
     <loc>https://AlrikRr.github.io/notes/active-directory/attacks/ntlm-relay/</loc>
   </url><url>
-    <loc>https://AlrikRr.github.io/notes/active-directory/attacks/</loc>
+    <loc>https://AlrikRr.github.io/notes/active-directory/documentation/</loc>
   </url><url>
     <loc>https://AlrikRr.github.io/notes/active-directory/attacks/dns/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/notes/active-directory/attacks/</loc>
   </url><url>
     <loc>https://AlrikRr.github.io/notes/active-directory/0-recon/</loc>
   </url><url>
@@ -114,37 +114,46 @@
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/posts/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/badgelife/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/ctf/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/9-flag/</loc>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/nsec/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/write-up/</loc>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/</loc>
+    <lastmod>2023-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/8-flag/</loc>
+    <lastmod>2023-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/7-flag/</loc>
+    <lastmod>2023-04-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/5-flag/</loc>
     <lastmod>2023-04-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/write-up/nsec-2021/1-flag/</loc>
@@ -168,9 +177,6 @@
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/iot-hacking/tplink-ac750/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
-    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/firmware/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
@@ -189,6 +195,9 @@
     <loc>https://AlrikRr.github.io/tags/uart/</loc>
     <lastmod>2022-10-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/reverse-engineering/</loc>
+    <lastmod>2022-10-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/tags/binary/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -200,9 +209,6 @@
   </url><url>
     <loc>https://AlrikRr.github.io/categories/firmware-reverse/</loc>
     <lastmod>2022-09-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>
-    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/flipper/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
@@ -223,6 +229,9 @@
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/uart-bridge-pi4/</loc>
+    <lastmod>2022-09-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/flipper-zero/</loc>
     <lastmod>2022-09-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/flipper-zero/flipper-gpio/tty-shell/</loc>
@@ -282,9 +291,6 @@
     <loc>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/4-clocklogic/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/8bits-computer/</loc>
-    <lastmod>2022-06-11T09:27:47-04:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/555timer/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
@@ -301,6 +307,9 @@
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/</loc>
+    <lastmod>2022-06-11T09:27:47-04:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/8bits-computer/</loc>
     <lastmod>2022-06-11T09:27:47-04:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/8bits-computer/part1-clock/3-bistable555timer/</loc>
@@ -351,22 +360,22 @@
     <loc>https://AlrikRr.github.io/tags/unpacked/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/htb/</loc>
+    <loc>https://AlrikRr.github.io/tags/eternalblue/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/tags/eternalblue/</loc>
+    <loc>https://AlrikRr.github.io/posts/write-up/htb/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/htb/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/htb/easy/</loc>
+    <loc>https://AlrikRr.github.io/posts/write-up/htb/easy/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/</loc>
+    <loc>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/legacy/</loc>
+    <loc>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/legacy/</loc>
     <lastmod>2021-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/legacyos/</loc>
@@ -381,7 +390,7 @@
     <loc>https://AlrikRr.github.io/tags/bloodhound/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/htb/easy/windows/forest/</loc>
+    <loc>https://AlrikRr.github.io/posts/write-up/htb/easy/windows/forest/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/kerbrute/</loc>
@@ -389,9 +398,6 @@
   </url><url>
     <loc>https://AlrikRr.github.io/tags/spn/</loc>
     <lastmod>2021-09-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://AlrikRr.github.io/posts/raspberry/</loc>
-    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/categories/binary/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
@@ -412,6 +418,9 @@
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/tags/redteam/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/raspberry/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://AlrikRr.github.io/posts/reverse-engineering/binary-exploitation/ret-2-libc/</loc>
@@ -465,9 +474,6 @@
     <loc>https://AlrikRr.github.io/tags/sandboxing/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://AlrikRr.github.io/posts/linux-tutorials/</loc>
-    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://AlrikRr.github.io/tags/android/</loc>
     <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -510,13 +516,22 @@
     <loc>https://AlrikRr.github.io/tags/wireguard/</loc>
     <lastmod>2020-06-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/linux-tutorials/</loc>
+    <lastmod>2020-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://AlrikRr.github.io/notes/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
   </url><url>
+    <loc>https://AlrikRr.github.io/posts/forensic/dead/</loc>
+  </url><url>
     <loc>https://AlrikRr.github.io/posts/active-directory/ad-attacks/</loc>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/forensic/live/</loc>
   </url><url>
     <loc>https://AlrikRr.github.io/search/</loc>
     <priority>0.1</priority>
+  </url><url>
+    <loc>https://AlrikRr.github.io/posts/forensic/</loc>
   </url><url>
     <loc>https://AlrikRr.github.io/notes/active-directory/</loc>
   </url>

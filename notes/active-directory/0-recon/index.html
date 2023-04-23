@@ -42,9 +42,10 @@
 <meta property="og:title" content="0️⃣ Recon AD" />
 <meta property="og:description" content="DNS Recon dig -t SRV _ldap._tcp.dc._msdcs.domainnam You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.
 dig -t SRV _gc._tcp.domainname dig -t SRV __kerberos.__tcp._tcp.domainname dig -t SRV _kpasswd._tcp._tcp.domainname Don&rsquo;t forget to add the local domain inside the /etc/hosts file.
-Get DFL of Domain &amp; Forest If you have the DFL, you can easily check whether the network uses legacy protocol." />
+    Get DFL of Domain &amp; Forest If you have the DFL, you can easily check whether the network uses legacy protocol." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://AlrikRr.github.io/notes/active-directory/0-recon/" /><meta property="article:section" content="notes" />
+
 
 
 
@@ -270,12 +271,12 @@ Get DFL of Domain &amp; Forest If you have the DFL, you can easily check whether
         <h5 class="note-title"><span>DNS Recon</span></h5>
         
             <div class="card">
-                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _ldap._tcp.dc._msdcs.domainnam
-</span></span></code></pre></div><p>You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _gc._tcp.domainname
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV __kerberos.__tcp._tcp.domainname
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig -t SRV _kpasswd._tcp._tcp.domainname
-</span></span></code></pre></div><p>Don&rsquo;t forget to add the local domain inside the <code>/etc/hosts</code> file.</p>
+                <div class="card-body"><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _ldap._tcp.dc._msdcs.domainnam
+</code></pre></div><p>You may easily obtain the IP of the DNS, which serves as the primary domain controller, by using the domain name as a target.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _gc._tcp.domainname
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV __kerberos.__tcp._tcp.domainname
+</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dig -t SRV _kpasswd._tcp._tcp.domainname
+</code></pre></div><p>Don&rsquo;t forget to add the local domain inside the <code>/etc/hosts</code> file.</p>
 </div>
             </div>
         
@@ -288,8 +289,8 @@ Get DFL of Domain &amp; Forest If you have the DFL, you can easily check whether
         
             <div class="card">
                 <div class="card-body"><p>If you have the DFL, you can easily check whether the network uses legacy protocol.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ldapsearch -x -LLL -H ldap://10.9.35.11 -b <span style="color:#e6db74">&#39;&#39;</span> -s base <span style="color:#e6db74">&#39;(objectclass=*)&#39;</span>
-</span></span></code></pre></div></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ldapsearch -x -LLL -H ldap://10.9.35.11 -b <span style="color:#e6db74">&#39;&#39;</span> -s base <span style="color:#e6db74">&#39;(objectclass=*)&#39;</span>
+</code></pre></div></div>
             </div>
         
     </div>

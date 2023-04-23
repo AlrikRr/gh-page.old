@@ -47,6 +47,7 @@
 <meta property="article:modified_time" content="2022-08-19T11:00:00-04:00" />
 
 
+
     
     
 <meta name="description" content="Build your domain controller and link the first client" />
@@ -243,6 +244,40 @@
 
       </ul>
     </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/forensic/">🔍 Forensic - DFIR</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/dead/" title="Dead Acquisition">Dead Acquisition</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/forensic/live/" title="Live Acquisition">Live Acquisition</a></li>
   
 
 
@@ -719,6 +754,99 @@
     <li><a class="" href="/posts/write-up/nsec-2021/5-flag/" title="Flag #5 - Punk Down">Flag #5 - Punk Down</a></li>
   
 
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/7-flag/" title="Flag #7 - Reboot">Flag #7 - Reboot</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/8-flag/" title="Flag #8 - Tom&#39;s Hut part1">Flag #8 - Tom&#39;s Hut part1</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/nsec-2021/9-flag/" title="Flag #9 - Tom&#39;s Hut part2">Flag #9 - Tom&#39;s Hut part2</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/">HackTheBox</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/">Easy</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/write-up/htb/easy/windows/">Windows</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/forest/" title="Forest">Forest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/write-up/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
 
       </ul>
     </li>
@@ -751,72 +879,6 @@
   
     
     <li><a class="" href="/posts/write-up/vulnhub/y0usef/" title="Y0usef - easy">Y0usef - easy</a></li>
-  
-
-
-      </ul>
-    </li>
-  
-
-
-      </ul>
-    </li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/">📦 HackTheBox</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/">Easy</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/htb/easy/windows/">Windows</a>
-      
-      <ul class="">
-        
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/forest/" title="Forest">Forest</a></li>
-  
-
-  
-  
-  
-  
-  
-    
-    <li><a class="" href="/posts/htb/easy/windows/legacy/" title="Legacy">Legacy</a></li>
-  
-
-
-      </ul>
-    </li>
   
 
 
@@ -926,12 +988,12 @@ To do so, I would recommand you to install first a Windows Server 2022 till the 
 
 <h2 id="setup-pssessions">Setup PSSessions</h2>
 <p>From the management Computer, we are going to use PSSESSION to <strong>manage remotely the DC</strong>. First you need to add the DC ip in the trusted hosts list:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Start-Service WinRM
-</span></span><span style="display:flex;"><span>Set-Item WSMan:localhost<span style="color:#ae81ff">\c</span>lient<span style="color:#ae81ff">\t</span>rustedhosts -Value 192.168.100.50
-</span></span></code></pre></div><p>Next, start a new session using:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>New-PSSession -ComputerName 192.168.100.50 -Credential <span style="color:#f92672">(</span>Get-Credential<span style="color:#f92672">)</span>
-</span></span><span style="display:flex;"><span>Enter-PSSession &lt;ID&gt;
-</span></span></code></pre></div><p>Add the ID of the PSSession.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Start-Service WinRM
+Set-Item WSMan:localhost<span style="color:#ae81ff">\c</span>lient<span style="color:#ae81ff">\t</span>rustedhosts -Value 192.168.100.50
+</code></pre></div><p>Next, start a new session using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">New-PSSession -ComputerName 192.168.100.50 -Credential <span style="color:#f92672">(</span>Get-Credential<span style="color:#f92672">)</span>
+Enter-PSSession &lt;ID&gt;
+</code></pre></div><p>Add the ID of the PSSession.</p>
 <p>Or you can save the Session using this command:</p>
 <p><img src="pssession.png"
     
@@ -973,53 +1035,53 @@ _
 </p>
 <h2 id="install-the-dc">Install the DC</h2>
 <p>If youre are not in configuration mode, just use it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sconfig
-</span></span><span style="display:flex;"><span>&lt;6&gt; Update Server
-</span></span><span style="display:flex;"><span>&lt;13&gt; Reboot 
-</span></span></code></pre></div><h3 id="install-vm-tools">Install VM Tools</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sconfig
+&lt;6&gt; Update Server
+&lt;13&gt; Reboot 
+</code></pre></div><h3 id="install-vm-tools">Install VM Tools</h3>
 <p>Use VMWare to install the vmware tools and go in the disk</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd D:<span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>./setup64.exe
-</span></span></code></pre></div><p>Then don&rsquo;t forget to change the DC name, here DC01:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;2&gt; Change Computer Name
-</span></span><span style="display:flex;"><span>Set-SConfig -AutoLaunch $false
-</span></span></code></pre></div><h3 id="configure-network-interfaces">Configure Network Interfaces</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd D:<span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>./setup64.exe
+</code></pre></div><p>Then don&rsquo;t forget to change the DC name, here DC01:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;2&gt; Change Computer Name
+Set-SConfig -AutoLaunch $false
+</code></pre></div><h3 id="configure-network-interfaces">Configure Network Interfaces</h3>
 <p>It is very important to setup a static IP for your Domain Controller since it will be used as a default DNS server for your Domain:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;8&gt; Change Network
-</span></span><span style="display:flex;"><span>&lt;Select Network Interface <span style="color:#ae81ff">1</span> - 192.168.100.0&gt;
-</span></span><span style="display:flex;"><span>&lt;Change Address STATIC&gt;
-</span></span><span style="display:flex;"><span>&lt;192.168.100.50/255.255.255.0/GW:192.168.100.2&gt;
-</span></span></code></pre></div><p>Then change the DNS server to the domain controller IP:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&lt;8&gt; Change Network
-</span></span><span style="display:flex;"><span>&lt;Change Default DNS Address&gt;
-</span></span><span style="display:flex;"><span>&lt;192.168.100.50&gt;
-</span></span></code></pre></div><h3 id="install-forest">Install Forest</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
+&lt;Select Network Interface <span style="color:#ae81ff">1</span> - 192.168.100.0&gt;
+&lt;Change Address STATIC&gt;
+&lt;192.168.100.50/255.255.255.0/GW:192.168.100.2&gt;
+</code></pre></div><p>Then change the DNS server to the domain controller IP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">&lt;8&gt; Change Network
+&lt;Change Default DNS Address&gt;
+&lt;192.168.100.50&gt;
+</code></pre></div><h3 id="install-forest">Install Forest</h3>
 <p>Once the Server is setup with basic information, do not hesitate to take a snapshot before installing the features.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Get-WindowsFeature | ? <span style="color:#f92672">{</span>$_.Name -LIKE <span style="color:#e6db74">&#34;ad*&#34;</span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
-</span></span></code></pre></div><p>Create your forest</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Import-Module ADDSDeployment
-</span></span><span style="display:flex;"><span>Install-ADDSForest
-</span></span></code></pre></div><p>Press Y then the forest name, here <strong>nerv.com</strong> and then the same password as the current Adminitrator. Press Y Again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-WindowsFeature | ? <span style="color:#f92672">{</span>$_.Name -LIKE <span style="color:#e6db74">&#34;ad*&#34;</span><span style="color:#f92672">}</span>
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
+</code></pre></div><p>Create your forest</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Import-Module ADDSDeployment
+Install-ADDSForest
+</code></pre></div><p>Press Y then the forest name, here <strong>nerv.com</strong> and then the same password as the current Adminitrator. Press Y Again.</p>
 <p>Once the server reboot, you need to change the DNS and add the IP of the DC (Like we did before but since we install the domain, the DNS was changed).</p>
 <h3 id="remove-password-complexity">Remove Password Complexity</h3>
 <p>It is usefull to remove the password complexity here since we are going to create weak username and password.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>secedit /export /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg
-</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>gc C:<span style="color:#ae81ff">\s</span>ecpol.cfg<span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PasswordComplexity = 1&#34;</span>, <span style="color:#e6db74">&#34;PasswordComplexity = 0&#34;</span><span style="color:#f92672">)</span> | Out-File C:<span style="color:#ae81ff">\s</span>ecpol.cfg
-</span></span><span style="display:flex;"><span>secedit /configure /db c:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ecurity<span style="color:#ae81ff">\l</span>ocal.sdb /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg /areas SECURITYPOLICY
-</span></span><span style="display:flex;"><span>rm -force c:<span style="color:#ae81ff">\s</span>ecpol.cfg -confirm:$false
-</span></span></code></pre></div><h2 id="workstation-setup">WorkStation Setup</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">secedit /export /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg
+<span style="color:#f92672">(</span>gc C:<span style="color:#ae81ff">\s</span>ecpol.cfg<span style="color:#f92672">)</span>.replace<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;PasswordComplexity = 1&#34;</span>, <span style="color:#e6db74">&#34;PasswordComplexity = 0&#34;</span><span style="color:#f92672">)</span> | Out-File C:<span style="color:#ae81ff">\s</span>ecpol.cfg
+secedit /configure /db c:<span style="color:#ae81ff">\w</span>indows<span style="color:#ae81ff">\s</span>ecurity<span style="color:#ae81ff">\l</span>ocal.sdb /cfg c:<span style="color:#ae81ff">\s</span>ecpol.cfg /areas SECURITYPOLICY
+rm -force c:<span style="color:#ae81ff">\s</span>ecpol.cfg -confirm:$false
+</code></pre></div><h2 id="workstation-setup">WorkStation Setup</h2>
 <p>First install a local Windows 10 or 11 and create a local administrator.</p>
 <p>Once installed, take a snapshot before putting the client into the domaine, that way you&rsquo;ll be able to clone the machine for other workstations.
 Do not forget to change the name of the machine : WS01</p>
 <h3 id="link-the-workstation">Link the Workstation</h3>
 <p>Before using the &ldquo;Access Work or School&rdquo; feature form the the WorkStation, you need to change the DNS address to you Domain Controller.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Get-DnsClientServerAddress
-</span></span><span style="display:flex;"><span>Set-DnsClientServerAddress -InterfaceIndex <span style="color:#ae81ff">3</span> -ServerAddresses 192.168.100.50
-</span></span></code></pre></div><p>Once it is done, you just need to search &ldquo;Access Work or Schooll&rdquo; feature on task bar and then use the domain name as local domain.<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Get-DnsClientServerAddress
+Set-DnsClientServerAddress -InterfaceIndex <span style="color:#ae81ff">3</span> -ServerAddresses 192.168.100.50
+</code></pre></div><p>Once it is done, you just need to search &ldquo;Access Work or Schooll&rdquo; feature on task bar and then use the domain name as local domain.<br>
 Or you can use this command :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Add-Computer -DomainName nerv.com -Credential nerv<span style="color:#ae81ff">\A</span>dministrateur -Force -Restart
-</span></span></code></pre></div><p>Take a snapshot of the DC01 and the WS01 once it is joined BEFORE adding the random users so you can go back anytime you want.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Add-Computer -DomainName nerv.com -Credential nerv<span style="color:#ae81ff">\A</span>dministrateur -Force -Restart
+</code></pre></div><p>Take a snapshot of the DC01 and the WS01 once it is joined BEFORE adding the random users so you can go back anytime you want.</p>
 
         </div>
 
@@ -1129,8 +1191,23 @@ Or you can use this command :</p>
   
 
   
+  
+
+  
+  
+
+  
     
     
+  
+  
+
+  
+  
+
+  
+  
+
   
   
 

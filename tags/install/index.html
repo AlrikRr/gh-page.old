@@ -45,6 +45,7 @@
 <meta property="og:url" content="https://AlrikRr.github.io/tags/install/" />
 
 
+
     
     
     <link rel="stylesheet" href="/css/layouts/list.css">
@@ -550,7 +551,7 @@ You can download the official NIXOS ISO here : nixos.org/download
 Don&rsquo;t hesitate to read the wiki here : nixos.org
 Installation If you have any issue, Google is your friend
 For this install, I used a Virtual Disk of 25GiB.
-# Display NixOS Wiki $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
+# Display NixOS Wiki  $ nixos-help # If you need to change the keyboard layout, use this command with you contry code # here I used French layout $ loadkeys fr # Switch with root $ sudo -i # Display disks name and partitions $ lsblk # Open parted tool and free 2GB for the SWAP  $ parted /dev/sda -- mklabel gpt $ parted /dev/sda -- mkpart primary 512MiB -2GiB $ parted /dev/sda -- mkpart primary -2GiB 100% # Create boot ESP $ parted /dev/sda -- mkpart ESP fat32 1MiB 512MiB $ parted /dev/sda -- set 3 boot on # Encryption of the root partition  $ cryptsetup luksFormat /dev/sda1 $ cryptsetup luksOpen /dev/sda1 nixos-root # Check if you nixos-root is open $ ls -l /dev/mapper # Format the nixos-root into BTRFS mkfs.</p>
       </div>
       <div class="card-footer">
         <span class="float-left">June 19, 2020</span>

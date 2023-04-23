@@ -12,9 +12,9 @@
       <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://AlrikRr.github.io/posts/malware/investigations/kardon/</guid>
-      <description>Identification Name kardon.exe Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400 FileType PE 32 bit TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29 FileSize 10KB ImageBase 000011AD EntryPoint(RVA) 00400000 VA(IB+RVA) 004011AD Sections There are 4 sections :
-.text .rdata .data .reloc Imports Interesting DLLs :
-urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.dll: GetCommandLineA(), MoveFileExA(), WinExec(), GetCurrentProcess(), etc. ADVAPI32.dll: RegCreateKeyA(), RegSetValueExA(), etc. 💡 The identification of the malware is done, we have a better understanding of the malware at the moment.</description>
+      <description>Identification    Name kardon.exe     Hash (256) 555675C526F80B9C89E02CA9D2C27F0EA61AD400   FileType PE 32 bit   TimeStamp 5AFD5BE1 —&amp;gt; GMT: Thursday 17 May 2018 10:39:29   FileSize 10KB   ImageBase 000011AD   EntryPoint(RVA) 00400000   VA(IB+RVA) 004011AD    Sections There are 4 sections :
+ .text .rdata .data .reloc  Imports Interesting DLLs :
+ urlmon.dll: URLDownloadToFileA() SHELL32.dll: SHGetFolderPathA() KERNEL32.</description>
     </item>
     
     
